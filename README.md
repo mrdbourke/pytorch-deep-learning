@@ -41,5 +41,6 @@ Some ideas: transfer learning + replicate a modern paper with pure PyTorch?
 
 Almost daily updates of what's happening.
 
+* 23, 24 Oct 2021 - update 00 and 01 notebooks with more outline/code
 * 20 Oct 2021 - add v0 outlines for 01 and 02, add rough outline of course to README, this course will focus on less but better 
 * 19 Oct 2021 - Start repo 🔥, add fundamentals notebook draft v0
