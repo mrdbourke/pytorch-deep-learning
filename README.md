@@ -37,10 +37,17 @@ Still tossing up ideas for the last one. Possibly a two scaled up projects to em
 
 Some ideas: transfer learning + replicate a modern paper with pure PyTorch?
 
+## Status
+
+**Working on:** notebooks 00, 01, 02 (these are fundamentals, will scale up with 03, 04, 05 etc...)
+**Next:** Create skeleton code for 02
+**Done skeleton code for:** 00, 01
+
 ## Log
 
 Almost daily updates of what's happening.
 
+* 26 Oct 2021 - update 00, 01, 02 with outline/code, skeleton code for 00 & 01 done, 02 next
 * 23, 24 Oct 2021 - update 00 and 01 notebooks with more outline/code
 * 20 Oct 2021 - add v0 outlines for 01 and 02, add rough outline of course to README, this course will focus on less but better 
 * 19 Oct 2021 - Start repo 🔥, add fundamentals notebook draft v0
