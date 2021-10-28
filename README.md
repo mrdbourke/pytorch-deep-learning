@@ -47,6 +47,7 @@ Some ideas: transfer learning + replicate a modern paper with pure PyTorch?
 
 Almost daily updates of what's happening.
 
+* 28 Oct 2021 - Finished skeleton code for 02, going to clean/tidy tomorrow, 03 next week
 * 27 Oct 2021 - add a bunch of code for 02, going to finish tomorrow/by end of week
 * 26 Oct 2021 - update 00, 01, 02 with outline/code, skeleton code for 00 & 01 done, 02 next
 * 23, 24 Oct 2021 - update 00 and 01 notebooks with more outline/code
