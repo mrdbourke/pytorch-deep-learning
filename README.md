@@ -23,7 +23,7 @@ data -> build model -> fit model to data (training) -> evaluate model and make p
 Module 1 will showcase an end-to-end PyTorch workflow that can be leveraged for other problems.
 
 2. PyTorch classification - Let's take the workflow we learned in module 1 and apply it to a common machine learning problem type: classification (deciding whether something is one thing or another).
-3. PyTorch computer vision - We'll get even more specific now and see how PyTorch can be used for computer vision problems though still using the same workflow from 1 & 2.
+3. PyTorch computer vision - We'll get even more specific now and see how PyTorch can be used for computer vision problems though still using the same workflow from 1 & 2. We'll also start functionizing the code we've been writing, for example: `def train(model, data, optimizer, loss_fn): ...`
 4. Going modular - PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). For example:
 ```
 code/
@@ -40,13 +40,14 @@ Some ideas: transfer learning + replicate a modern paper with pure PyTorch?
 ## Status
 
 **Working on:** notebooks 00, 01, 02 (these are fundamentals, will scale up with 03, 04, 05 etc...)
-**Next:** Create skeleton code for 02
-**Done skeleton code for:** 00, 01
+**Next:** Polish skeleton code for 02, start on code for 03
+**Done skeleton code for:** 00, 01, 02 
 
 ## Log
 
 Almost daily updates of what's happening.
 
+* 29 Oct 2021 - Tidied up skeleton code for 02, still a few more things to clean/tidy, created 03
 * 28 Oct 2021 - Finished skeleton code for 02, going to clean/tidy tomorrow, 03 next week
 * 27 Oct 2021 - add a bunch of code for 02, going to finish tomorrow/by end of week
 * 26 Oct 2021 - update 00, 01, 02 with outline/code, skeleton code for 00 & 01 done, 02 next
