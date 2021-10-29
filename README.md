@@ -39,9 +39,18 @@ Some ideas: transfer learning + replicate a modern paper with pure PyTorch?
 
 ## Status
 
-**Working on:** notebooks 00, 01, 02 (these are fundamentals, will scale up with 03, 04, 05 etc...)
+**Working on:** skeleton code for notebooks 00, 01, 02 (these are fundamentals, will scale up with 03, 04, 05 etc...)
 **Next:** Polish skeleton code for 02, start on code for 03
 **Done skeleton code for:** 00, 01, 02 
+
+## TODO
+
+High-level overview of things to do:
+* How to use this repo (e.g. env setup, GPU/no GPU) - all notebooks should run fine in Colab and locally if needed.
+* Finish skeleton code for notebooks 00 - 05
+* Make slides for 00 - 05
+* Write annotations for 00 - 05
+* Record videos for 00 - 05
 
 ## Log
 
