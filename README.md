@@ -56,6 +56,8 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 4 Nov 2021 - Add GPU code to 03 + train/test loops + `helper_functions.py`
+* 3 Nov 2021 - Add basic start for 03, going to finish by end of week
 * 29 Oct 2021 - Tidied up skeleton code for 02, still a few more things to clean/tidy, created 03
 * 28 Oct 2021 - Finished skeleton code for 02, going to clean/tidy tomorrow, 03 next week
 * 27 Oct 2021 - add a bunch of code for 02, going to finish tomorrow/by end of week
