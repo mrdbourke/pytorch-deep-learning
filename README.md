@@ -39,8 +39,8 @@ Some ideas: transfer learning + replicate a modern paper with pure PyTorch?
 
 ## Status
 
-**Working on:** skeleton code for notebooks 00, 01, 02 (these are fundamentals, will scale up with 03, 04, 05 etc...)
-**Next:** Polish skeleton code for 02, start on code for 03
+**Working on:** skeleton code for 03
+**Next:** Finished skeleton code for 03 then start on 04 (computer vision with custom datasets)
 **Done skeleton code for:** 00, 01, 02 
 
 ## TODO
