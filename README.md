@@ -56,6 +56,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 9 Nov 2021 - Update 03 skeleton code to finish off building CNN model, onto 04 for loading custom datasets
 * 4 Nov 2021 - Add GPU code to 03 + train/test loops + `helper_functions.py`
 * 3 Nov 2021 - Add basic start for 03, going to finish by end of week
 * 29 Oct 2021 - Tidied up skeleton code for 02, still a few more things to clean/tidy, created 03
