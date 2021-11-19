@@ -56,6 +56,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 18 Nov 2021 - Updated vision code for 03 and added custom dataset loading code in 04
 * 12 Nov 2021 - Added a bunch of skeleton code to notebook 04 for custom dataset loading, next is modelling with custom data
 * 10 Nov 2021 - researching best practice for custom datasets for 04
 * 9 Nov 2021 - Update 03 skeleton code to finish off building CNN model, onto 04 for loading custom datasets
