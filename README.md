@@ -56,6 +56,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 19 Nov 2021 - Added 05 (transfer learning) notebook, update custom data loading code in 04
 * 18 Nov 2021 - Updated vision code for 03 and added custom dataset loading code in 04
 * 12 Nov 2021 - Added a bunch of skeleton code to notebook 04 for custom dataset loading, next is modelling with custom data
 * 10 Nov 2021 - researching best practice for custom datasets for 04
