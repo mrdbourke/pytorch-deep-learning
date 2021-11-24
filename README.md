@@ -24,38 +24,41 @@ Module 1 will showcase an end-to-end PyTorch workflow that can be leveraged for 
 
 2. PyTorch classification - Let's take the workflow we learned in module 1 and apply it to a common machine learning problem type: classification (deciding whether something is one thing or another).
 3. PyTorch computer vision - We'll get even more specific now and see how PyTorch can be used for computer vision problems though still using the same workflow from 1 & 2. We'll also start functionizing the code we've been writing, for example: `def train(model, data, optimizer, loss_fn): ...`
-4. Going modular - PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). For example:
+4. PyTorch custom datasets - How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05).
+5. Going modular - PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). For example:
 ```
 code/
-    model.py
-    training.py
-    eval.py
+    data_setup.py <- sets up data
+    model_builder.py <- builds the model ready to be used
+    engine.py <- training/eval functions for the model
+    train.py <- trains and saves the model
 ```
-5. ??? 
+6. PyTorch transfer learning - Let's improve upon the models we've built ourselves using transfer learning.
+7. PyTorch experiment tracking - We've built a bunch of models... wouldn't it be good to track how they're all going?
+8. ???
 
-Still tossing up ideas for the last one. Possibly a two scaled up projects to emphasize everything in 2, 3, 4.
-
-Some ideas: transfer learning + replicate a modern paper with pure PyTorch?
+As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big ideas. 
 
 ## Status
 
-**Working on:** skeleton code for 03
-**Next:** Finished skeleton code for 03 then start on 04 (computer vision with custom datasets)
-**Done skeleton code for:** 00, 01, 02 
+**Working on:** skeleton code for 06
+**Next:** Write transfer learning code for PyTorch
+**Done skeleton code for:** 00, 01, 02, 03, 04, 05
 
 ## TODO
 
 High-level overview of things to do:
 * How to use this repo (e.g. env setup, GPU/no GPU) - all notebooks should run fine in Colab and locally if needed.
-* Finish skeleton code for notebooks 00 - 05
-* Make slides for 00 - 05
-* Write annotations for 00 - 05
-* Record videos for 00 - 05
+* Finish skeleton code for notebooks 00 - 07
+* Make slides for 00 - 07
+* Write annotations for 00 - 07
+* Record videos for 00 - 07
 
 ## Log
 
 Almost daily updates of what's happening.
 
+* 24 Nov 2021 - Update 04, 05, 06 notebooks for easier digestion and learning, each section should cover a max of 3 big ideas, 05 is now dedicated to turning notebook code into modular code 
 * 22 Nov 2021 - Update 04 train and test functions to make more straightforward
 * 19 Nov 2021 - Added 05 (transfer learning) notebook, update custom data loading code in 04
 * 18 Nov 2021 - Updated vision code for 03 and added custom dataset loading code in 04
