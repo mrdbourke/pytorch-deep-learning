@@ -41,9 +41,9 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 
 ## Status
 
-**Working on:** skeleton code for 06
-**Next:** Write transfer learning code for PyTorch
-**Done skeleton code for:** 00, 01, 02, 03, 04, 05
+* **Working on:** skeleton code for 06
+* **Next:** Write transfer learning code for PyTorch
+* **Done skeleton code for:** 00, 01, 02, 03, 04, 05
 
 ## TODO
 
