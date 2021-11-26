@@ -58,6 +58,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 26 Nov 2021 - Finish skeleton code for 07, need to clean up and make more straightforward
 * 25 Nov 2021 - clean code for 06, add skeleton code for 07 (experiment tracking)
 * 24 Nov 2021 - Update 04, 05, 06 notebooks for easier digestion and learning, each section should cover a max of 3 big ideas, 05 is now dedicated to turning notebook code into modular code 
 * 22 Nov 2021 - Update 04 train and test functions to make more straightforward
