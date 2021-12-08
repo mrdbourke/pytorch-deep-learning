@@ -18,10 +18,18 @@ def create_dataloaders(
 
     # Turn images into data loaders
     train_dataloader = DataLoader(
-        train_data, batch_size=batch_size, num_workers=num_workers, shuffle=True
+        train_data,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=num_workers,
+        pin_memory=True,
     )
     test_dataloader = DataLoader(
-        test_data, batch_size=batch_size, num_workers=num_workers, shuffle=True
+        test_data,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=num_workers,
+        pin_memory=True,
     )
 
     return train_dataloader, test_dataloader, class_names
