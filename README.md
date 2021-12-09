@@ -13,7 +13,7 @@ Launch early 2022.
 **Note:** This is rough and subject to change.
 
 **Course focus:** code, code, code, experiment, experiment, experiment. 
-**Teaching style:** https://sive.rs/kimo
+**Teaching style:** [https://sive.rs/kimo](https://sive.rs/kimo)
 
 0. PyTorch fundamentals - ML is all about representing data as numbers (tensors) and manipulating those tensors so this module will cover PyTorch tensors.
 1. PyTorch workflow - You'll use different techniques for different problem types but the workflow remains much the same:
@@ -58,6 +58,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 9 Dec 2021 - Created a website for the course ([learnpytorch.io](https://learnpytorch.io))you'll see updates posted there as development continues 
 * 8 Dec 2021 - Clean up notebook 07, starting to go back through code and add annotations
 * 26 Nov 2021 - Finish skeleton code for 07, added four different experiments, need to clean up and make more straightforward
 * 25 Nov 2021 - clean code for 06, add skeleton code for 07 (experiment tracking)
