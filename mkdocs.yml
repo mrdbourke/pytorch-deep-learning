@@ -1,0 +1,40 @@
+site_name: Zero to Mastery PyTorch for Deep Learning
+site_url: https://www.learnpytorch.io
+
+repo_url: https://github.com/mrdbourke/pytorch-deep-learning/
+repo_name: mrdbourke/pytorch_deep_learning
+
+theme:
+  name: material
+  # logo: assets/misc-ztm-logo.png
+  # favicon: assets/misc-ztm-logo.png
+  features:
+    - navigation.instant
+  palette:
+    primary: black
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+ - mkdocs-jupyter
+ - search
+
+edit_uri: ""
+
+nav:
+  - Home: 'index.md'
+  - Fundamentals:
+    - '00. Getting started with PyTorch': '00_pytorch_fundamentals.ipynb'
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/mrdbourke
+    - icon: fontawesome/brands/github
+      link: https://github.com/mrdbourke
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCr8O8l5cCX85Oem1d18EezQ
