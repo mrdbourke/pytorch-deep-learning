@@ -1,5 +1,5 @@
 site_name: Zero to Mastery PyTorch for Deep Learning
-site_url: http://dev.mrdbourke.com/pytorch-deep-learning
+site_url: http://www.learnpytorch.io
 
 repo_url: https://github.com/mrdbourke/pytorch-deep-learning/
 repo_name: mrdbourke/pytorch_deep_learning
@@ -27,8 +27,7 @@ edit_uri: ""
 
 nav:
   - Home: 'index.md'
-  - Fundamentals:
-    - '00. Getting started with PyTorch': '00_pytorch_fundamentals.ipynb'
+  - '00. Getting started with PyTorch': '00_pytorch_fundamentals.ipynb'
 
 extra:
   social:
