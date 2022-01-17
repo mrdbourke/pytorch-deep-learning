@@ -41,7 +41,7 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 
 ## Status
 
-* **Working on:** creating course website & annotating notebook 00
+* **Working on:** annotating notebook 00
 * **Next:** Write transfer learning code for PyTorch
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 
@@ -49,7 +49,7 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 
 High-level overview of things to do:
 * How to use this repo (e.g. env setup, GPU/no GPU) - all notebooks should run fine in Colab and locally if needed.
-* Finish skeleton code for notebooks 00 - 07
+* Finish skeleton code for notebooks 00 - 07 ✅
 * Make slides for 00 - 07
 * Write annotations for 00 - 07
 * Record videos for 00 - 07
@@ -58,6 +58,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 17 Jan 2021 - back from holidays, adding more annotations to 00 
 * 10 Dec 2021 - start adding annoations for 00
 * 9 Dec 2021 - Created a website for the course ([learnpytorch.io](https://learnpytorch.io)) you'll see updates posted there as development continues 
 * 8 Dec 2021 - Clean up notebook 07, starting to go back through code and add annotations
