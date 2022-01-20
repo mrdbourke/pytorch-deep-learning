@@ -35,15 +35,18 @@ code/
 ```
 6. PyTorch transfer learning - Let's improve upon the models we've built ourselves using transfer learning.
 7. PyTorch experiment tracking - We've built a bunch of models... wouldn't it be good to track how they're all going?
-8. ???
+8. ??? Milestone Project 1 & 2 could be built into the final two notebooks (putting together all the fundamentals)
 
 As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big ideas. 
 
 ## Status
 
-* **Working on:** annotating notebook 00
-* **Next:** Write transfer learning code for PyTorch
+* **Working on:** annotating notebook 01
+* **Next:** finish annotations for 00, 01, 02 then make keynote slides
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
+* **Done annotations (text) for:** 00
+* **Done images/keynote for:**
+* **Done vidoes for:**
 
 ## TODO
 
@@ -58,6 +61,9 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 20 Jan 2021 - finish annotations for 00 (still need to add images), add exercises and solutions for 00
+* 19 Jan 2021 - add more annotations for 00
+* 18 Jan 2021 - add more annotations for 00
 * 17 Jan 2021 - back from holidays, adding more annotations to 00 
 * 10 Dec 2021 - start adding annoations for 00
 * 9 Dec 2021 - Created a website for the course ([learnpytorch.io](https://learnpytorch.io)) you'll see updates posted there as development continues 
