@@ -6,8 +6,8 @@ repo_name: mrdbourke/pytorch_deep_learning
 
 theme:
   name: material
-  # logo: assets/misc-ztm-logo.png
-  # favicon: assets/misc-ztm-logo.png
+  logo: assets/misc-ztm-logo-and-pytorch-logo.png
+  favicon: assets/misc-ztm-logo-and-pytorch-logo.png
   features:
     - navigation.instant
   palette:
