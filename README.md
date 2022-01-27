@@ -61,6 +61,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 26 Jan 2021 - lots more annotations to 01, should be finished tomorrow, will do exercises + solutions then too
 * 24 Jan 2021 - add a bunch of annotations to 01
 * 21 Jan 2021 - start adding annotations for 01 
 * 20 Jan 2021 - finish annotations for 00 (still need to add images), add exercises and solutions for 00
