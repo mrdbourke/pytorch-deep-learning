@@ -1,4 +1,4 @@
-# pytorch-deep-learing (work in progress)
+# PyTorch for Deep Learning (work in progress)
 I'd like to learn PyTorch. So I'm going to use this repo to:
 
 1. Add what I've learned.
@@ -14,6 +14,8 @@ Launch early 2022.
 
 **Course focus:** code, code, code, experiment, experiment, experiment. 
 **Teaching style:** [https://sive.rs/kimo](https://sive.rs/kimo)
+
+TODO: turn the table of contents into a nice table
 
 0. PyTorch fundamentals - ML is all about representing data as numbers (tensors) and manipulating those tensors so this module will cover PyTorch tensors.
 1. PyTorch workflow - You'll use different techniques for different problem types but the workflow remains much the same:
@@ -41,11 +43,12 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 
 ## Status
 
-* **Working on:** annotating notebook 01
+* **Working on:** annotating notebook 02 (text)
 * **Next:** finish annotations for 00, 01, 02 then make keynote slides
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done annotations (text) for:** 00
-* **Done images/keynote for:**
+* **Done annotations (text) for:** 00, 01
+* **Done images for:**
+* **Done keynotes for:** 
 * **Done vidoes for:**
 
 ## TODO
@@ -53,14 +56,16 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 High-level overview of things to do:
 * How to use this repo (e.g. env setup, GPU/no GPU) - all notebooks should run fine in Colab and locally if needed.
 * Finish skeleton code for notebooks 00 - 07 ✅
-* Make slides for 00 - 07
 * Write annotations for 00 - 07
+* Make images for 00 - 07
+* Make slides for 00 - 07
 * Record videos for 00 - 07
 
 ## Log
 
 Almost daily updates of what's happening.
 
+* 28 Jan 2021 - add exercies and solutions for 01
 * 26 Jan 2021 - lots more annotations to 01, should be finished tomorrow, will do exercises + solutions then too
 * 24 Jan 2021 - add a bunch of annotations to 01
 * 21 Jan 2021 - start adding annotations for 01 
