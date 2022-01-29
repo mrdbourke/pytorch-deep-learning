@@ -29,6 +29,7 @@ nav:
   - Home: 'index.md'
   - '00. Getting started with PyTorch': '00_pytorch_fundamentals.ipynb'
   - '01. PyTorch workflow': '01_pytorch_workflow.ipynb'
+  - '02. PyTorch classification': '02_pytorch_classification.ipynb'
 
 extra:
   social:
