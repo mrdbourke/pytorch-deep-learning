@@ -1,6 +1,6 @@
-# Welcome to the Zero to Mastery PyTorch for Deep Learning Book (work in progress)
+# Welcome to the Learn PyTorch for Deep Learning book (work in progress)
 
-This will be the homepage for the online book version of the Zero to Mastery Deep Learning with PyTorch course.
+This will be the homepage for the online book version of the Zero to Mastery Learn PyTorch for Deep Learning course.
 
 This course will teach you foundations of deep learning and PyTorch (a deep learning framework written in Python).
 
