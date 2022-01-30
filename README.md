@@ -53,6 +53,8 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 
 ## TODO
 
+See the project page for specifics - https://github.com/users/mrdbourke/projects/1 
+
 High-level overview of things to do:
 * How to use this repo (e.g. env setup, GPU/no GPU) - all notebooks should run fine in Colab and locally if needed.
 * Finish skeleton code for notebooks 00 - 07 ✅
