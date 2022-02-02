@@ -7,6 +7,30 @@ import torch
 import matplotlib.pyplot as plt
 from torch import nn
 
+# Plot linear data or training and test and predictions (optional)
+def plot_predictions(train_data=X_train, 
+                     train_labels=y_train, 
+                     test_data=X_test, 
+                     test_labels=y_test, 
+                     predictions=None):
+  """
+  Plots linear training data and test data and compares predictions.
+  """
+  plt.figure(figsize=(10, 7))
+
+  # Plot training data in blue
+  plt.scatter(train_data, train_labels, c="b", s=4, label="Training data")
+  
+  # Plot test data in green
+  plt.scatter(test_data, test_labels, c="g", s=4, label="Testing data")
+
+  if predictions is not None:
+    # Plot the predictions in red (predictions were made on the test data)
+    plt.scatter(test_data, predictions, c="r", s=4, label="Predictions")
+
+  # Show the legend
+  plt.legend(prop={"size": 14});
+
 # Calculate accuracy (a classification metric)
 def accuracy_fn(y_true, y_pred):
     """Calculates accuracy between truth labels and predictions.
