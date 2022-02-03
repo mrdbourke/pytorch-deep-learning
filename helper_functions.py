@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 from torch import nn
 
 # Plot linear data or training and test and predictions (optional)
-def plot_predictions(train_data=X_train, 
-                     train_labels=y_train, 
-                     test_data=X_test, 
-                     test_labels=y_test, 
+def plot_predictions(train_data,
+                     train_labels, 
+                     test_data, 
+                     test_labels, 
                      predictions=None):
   """
   Plots linear training data and test data and compares predictions.
