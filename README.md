@@ -43,10 +43,10 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 
 ## Status
 
-* **Working on:** annotating notebook 02 (text)
+* **Working on:** making exercises and solutions for 02
 * **Next:** finish annotations for 00, 01, 02 then make keynote slides
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done annotations (text) for:** 00, 01
+* **Done annotations (text) for:** 00, 01, 02 
 * **Done images for:**
 * **Done keynotes for:** 
 * **Done vidoes for:**
@@ -67,6 +67,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 01-07 Feb 2021 - add annotations for 02, finished, still need images, going to work on exercises/solutions today 
 * 31 Jan 2021 - start adding annotations for 02
 * 28 Jan 2021 - add exercies and solutions for 01
 * 26 Jan 2021 - lots more annotations to 01, should be finished tomorrow, will do exercises + solutions then too
