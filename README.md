@@ -47,8 +47,8 @@ As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big
 * **Next:** finish annotations for 00, 01, 02 then make keynote slides
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02 
-* **Done images for:**
-* **Done keynotes for:** 
+* **Done images for:** 00
+* **Done keynotes for:** 00
 * **Done vidoes for:**
 
 ## TODO
@@ -67,6 +67,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 10 Feb 2021 - finished slides and images for 00, notebook is ready for publishing: https://www.learnpytorch.io/00_pytorch_fundamentals/
 * 01-07 Feb 2021 - add annotations for 02, finished, still need images, going to work on exercises/solutions today 
 * 31 Jan 2021 - start adding annotations for 02
 * 28 Jan 2021 - add exercies and solutions for 01
