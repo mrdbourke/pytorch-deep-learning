@@ -1,4 +1,4 @@
-# PyTorch for Deep Learning (work in progress)
+# Learn PyTorch for Deep Learning (work in progress)
 
 I'd like to learn PyTorch. So I'm going to use this repo to:
 
@@ -18,11 +18,11 @@ Launch early 2022.
 | **Section** | **What does it cover?** | **Exercises & Extra-curriculum** | 
 | ----- | ----- | ----- |
 | [00 - PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/) | Many fundamental PyTorch operations used for deep learning and neural networks. | Go to exercises & extra-curriculum |
-| [01 - PyTorch Workflow](https://www.learnpytorch.io/01_pytorch_workflow/) | Provides an outline for approaching deep learning problems with PyTorch. | Go to exercises & extra-curriculum |
-| [02 - PyTorch Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | Go to exercises & extra-curriculum |
-| Coming soon: 03 - PyTorch Computer Vision | Let's see how PyTorch can be used for computer vision problems using the same workflow from 1 & 2 | Go to exercises & extra-curriculum | 
-| Coming soon: 04 - PyTorch Custom Datasets | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05) | Go to exercises & extra-curriculum | 
-| Coming soon: 05 - Going modular | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild) | Go to exercises & extra-curriculum | 
+| [01 - PyTorch Workflow](https://www.learnpytorch.io/01_pytorch_workflow/) | Provides an outline for approaching deep learning problems and building neural networks with PyTorch. | Go to exercises & extra-curriculum |
+| [02 - PyTorch Neural Network Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | Go to exercises & extra-curriculum |
+| Coming soon: 03 - PyTorch Computer Vision | Let's see how PyTorch can be used for computer vision problems using the same workflow from 01 & 02. | Go to exercises & extra-curriculum | 
+| Coming soon: 04 - PyTorch Custom Datasets | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05). | Go to exercises & extra-curriculum | 
+| Coming soon: 05 - Going modular | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | Go to exercises & extra-curriculum | 
 | Coming soon: 06 - PyTorch Transfer Learning | Let's take a well performing pre-trained model and adjust it to one of our own problems. | Go to exercises & extra-curriculum |
 | Coming soon: 07 - Milestone Project 1: PyTorch Experiment Tracking | We've built a bunch of models... wouldn't it be good to track how they're all going? | Go to exercises & extra-curriculum | 
 | Coming soon: 08 - Milestone Project 2: PyTorch Paper Replicating | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | 
