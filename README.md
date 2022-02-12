@@ -1,21 +1,33 @@
 # PyTorch for Deep Learning (work in progress)
+
 I'd like to learn PyTorch. So I'm going to use this repo to:
 
 1. Add what I've learned.
 2. Teach others in a beginner-friendly way.
 
-Stay tuned to here for updates. Course materials will be actively worked on for the next ~3-4 months.
+Stay tuned to here for updates, course materials are being actively worked on.
 
 Launch early 2022.
 
-## Outline
+## Course materials/outline
 
-**Note:** This is rough and subject to change.
+* **Note:** This is rough and subject to change.
+* **Course focus:** `code, code, code, experiment, experiment, experiment`
+* **Teaching style:** [https://sive.rs/kimo](https://sive.rs/kimo)
 
-**Course focus:** code, code, code, experiment, experiment, experiment. 
-**Teaching style:** [https://sive.rs/kimo](https://sive.rs/kimo)
+| **Section** | **What does it cover?** | **Exercises & Extra-curriculum** | 
+| ----- | ----- | ----- |
+| [00 - PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/) | Many fundamental PyTorch operations used for deep learning and neural networks. | Go to exercises & extra-curriculum |
+| [01 - PyTorch Workflow](https://www.learnpytorch.io/01_pytorch_workflow/) | Provides an outline for approaching deep learning problems with PyTorch. | Go to exercises & extra-curriculum |
+| [02 - PyTorch Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | Go to exercises & extra-curriculum |
+| Coming soon: 03 - PyTorch Computer Vision | Let's see how PyTorch can be used for computer vision problems using the same workflow from 1 & 2 | Go to exercises & extra-curriculum | 
+| Coming soon: 04 - PyTorch Custom Datasets | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05) | Go to exercises & extra-curriculum | 
+| Coming soon: 05 - Going modular | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild) | Go to exercises & extra-curriculum | 
+| Coming soon: 06 - PyTorch Transfer Learning | Let's take a well performing pre-trained model and adjust it to one of our own problems. | Go to exercises & extra-curriculum |
+| Coming soon: 07 - Milestone Project 1: PyTorch Experiment Tracking | We've built a bunch of models... wouldn't it be good to track how they're all going? | Go to exercises & extra-curriculum | 
+| Coming soon: 08 - Milestone Project 2: PyTorch Paper Replicating | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | 
 
-TODO: turn the table of contents into a nice table
+### Old outline version (will update this if necessary)
 
 0. PyTorch fundamentals - ML is all about representing data as numbers (tensors) and manipulating those tensors so this module will cover PyTorch tensors.
 1. PyTorch workflow - You'll use different techniques for different problem types but the workflow remains much the same:
@@ -37,18 +49,18 @@ code/
 ```
 6. PyTorch transfer learning - Let's improve upon the models we've built ourselves using transfer learning.
 7. PyTorch experiment tracking - We've built a bunch of models... wouldn't it be good to track how they're all going?
-8. ??? Milestone Project 1 & 2 could be built into the final two notebooks (putting together all the fundamentals)
+8. PyTorch paper replicating - Let's see why PyTorch is the most popular deep learning framework for machine learning research by replicating a machine learning research paper with it.
 
-As for 8, seven notebooks sounds like enough. Each will teach a maximum of 3 big ideas. 
+Each notebook will teach a maximum of 3 big ideas. 
 
 ## Status
 
-* **Working on:** making exercises and solutions for 02
+* **Working on:** making slides and images for 00, 01, 02
 * **Next:** finish annotations for 00, 01, 02 then make keynote slides
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02 
-* **Done images for:** 00
-* **Done keynotes for:** 00
+* **Done images for:** 00, 01
+* **Done keynotes for:** 00, 01
 * **Done vidoes for:**
 
 ## TODO
@@ -67,6 +79,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 12 Feb 2021 - tidy up README with table of course materials, finish images and slides for 01
 * 10 Feb 2021 - finished slides and images for 00, notebook is ready for publishing: https://www.learnpytorch.io/00_pytorch_fundamentals/
 * 01-07 Feb 2021 - add annotations for 02, finished, still need images, going to work on exercises/solutions today 
 * 31 Jan 2021 - start adding annotations for 02
