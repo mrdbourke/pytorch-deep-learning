@@ -8,10 +8,12 @@ For the sake of this course, we're keeping things simple.
 
 Though not so simple you won't be able to use what you're using here elsewhere.
 
-There's two setup options. One is easier than the other but the other offers more options in the long-run.
+There are two setup options. One is easier than the other but the other offers more options in the long-run.
 
 1. Use Google Colab (easiest)
 2. Setup on your own local/remote machine (a few steps but you've got a bit more flexibility here)
+
+**Note** Neither of these are replacements for [PyTorch's official setup docs](https://pytorch.org/get-started/locally/), if you're wanting to start coding PyTorch for the long term, you should get familiar with those.
 
 ## 1. Setup with Google Colab (easiest)
 
@@ -45,7 +47,7 @@ To begin with Google Colab, I'd first go through the [Introduction to Google Col
 
 ### Opening a course notebook with one-click
 
-After that, you can run any of the course notebooks directly in Google Colab by pressing the "Open in Colab" button at the top of the online book version or the GitHub version.
+After you've gotten familiar with the Google Colab interface, you can run any of the course notebooks directly in Google Colab by pressing the "Open in Colab" button at the top of the online book version or the GitHub version.
 
 ![open a course notebook in Google Colab via open in Colab button](https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/setup-open-in-colab-cropped.gif)
 
@@ -86,12 +88,67 @@ If PyTorch can see the GPU on Google Colab, the above will print `True`.
 
 ## TK - 2. Getting setup locally (Linux version)
 
-TK - this is not a replacement for the PyTorch documentation for getting setup locally: https://pytorch.org/get-started/locally/
+**Note:** A reminder this is not a replacement for the [PyTorch documentation for getting setup locally](https://pytorch.org/get-started/locally/). This is only one way of getting setup (there are many) and designed specifically for this course.
 
-The setup will be: Jupyter Lab + Conda
+This **setup is focused on Linux systems** (the most common operating system in the world), if you are running Windows or macOS, you should refer to the PyTorch documentation. 
 
-TK - finish this
-1. Install Miniconda (use just use Anaconda if you already have it), the main thing is you need `conda` on the command line
-2. Make a directory for the course materials
-3. Install dependencies: `torch, cudatoolkit, pandas, jupyterlab, numpy, matplotlib, scikit-learn, torchinfo, torchmetrics` etc
-4. Clone data/verify PyTorch works in a Jupyter Lab notebook
+This setup also expects you to have access to a NVIDIA GPU.
+
+Why this setup?
+
+As a machine learning engineer, I use it almost daily. It works for a large amount of workflows and it's flexible enough so you can change if you need.
+
+Let's begin.
+
+### Setup steps locally for a Linux system with a GPU
+
+TK image - overall setup of the course environment (e.g. Jupyter Lab inside conda env)
+
+1. [Install Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) (you can use Anaconda if you already have it), the main thing is you need access to `conda` on the command line.
+2. Make a directory for the course materials, you can name it what you want and then change into it. For example:
+```
+mkdir ztm-pytorch-course
+cd ztm-pytorch-course
+```
+3. Create a `conda` environment in the directory you just created. The following command will create a `conda` enviroment that lives in the folder called `env` which lives in the folder you just created (e.g. `ztm-pytorch-course/env`).
+```
+conda create --prefix ./env
+```
+4. Activate the environment you just created.
+```
+conda activate ./env
+```
+5. Install the code dependencies you'll need for the course such as PyTorch and CUDA Toolkit for running PyTorch on your GPU. You can run all of these at the same time (**note:** this is specifically for Linux systems with a NVIDIA GPU, for other options see the [PyTorch setup documentation](https://pytorch.org/get-started/locally/)):
+```
+conda install pytorch=1.10.0 torchvision cudatoolkit=11.3 -c pytorch
+conda install -c conda-forge torchmetrics
+conda install -c conda-forge jupyterlab
+conda install pandas matplotlib scikit-learn 
+conda install -c conda-forge torchinfo
+conda install -c anaconda pip
+```
+6. Verify the installation ran correctly by running starting a Jupyter Lab server:
+
+```bash
+jupyter lab
+```
+
+7. And then starting a Jupyter Notebook and running the following piece of code in a cell.
+```python
+import pandas as pd
+import numpy as np
+import torch
+import scikit-learn
+import matplotlib
+import torchinfo, torchmetrics
+
+# Check PyTorch access (should print out a tensor)
+print(torch.randn(3, 3))
+
+# Check for GPU (should return True)
+print(torch.cuda.is_available())
+```
+
+If the above code runs without errors, you should be ready to go.
+
+If you do run into an error, please refer to the [Learn PyTorch GitHub Discussions page](https://github.com/mrdbourke/pytorch-deep-learning/discussions) and ask a question or the [PyTorch setup documentation page](https://pytorch.org/get-started/locally/).
