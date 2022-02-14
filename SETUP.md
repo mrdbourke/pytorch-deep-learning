@@ -81,3 +81,11 @@ If PyTorch can see the GPU on Google Colab, the above will print `True`.
 ## TK - 2. Getting setup locally (Linux version)
 
 TK - this is not a replacement for the PyTorch documentation for getting setup locally: https://pytorch.org/get-started/locally/
+
+The setup will be: Jupyter Lab + Conda
+
+TK - finish this
+1. Install Miniconda (use just use Anaconda if you already have it), the main thing is you need `conda` on the command line
+2. Make a directory for the course materials
+3. Install dependencies: `torch, cudatoolkit, pandas, jupyterlab, numpy, matplotlib, scikit-learn, torchinfo, torchmetrics` etc
+4. Clone data/verify PyTorch works in a Jupyter Lab notebook
