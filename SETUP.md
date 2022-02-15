@@ -107,12 +107,12 @@ TK image - overall setup of the course environment (e.g. Jupyter Lab inside cond
 1. [Install Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) (you can use Anaconda if you already have it), the main thing is you need access to `conda` on the command line. Make sure to follow all the steps in the Miniconda installation guide before moving onto the next step.
 2. Make a directory for the course materials, you can name it what you want and then change into it. For example:
 ```
-mkdir ztm-pytorch-course
+mkdir ztm-pytorch-course \
 cd ztm-pytorch-course
 ```
 3. Create a `conda` environment in the directory you just created. The following command will create a `conda` enviroment that lives in the folder called `env` which lives in the folder you just created (e.g. `ztm-pytorch-course/env`). Press `y` when the command below asks `y/n?`.
 ```
-conda create --prefix ./env
+conda create --prefix ./env python=3.8
 ```
 4. Activate the environment you just created.
 ```
@@ -120,12 +120,10 @@ conda activate ./env
 ```
 5. Install the code dependencies you'll need for the course such as PyTorch and CUDA Toolkit for running PyTorch on your GPU. You can run all of these at the same time (**note:** this is specifically for Linux systems with a NVIDIA GPU, for other options see the [PyTorch setup documentation](https://pytorch.org/get-started/locally/)):
 ```
-conda install pytorch=1.10.0 torchvision cudatoolkit=11.3 -c pytorch \
-conda install -c conda-forge torchmetrics \
-conda install -c conda-forge jupyterlab \
-conda install pandas matplotlib scikit-learn \
-conda install -c conda-forge torchinfo \
-conda install -c anaconda pip 
+conda install -c pytorch pytorch=1.10.0 torchvision cudatoolkit=11.3 -y
+conda install -c conda-forge jupyterlab torchinfo torchmetrics -y
+conda install -c anaconda pip -y
+conda install pandas matplotlib scikit-learn -y
 ```
 6. Verify the installation ran correctly by running starting a Jupyter Lab server:
 
@@ -138,7 +136,7 @@ jupyter lab
 import pandas as pd
 import numpy as np
 import torch
-import scikit-learn
+import sklearn
 import matplotlib
 import torchinfo, torchmetrics
 
