@@ -107,7 +107,7 @@ TK image - overall setup of the course environment (e.g. Jupyter Lab inside cond
 1. [Install Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) (you can use Anaconda if you already have it), the main thing is you need access to `conda` on the command line. Make sure to follow all the steps in the Miniconda installation guide before moving onto the next step.
 2. Make a directory for the course materials, you can name it what you want and then change into it. For example:
 ```
-mkdir ztm-pytorch-course \
+mkdir ztm-pytorch-course
 cd ztm-pytorch-course
 ```
 3. Create a `conda` environment in the directory you just created. The following command will create a `conda` enviroment that lives in the folder called `env` which lives in the folder you just created (e.g. `ztm-pytorch-course/env`). Press `y` when the command below asks `y/n?`.
@@ -131,7 +131,7 @@ conda install pandas matplotlib scikit-learn -y
 jupyter lab
 ```
 
-7. And then starting a Jupyter Notebook and running the following piece of code in a cell.
+7. After Jupyter Lab is running, start a Jupyter Notebook and running the following piece of code in a cell.
 ```python
 import pandas as pd
 import numpy as np
