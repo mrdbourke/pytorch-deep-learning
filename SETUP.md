@@ -88,11 +88,11 @@ If PyTorch can see the GPU on Google Colab, the above will print `True`.
 
 ## TK - 2. Getting setup locally (Linux version)
 
-**Note:** A reminder this is not a replacement for the [PyTorch documentation for getting setup locally](https://pytorch.org/get-started/locally/). This is only one way of getting setup (there are many) and designed specifically for this course.
+> **Note:** A reminder this is not a replacement for the [PyTorch documentation for getting setup locally](https://pytorch.org/get-started/locally/). This is only one way of getting setup (there are many) and designed specifically for this course.
 
 This **setup is focused on Linux systems** (the most common operating system in the world), if you are running Windows or macOS, you should refer to the PyTorch documentation. 
 
-This setup also expects you to have access to a NVIDIA GPU.
+This setup also **expects you to have access to a NVIDIA GPU**.
 
 Why this setup?
 
@@ -104,13 +104,13 @@ Let's begin.
 
 TK image - overall setup of the course environment (e.g. Jupyter Lab inside conda env)
 
-1. [Install Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) (you can use Anaconda if you already have it), the main thing is you need access to `conda` on the command line.
+1. [Install Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) (you can use Anaconda if you already have it), the main thing is you need access to `conda` on the command line. Make sure to follow all the steps in the Miniconda installation guide before moving onto the next step.
 2. Make a directory for the course materials, you can name it what you want and then change into it. For example:
 ```
 mkdir ztm-pytorch-course
 cd ztm-pytorch-course
 ```
-3. Create a `conda` environment in the directory you just created. The following command will create a `conda` enviroment that lives in the folder called `env` which lives in the folder you just created (e.g. `ztm-pytorch-course/env`).
+3. Create a `conda` environment in the directory you just created. The following command will create a `conda` enviroment that lives in the folder called `env` which lives in the folder you just created (e.g. `ztm-pytorch-course/env`). Press `y` when the command below asks `y/n?`.
 ```
 conda create --prefix ./env
 ```
@@ -120,12 +120,12 @@ conda activate ./env
 ```
 5. Install the code dependencies you'll need for the course such as PyTorch and CUDA Toolkit for running PyTorch on your GPU. You can run all of these at the same time (**note:** this is specifically for Linux systems with a NVIDIA GPU, for other options see the [PyTorch setup documentation](https://pytorch.org/get-started/locally/)):
 ```
-conda install pytorch=1.10.0 torchvision cudatoolkit=11.3 -c pytorch
-conda install -c conda-forge torchmetrics
-conda install -c conda-forge jupyterlab
-conda install pandas matplotlib scikit-learn 
-conda install -c conda-forge torchinfo
-conda install -c anaconda pip
+conda install pytorch=1.10.0 torchvision cudatoolkit=11.3 -c pytorch \
+conda install -c conda-forge torchmetrics \
+conda install -c conda-forge jupyterlab \
+conda install pandas matplotlib scikit-learn \
+conda install -c conda-forge torchinfo \
+conda install -c anaconda pip 
 ```
 6. Verify the installation ran correctly by running starting a Jupyter Lab server:
 
