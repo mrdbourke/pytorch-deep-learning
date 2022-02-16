@@ -55,12 +55,13 @@ Each notebook will teach a maximum of 3 big ideas.
 
 ## Status
 
-* **Working on:** making slides and images for 00, 01, 02
-* **Next:** finish annotations for 00, 01, 02 then make keynote slides
+* **Working on:** recording videos for 00
+* **Total video count:** 11
+* **Next:** recording videos for 00, 01, 02
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02 
-* **Done images for:** 00, 01
-* **Done keynotes for:** 00, 01
+* **Done images for:** 00, 01, 02
+* **Done keynotes for:** 00, 01, 02
 * **Done vidoes for:**
 
 ## TODO
@@ -79,6 +80,8 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 17 Feb 2021 - recorded 11 videos for section 00 
+* 16 Feb 2021 - added setup guide 
 * 12 Feb 2021 - tidy up README with table of course materials, finish images and slides for 01
 * 10 Feb 2021 - finished slides and images for 00, notebook is ready for publishing: https://www.learnpytorch.io/00_pytorch_fundamentals/
 * 01-07 Feb 2021 - add annotations for 02, finished, still need images, going to work on exercises/solutions today 
