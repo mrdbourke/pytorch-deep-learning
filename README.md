@@ -56,7 +56,7 @@ Each notebook will teach a maximum of 3 big ideas.
 ## Status
 
 * **Working on:** recording videos for 00
-* **Total video count:** 11
+* **Total video count:** 24
 * **Next:** recording videos for 00, 01, 02
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02 
@@ -80,6 +80,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 18 Feb 2021 - recorded 13 videos for section 00
 * 17 Feb 2021 - recorded 11 videos for section 00 
 * 16 Feb 2021 - added setup guide 
 * 12 Feb 2021 - tidy up README with table of course materials, finish images and slides for 01
