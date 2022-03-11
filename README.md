@@ -80,6 +80,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 11 Mar 2021 - recorded 9 videos for 02
 * 10 Mar 2021 - recorded 10 videos for 02
 * 9 Mar 2021 - cleaning up slides/code for 02, getting ready for recording
 * 8 Mar 2021 - recorded 9 videos for section 01, finished section 01, now onto 02
