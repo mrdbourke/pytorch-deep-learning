@@ -19,7 +19,7 @@ Launch early 2022.
 | ----- | ----- | ----- | ----- |
 | [00 - PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/) | Many fundamental PyTorch operations used for deep learning and neural networks. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/00_pytorch_fundamentals/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/00_pytorch_and_deep_learning_fundamentals.pdf) |
 | [01 - PyTorch Workflow](https://www.learnpytorch.io/01_pytorch_workflow/) | Provides an outline for approaching deep learning problems and building neural networks with PyTorch. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/01_pytorch_workflow/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/01_pytorch_workflow.pdf) |
-| [02 - PyTorch Neural Network Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | Go to exercises & extra-curriculum | Go to slides |
+| [02 - PyTorch Neural Network Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/02_pytorch_classification/#exercises) | Go to slides |
 | Coming soon: 03 - PyTorch Computer Vision | Let's see how PyTorch can be used for computer vision problems using the same workflow from 01 & 02. | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 04 - PyTorch Custom Datasets | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05). | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 05 - Going modular | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | Go to exercises & extra-curriculum | Go to slides |
@@ -55,14 +55,14 @@ Each notebook will teach a maximum of 3 big ideas.
 
 ## Status
 
-* **Working on:** making slides and preparing to record videos for 02
-* **Total video count:** 71
-* **Next:** recording videos for 00, 01, 02
+* **Working on:** annotating code notebook 03
+* **Total video count:** 90
+* **Next:** annotate notebooks 03, 04, 05 with text then make slides and images
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02 
 * **Done images for:** 00, 01, 02
 * **Done keynotes for:** 00, 01, 02
-* **Done vidoes for:** 00, 01
+* **Done vidoes for:** 00, 01, 02
 
 ## TODO
 
@@ -80,6 +80,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 12 Mar 2021 - recorded 12 videos for 02, finished section 02, now onto making materials for 03, 04, 05
 * 11 Mar 2021 - recorded 9 videos for 02
 * 10 Mar 2021 - recorded 10 videos for 02
 * 9 Mar 2021 - cleaning up slides/code for 02, getting ready for recording
