@@ -101,7 +101,7 @@ As a machine learning engineer, I use it almost daily. It works for a large amou
 Let's begin.
 
 ### Setup steps locally for a Linux system with a GPU
-
+TK TODO - add step for install CUDA drivers
 TK image - overall setup of the course environment (e.g. Jupyter Lab inside conda env)
 
 1. [Install Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) (you can use Anaconda if you already have it), the main thing is you need access to `conda` on the command line. Make sure to follow all the steps in the Miniconda installation guide before moving onto the next step.
