@@ -30,12 +30,15 @@ nav:
   - '00. Getting started with PyTorch': '00_pytorch_fundamentals.ipynb'
   - '01. PyTorch workflow': '01_pytorch_workflow.ipynb'
   - '02. PyTorch classification': '02_pytorch_classification.ipynb'
+  - '(WIP) 03. PyTorch computer vision': '03_pytorch_computer_vision.ipynb'
+  - '(WIP) 04. PyTorch custom datasets': '04_pytorch_custom_datasets.ipynb'
+  - '(WIP) 05. PyTorch going modular': '05_pytorch_going_modular.md'
 
 extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/mrdbourke
     - icon: fontawesome/brands/github
-      link: https://github.com/mrdbourke
+      link: https://github.com/mrdbourke/pytorch-deep-learning
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCr8O8l5cCX85Oem1d18EezQ
