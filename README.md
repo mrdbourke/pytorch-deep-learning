@@ -19,7 +19,7 @@ Launch early 2022.
 | ----- | ----- | ----- | ----- |
 | [00 - PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/) | Many fundamental PyTorch operations used for deep learning and neural networks. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/00_pytorch_fundamentals/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/00_pytorch_and_deep_learning_fundamentals.pdf) |
 | [01 - PyTorch Workflow](https://www.learnpytorch.io/01_pytorch_workflow/) | Provides an outline for approaching deep learning problems and building neural networks with PyTorch. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/01_pytorch_workflow/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/01_pytorch_workflow.pdf) |
-| [02 - PyTorch Neural Network Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/02_pytorch_classification/#exercises) | Go to slides |
+| [02 - PyTorch Neural Network Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/02_pytorch_classification/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/02_pytorch_classification.pdf) |
 | Coming soon: 03 - PyTorch Computer Vision | Let's see how PyTorch can be used for computer vision problems using the same workflow from 01 & 02. | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 04 - PyTorch Custom Datasets | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05). | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 05 - Going modular | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | Go to exercises & extra-curriculum | Go to slides |
@@ -80,30 +80,31 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
-* 12 Mar 2021 - recorded 12 videos for 02, finished section 02, now onto making materials for 03, 04, 05
-* 11 Mar 2021 - recorded 9 videos for 02
-* 10 Mar 2021 - recorded 10 videos for 02
-* 9 Mar 2021 - cleaning up slides/code for 02, getting ready for recording
-* 8 Mar 2021 - recorded 9 videos for section 01, finished section 01, now onto 02
-* 7 Mar 2021 - recorded 4 videos for section 01
-* 6 Mar 2021 - recorded 4 videos for section 01
-* 4 Mar 2021 - recorded 10 videos for section 01
-* 20 Feb 2021 - recorded 8 videos for section 00, finished section, now onto 01
-* 18 Feb 2021 - recorded 13 videos for section 00
-* 17 Feb 2021 - recorded 11 videos for section 00 
-* 16 Feb 2021 - added setup guide 
-* 12 Feb 2021 - tidy up README with table of course materials, finish images and slides for 01
-* 10 Feb 2021 - finished slides and images for 00, notebook is ready for publishing: https://www.learnpytorch.io/00_pytorch_fundamentals/
-* 01-07 Feb 2021 - add annotations for 02, finished, still need images, going to work on exercises/solutions today 
-* 31 Jan 2021 - start adding annotations for 02
-* 28 Jan 2021 - add exercies and solutions for 01
-* 26 Jan 2021 - lots more annotations to 01, should be finished tomorrow, will do exercises + solutions then too
-* 24 Jan 2021 - add a bunch of annotations to 01
-* 21 Jan 2021 - start adding annotations for 01 
-* 20 Jan 2021 - finish annotations for 00 (still need to add images), add exercises and solutions for 00
-* 19 Jan 2021 - add more annotations for 00
-* 18 Jan 2021 - add more annotations for 00
-* 17 Jan 2021 - back from holidays, adding more annotations to 00 
+* 14 Mar 2022 - start adding annotations for notebook 03, see the work in progress here: https://www.learnpytorch.io/03_pytorch_computer_vision/
+* 12 Mar 2022 - recorded 12 videos for 02, finished section 02, now onto making materials for 03, 04, 05
+* 11 Mar 2022 - recorded 9 videos for 02
+* 10 Mar 2022 - recorded 10 videos for 02
+* 9 Mar 2022 - cleaning up slides/code for 02, getting ready for recording
+* 8 Mar 2022 - recorded 9 videos for section 01, finished section 01, now onto 02
+* 7 Mar 2022 - recorded 4 videos for section 01
+* 6 Mar 2022 - recorded 4 videos for section 01
+* 4 Mar 2022 - recorded 10 videos for section 01
+* 20 Feb 2022 - recorded 8 videos for section 00, finished section, now onto 01
+* 18 Feb 2022 - recorded 13 videos for section 00
+* 17 Feb 2022 - recorded 11 videos for section 00 
+* 16 Feb 2022 - added setup guide 
+* 12 Feb 2022 - tidy up README with table of course materials, finish images and slides for 01
+* 10 Feb 2022 - finished slides and images for 00, notebook is ready for publishing: https://www.learnpytorch.io/00_pytorch_fundamentals/
+* 01-07 Feb 2022 - add annotations for 02, finished, still need images, going to work on exercises/solutions today 
+* 31 Jan 2022 - start adding annotations for 02
+* 28 Jan 2022 - add exercies and solutions for 01
+* 26 Jan 2022 - lots more annotations to 01, should be finished tomorrow, will do exercises + solutions then too
+* 24 Jan 2022 - add a bunch of annotations to 01
+* 21 Jan 2022 - start adding annotations for 01 
+* 20 Jan 2022 - finish annotations for 00 (still need to add images), add exercises and solutions for 00
+* 19 Jan 2022 - add more annotations for 00
+* 18 Jan 2022 - add more annotations for 00
+* 17 Jan 2022 - back from holidays, adding more annotations to 00 
 * 10 Dec 2021 - start adding annoations for 00
 * 9 Dec 2021 - Created a website for the course ([learnpytorch.io](https://learnpytorch.io)) you'll see updates posted there as development continues 
 * 8 Dec 2021 - Clean up notebook 07, starting to go back through code and add annotations
