@@ -10,6 +10,8 @@ theme:
   favicon: assets/ztm-logo-and-pytorch-logo.png
   features:
     - navigation.instant
+    - navigation.top
+    - toc.integrate
   palette:
     primary: black
 
@@ -27,12 +29,12 @@ edit_uri: ""
 
 nav:
   - Home: 'index.md'
-  - '00. Getting started with PyTorch': '00_pytorch_fundamentals.ipynb'
-  - '01. PyTorch workflow': '01_pytorch_workflow.ipynb'
-  - '02. PyTorch classification': '02_pytorch_classification.ipynb'
-  - '(WIP) 03. PyTorch computer vision': '03_pytorch_computer_vision.ipynb'
-  - '(WIP) 04. PyTorch custom datasets': '04_pytorch_custom_datasets.ipynb'
-  - '(WIP) 05. PyTorch going modular': '05_pytorch_going_modular.md'
+  - 00. Getting started with PyTorch: '00_pytorch_fundamentals.ipynb'
+  - 01. PyTorch workflow: '01_pytorch_workflow.ipynb'
+  - 02. PyTorch classification: '02_pytorch_classification.ipynb'
+  - (WIP) 03. PyTorch computer vision: '03_pytorch_computer_vision.ipynb'
+  - (WIP) 04. PyTorch custom datasets: '04_pytorch_custom_datasets.ipynb'
+  - (WIP) 05. PyTorch going modular: '05_pytorch_going_modular.md'
 
 extra:
   social:
