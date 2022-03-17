@@ -80,6 +80,9 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 17 Mar 2022 - add more annotations for 03 
+* 16 Mar 2022 - add more annotations for 03
+* 15 Mar 2022 - add more annotations for 03
 * 14 Mar 2022 - start adding annotations for notebook 03, see the work in progress here: https://www.learnpytorch.io/03_pytorch_computer_vision/
 * 12 Mar 2022 - recorded 12 videos for 02, finished section 02, now onto making materials for 03, 04, 05
 * 11 Mar 2022 - recorded 9 videos for 02
