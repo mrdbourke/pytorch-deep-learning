@@ -22,7 +22,7 @@ markdown_extensions:
 
 plugins:
  - mkdocs-jupyter:
-   ignore: ["03_pytorch_computer_vision.ipynb"]
+      ignore: ["03_pytorch_computer_vision.ipynb"]
  - search
 
 edit_uri: ""
