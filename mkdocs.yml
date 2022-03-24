@@ -21,8 +21,7 @@ markdown_extensions:
       custom_checkbox: true
 
 plugins:
- - mkdocs-jupyter:
-      ignore: ["03_pytorch_computer_vision.ipynb"]
+ - mkdocs-jupyter
  - search
 
 edit_uri: ""
