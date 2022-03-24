@@ -59,8 +59,8 @@ Each notebook will teach a maximum of 3 big ideas.
 * **Total video count:** 90
 * **Next:** annotate notebooks 03, 04, 05 with text then make slides and images
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done annotations (text) for:** 00, 01, 02 
-* **Done images for:** 00, 01, 02
+* **Done annotations (text) for:** 00, 01, 02, 03
+* **Done images for:** 00, 01, 02, 03
 * **Done keynotes for:** 00, 01, 02
 * **Done vidoes for:** 00, 01, 02
 
@@ -80,6 +80,11 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 24 Mar 2022 - fix error for 03 not working in docs (finally)
+* 23 Mar 2022 - add more images for 03
+* 22 Mar 2022 - add images for 03
+* 20 Mar 2022 - add more annotations for 03
+* 18 Mar 2022 - add more annotations for 03
 * 17 Mar 2022 - add more annotations for 03 
 * 16 Mar 2022 - add more annotations for 03
 * 15 Mar 2022 - add more annotations for 03
