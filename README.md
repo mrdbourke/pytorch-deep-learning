@@ -61,7 +61,8 @@ Each notebook will teach a maximum of 3 big ideas.
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03
 * **Done images for:** 00, 01, 02, 03
-* **Done keynotes for:** 00, 01, 02
+* **Done keynotes for:** 00, 01, 02, 03
+* **Done exercises and solutions for:** 00, 01, 02
 * **Done vidoes for:** 00, 01, 02
 
 ## TODO
@@ -80,6 +81,9 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 27 Mar 2022 - starting to add annotations for 04
+* 26 Mar 2022 - making dataset for 04
+* 25 Mar 2022 - make slides for 03
 * 24 Mar 2022 - fix error for 03 not working in docs (finally)
 * 23 Mar 2022 - add more images for 03
 * 22 Mar 2022 - add images for 03
