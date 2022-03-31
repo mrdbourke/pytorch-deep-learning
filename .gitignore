@@ -137,5 +137,5 @@ data/10_whole_foods*
 data/FashionMNIST
 data/10_whole_foods*
 data/food*
-data/pizza_steak_sushi/
+data/pizza_steak_sushi/*
 10_whole_foods.zip
