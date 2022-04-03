@@ -1,5 +1,8 @@
 # TODO: Going modular
 
+* TK - make sure the scripts have the most up to data versions of the functions in notebook 04 
+* TK - showcase how quickly notebook 04 can be reproduced when everything in a modular fashion (call the scripts on the command line).. e.g. `train_model.py...` -> saved model in target folder
+
 In this section we turn notebook 04 into a series of Python scripts saved to `going_modular`.
 
 This document will describe those steps.
