@@ -81,6 +81,8 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 3 Apr 2022 - add more annotations for 04
+* 2 Apr 2022 - add more annotations for 04
 * 1 Apr 2022 - add more annotations for 04
 * 31 Mar 2022 - add more annotations for 04
 * 29 Mar 2022 - add more annotations for 04
