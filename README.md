@@ -55,7 +55,7 @@ Each notebook will teach a maximum of 3 big ideas.
 
 ## Status
 
-* **Working on:** exercises and solutions for notebook 03
+* **Working on:** exercises and solutions for notebook 03, 04 
 * **Total video count:** 90
 * **Next:** annotate notebooks 03, 04, 05 with text then make slides and images
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
@@ -81,6 +81,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 13 Apr 2022 - add more images/annotations for 04
 * 3 Apr 2022 - add more annotations for 04
 * 2 Apr 2022 - add more annotations for 04
 * 1 Apr 2022 - add more annotations for 04
