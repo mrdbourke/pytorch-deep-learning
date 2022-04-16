@@ -20,12 +20,13 @@ Launch early 2022.
 | [00 - PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/) | Many fundamental PyTorch operations used for deep learning and neural networks. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/00_pytorch_fundamentals/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/00_pytorch_and_deep_learning_fundamentals.pdf) |
 | [01 - PyTorch Workflow](https://www.learnpytorch.io/01_pytorch_workflow/) | Provides an outline for approaching deep learning problems and building neural networks with PyTorch. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/01_pytorch_workflow/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/01_pytorch_workflow.pdf) |
 | [02 - PyTorch Neural Network Classification](https://www.learnpytorch.io/02_pytorch_classification/) | Uses the PyTorch workflow from 01 to go through a neural network classification problem. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/02_pytorch_classification/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/02_pytorch_classification.pdf) |
-| [03 - PyTorch Computer Vision](https://www.learnpytorch.io/03_pytorch_computer_vision/) | Let's see how PyTorch can be used for computer vision problems using the same workflow from 01 & 02. | Go to exercises & extra-curriculum | Go to slides |
-| Coming soon: 04 - PyTorch Custom Datasets | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05). | Go to exercises & extra-curriculum | Go to slides |
+| [03 - PyTorch Computer Vision](https://www.learnpytorch.io/03_pytorch_computer_vision/) | Let's see how PyTorch can be used for computer vision problems using the same workflow from 01 & 02. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/03_pytorch_computer_vision/#exercises) | Go to slides |
+| [04 - PyTorch Custom Datasets](https://www.learnpytorch.io/04_pytorch_custom_datasets/) | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05). | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 05 - Going modular | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 06 - PyTorch Transfer Learning | Let's take a well performing pre-trained model and adjust it to one of our own problems. | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 07 - Milestone Project 1: PyTorch Experiment Tracking | We've built a bunch of models... wouldn't it be good to track how they're all going? | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 08 - Milestone Project 2: PyTorch Paper Replicating | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | Go to slides |
+| Coming soon: 09 - Milestone Project 3: Model deployment | So you've built a working PyTorch model... how do you get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
 
 ### Old outline version (will update this if necessary)
 
@@ -50,19 +51,20 @@ code/
 6. PyTorch transfer learning - Let's improve upon the models we've built ourselves using transfer learning.
 7. PyTorch experiment tracking - We've built a bunch of models... wouldn't it be good to track how they're all going?
 8. PyTorch paper replicating - Let's see why PyTorch is the most popular deep learning framework for machine learning research by replicating a machine learning research paper with it.
+9. PyTorch model deployment - How do you get your PyTorch models in the hands of others?
 
 Each notebook will teach a maximum of 3 big ideas. 
 
 ## Status
 
-* **Working on:** exercises and solutions for notebook 03, 04 
+* **Working on:** exercises and solutions for notebook 04 
 * **Total video count:** 90
-* **Next:** annotate notebooks 03, 04, 05 with text then make slides and images
+* **Next:** finish exericses/solutions for 04, then record videos for 03, 04
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04
 * **Done images for:** 00, 01, 02, 03, 04
 * **Done keynotes for:** 00, 01, 02, 03
-* **Done exercises and solutions for:** 00, 01, 02
+* **Done exercises and solutions for:** 00, 01, 02, 03
 * **Done vidoes for:** 00, 01, 02
 
 ## TODO
@@ -81,6 +83,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 16 Apr 2022 - finish exercises/solutions for 03, added live-coding walkthrough of 03 exercises/soltuons YouTube: https://youtu.be/_PibmqpEyhA
 * 14 Apr 2022 - add final images/annotations for 04, begin on exercises/solutions for 03 & 04
 * 13 Apr 2022 - add more images/annotations for 04
 * 3 Apr 2022 - add more annotations for 04
