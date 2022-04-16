@@ -1,3 +1,10 @@
 All solution notebooks for the [exercise templates](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/extras/exercises).
 
 **Note:** There may be more than one way of creating a solution for each exercise, the solutions are only one example. 
+
+You can video walkthroughs of me live-coding possible solutions to the notebooks on YouTube.
+
+| **Notebook** | **Live-coding Exercise & Solution Video Walkthrough** | 
+| ----- | ----- |
+| 02 PyTorch Neural Network Classification | https://youtu.be/ByyHwoEgF0Q |
+| 03 PyTorch Computer Vision | https://youtu.be/_PibmqpEyhA |
