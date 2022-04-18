@@ -57,14 +57,14 @@ Each notebook will teach a maximum of 3 big ideas.
 
 ## Status
 
-* **Working on:** exercises and solutions for notebook 04 
+* **Working on:** recording videos for notebook 03
 * **Total video count:** 90
-* **Next:** finish exericses/solutions for 04, then record videos for 03, 04
+* **Next:** record course videos for 03
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04
 * **Done images for:** 00, 01, 02, 03, 04
 * **Done keynotes for:** 00, 01, 02, 03
-* **Done exercises and solutions for:** 00, 01, 02, 03
+* **Done exercises and solutions for:** 00, 01, 02, 03, 04
 * **Done vidoes for:** 00, 01, 02
 
 ## TODO
@@ -83,7 +83,8 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
-* 16 Apr 2022 - finish exercises/solutions for 03, added live-coding walkthrough of 03 exercises/soltuons YouTube: https://youtu.be/_PibmqpEyhA
+* 18 Apr 2022 - finish exercises/solutions for 04, added live-coding walkthrough of 04 exercises/solutions on YouTube: https://youtu.be/vsFMF9wqWx0
+* 16 Apr 2022 - finish exercises/solutions for 03, added live-coding walkthrough of 03 exercises/solutions on YouTube: https://youtu.be/_PibmqpEyhA
 * 14 Apr 2022 - add final images/annotations for 04, begin on exercises/solutions for 03 & 04
 * 13 Apr 2022 - add more images/annotations for 04
 * 3 Apr 2022 - add more annotations for 04
