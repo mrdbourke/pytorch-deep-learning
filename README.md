@@ -7,7 +7,7 @@ I'd like to learn PyTorch. So I'm going to use this repo to:
 
 Stay tuned to here for updates, course materials are being actively worked on.
 
-Launch early 2022.
+Launch early-mid 2022.
 
 ## Course materials/outline
 
@@ -57,15 +57,15 @@ Each notebook will teach a maximum of 3 big ideas.
 
 ## Status
 
-* **Working on:** recording videos for notebook 03
-* **Total video count:** 113
-* **Next:** record course videos for notebook 04 
+* **Working on:** record course videos for notebook 04
+* **Total video count:** 125
+* **Next:** make materials for section 05
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04
 * **Done images for:** 00, 01, 02, 03, 04
 * **Done keynotes for:** 00, 01, 02, 03
 * **Done exercises and solutions for:** 00, 01, 02, 03, 04
-* **Done vidoes for:** 00, 01, 02
+* **Done vidoes for:** 00, 01, 02, 03
 
 ## TODO
 
@@ -83,6 +83,8 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 23 Apr 2022 - recorded 6 videos for 03, finished videos for 03, now to 04 
+* 22 Apr 2022 - recorded 5 videos for 03
 * 21 Apr 2022 - recorded 9 videos for 03
 * 20 Apr 2022 - recorded 3 videos for 03
 * 19 Apr 2022 - recorded 11 videos for 03
