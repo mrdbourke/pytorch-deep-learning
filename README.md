@@ -58,7 +58,7 @@ Each notebook will teach a maximum of 3 big ideas.
 ## Status
 
 * **Working on:** recording course videos for notebook 04
-* **Total video count:** 136
+* **Total video count:** 146
 * **Next:** make materials for section 05
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04
@@ -83,6 +83,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 26 Apr 2022 - recorded 10 videos for 04
 * 25 Apr 2022 - recorded 11 videos for 04
 * 24 Apr 2022 - prepared slides for 04
 * 23 Apr 2022 - recorded 6 videos for 03, finished videos for 03, now to 04 
