@@ -1,11 +1,8 @@
 import torch
-from torch import nn
-from tqdm import tqdm
-
-device = "cuda" if torch.cuda.is_available() else "cpu"
+from tqdm.auto import tqdm
 
 
-def train_step(model, dataloader, loss_fn, optimizer):
+def train_step(model, dataloader, loss_fn, optimizer, device):
     model.train()
     train_loss, train_acc = 0, 0
     for batch, (X, y) in enumerate(dataloader):
@@ -40,7 +37,7 @@ def train_step(model, dataloader, loss_fn, optimizer):
     return train_loss / len(dataloader), train_acc / len(dataloader)
 
 
-def test_step(model, dataloader, loss_fn):
+def test_step(model, dataloader, loss_fn, device):
     model.eval()  # put model in eval mode
     test_loss_total, test_acc = 0, 0
     # Turn on inference context manager
@@ -67,14 +64,7 @@ def test_step(model, dataloader, loss_fn):
     return test_loss_total, test_acc
 
 
-def train(
-    model,
-    train_dataloader,
-    test_dataloader,
-    optimizer,
-    loss_fn=nn.CrossEntropyLoss(),
-    epochs=5,
-):
+def train(model, train_dataloader, test_dataloader, optimizer, loss_fn, epochs, device):
 
     results = {"train_loss": [], "train_acc": [], "test_loss": [], "test_acc": []}
 
@@ -84,9 +74,10 @@ def train(
             dataloader=train_dataloader,
             loss_fn=loss_fn,
             optimizer=optimizer,
+            device=device,
         )
         test_loss, test_acc = test_step(
-            model=model, dataloader=test_dataloader, loss_fn=loss_fn
+            model=model, dataloader=test_dataloader, loss_fn=loss_fn, device=device
         )
 
         # Print out what's happening
