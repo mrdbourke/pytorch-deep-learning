@@ -82,6 +82,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 05 May 2022 - update section 05 with headings/outline
 * 28 Apr 2022 - recorded 13 videos for 04, finished videos for 04, now to make materials for 05
 * 27 Apr 2022 - recorded 3 videos for 04
 * 26 Apr 2022 - recorded 10 videos for 04
