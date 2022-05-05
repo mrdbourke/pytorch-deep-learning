@@ -10,9 +10,9 @@ For full code and resources see the [course GitHub](https://github.com/mrdbourke
 
 ## Status
 
-Videos are done for 00, 01, 02.
+Videos are done for 00, 01, 02, 03, 04.
 
-Currently working on annotating chapters 03, 04, 05 with text/images.
+Currently working on chapter 05: going modular.
 
 Chapters 06, 07, 08 will come after.
 
