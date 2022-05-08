@@ -92,9 +92,12 @@ Pros:
 * Explain each of the different `.py` files
 * How to go from functions in a notebook to `.py` (manaul vs automatic)
 
-## TK - Extensions & Exercises
+## TK - Exercises
 * TK Add an argument for using a different:
     * train/test dir
     * optimizer
     * etc...
 * Use `argparse` to be able to send `train.py` custom settings for training procedures
+
+## TK - Extra-curriculum
+* Read up on structuring a Python project on RealPython - https://realpython.com/python-application-layouts/ 
