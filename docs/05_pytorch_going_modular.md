@@ -11,6 +11,7 @@ Afterwards we can reuse the same code in the scripts in the next notebook (06. T
 Going modular involves turning notebook code (from a Jupyter Notebook or Google Colab notebook) into a series of different Python scripts that offer similar functionality.
 
 For example, we'd turn our notebook code from a series of cells into the following files:
+
 * `data_setup.py` - a file to prepare and download data if needed.
 * `engine.py` - a file containing various training functions.
 * `model_builder.py` or `model.py` - a file to create a PyTorch model.
@@ -184,7 +185,7 @@ Getting the data in each of the 05 notebooks happens the same as in [notebook 04
 
 A call is made to GitHub via Python's `requests` module to download a `.zip` file and unzip it.
 
-```python
+```python 
 import os
 import requests
 import zipfile
@@ -246,7 +247,7 @@ We convert the useful `Dataset` and `DataLoader` creation code into a function c
 
 And we write it to file using the line `%%writefile going_modular/data_setup.py`. 
 
-```python
+```py title="data_setup.py"
 %%writefile going_modular/data_setup.py
 """
 Contains functionality for creating PyTorch DataLoaders for 

@@ -12,7 +12,7 @@ For full code and resources see the [course GitHub](https://github.com/mrdbourke
 
 Videos are done for 00, 01, 02, 03, 04.
 
-Currently working on [chapter 05: going modular].
+Currently working on [chapter 05: going modular](https://www.learnpytorch.io/05_pytorch_going_modular/).
 
 Chapters 06, 07, 08 will come after.
 
