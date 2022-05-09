@@ -109,6 +109,8 @@ If you run each notebook side-by-side you'll see how they differ and that's wher
 
 The text in this document focuses on 05. Going Modular: Part 2 (script mode).
 
+* TK image - run 05 part 1 and 05 part 2 side-by-side and show a point of difference
+
 ### What we're working towards
 
 By the end of this section we want to have two things:
