@@ -11,11 +11,12 @@ Afterwards we can reuse the same code in the scripts in the next notebook (06. T
 Going modular involves turning notebook code (from a Jupyter Notebook or Google Colab notebook) into a series of different Python scripts that offer similar functionality.
 
 For example, we'd turn our notebook code from a series of cells into the following files:
-- `data_setup.py` - a file to prepare and download data if needed.
-- `engine.py` - a file containing various training functions.
-- `model_builder.py` or `model.py` - a file to create a PyTorch model.
-- `train.py` - a file to leverage all other files and train a target PyTorch model.
-- `utils.py` - a file dedicated to helpful utility functions.
+
+* `data_setup.py` - a file to prepare and download data if needed.
+* `engine.py` - a file containing various training functions.
+* `model_builder.py` or `model.py` - a file to create a PyTorch model.
+* `train.py` - a file to leverage all other files and train a target PyTorch model.
+* `utils.py` - a file dedicated to helpful utility functions.
 
 > **Note:** The naming and layout of the above files will depend on your use case and code requirements. Python scripts are as general as individual notebook cells, meaning, you could create one for almost any kind of functionality.
 
