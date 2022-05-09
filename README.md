@@ -82,6 +82,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 09 May 2022 - add a bunch of materials for 05, cleanup docs
 * 08 May 2022 - add a bunch of materials for 05
 * 06 May 2022 - continue making materials for 05
 * 05 May 2022 - update section 05 with headings/outline
