@@ -1,4 +1,4 @@
-# TODO: Going modular
+# 05. PyTorch Going Modular
 
 In this section we're going to turn notebook 04 into a series of Python scripts saved to a directory called [`going_modular`](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular).
 
@@ -45,7 +45,7 @@ But this list sums up a few of the main topics.
 | **Notebooks** | Easy to experiment/get started | Versioning can be hard |
 | | Easy to share (e.g. a link to a Google Colab notebook) | Hard to use only specific parts |
 | | Very visual | Text and graphics can get in the way of code | 
-| | | |
+| | **Pros** | **Cons** |
 | **Python scripts** | Can package code together (saves rewriting similar code across different notebooks) | Experimenting isn't as visual/have to run the whole script (rather than one cell) |
 | | Can use git for versioning | |
 | | Many open source projects use scripts | |  
@@ -53,11 +53,13 @@ But this list sums up a few of the main topics.
 
 ### My workflow
 
-I start ML projects in Jupyter/Google Colab notebooks for quick experimentation and visualization.
+I usually start machine learning projects in Jupyter/Google Colab notebooks for quick experimentation and visualization.
 
-Then when I've got something working, I move to Python scripts.
+Then when I've got something working, I move the most useful pieces of code to Python scripts.
 
-* TK image - workflow: notebooks/Google Colab -> Python Scripts
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-my-workflow-for-experimenting.png" alt="one possible workflow for writing machine learning code, start with jupyter or google colab notebooks and then move to Python scripts when you've got something working." width=600/>
+
+*There are many possible workflows for writing machine learning code. Some prefer to start with scripts, others (like me) prefer to start with notebooks and go to scripts later on.*
 
 ### PyTorch in the wild
 
@@ -69,8 +71,9 @@ For example, you might be instructred to run code like the following in a termin
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
 ```
 
-![command line call for training a PyTorch model with different hyperparameters](https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-python-train-command-line-annotated.png)
-* TK - caption above/make smaller with <img> tag
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-python-train-command-line-annotated.png" alt="command line call for training a PyTorch model with different hyperparameters" width=600/> 
+
+*Running a PyTorch `train.py` script on the command line with various hyperparameter settings.*
 
 In this case, `train.py` is the target Python script, it'll likely contain functions to train a PyTorch model.
 
@@ -88,7 +91,9 @@ You could setup any number of these argument flags in your `train.py` script to 
 
 The PyTorch blog post for training state-of-the-art computer vision models uses this style.
 
-TK image for PyTorch blog post training code - https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/#break-down-of-key-accuracy-improvements
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-training-sota-recipe.png" alt="PyTorch training script recipe for training state of the art computer vision models" width=600/>
+
+*PyTorch command line training script recipe for training state-of-the-art computer vision models with 8 GPUs. Source: [PyTorch blog](https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/#the-training-recipe).*
 
 ## TK - What we'ere going to cover
 
@@ -110,18 +115,15 @@ If you run each notebook side-by-side you'll see how they differ and that's wher
 
 The text in this document focuses on 05. Going Modular: Part 2 (script mode).
 
-* TK image - run 05 part 1 and 05 part 2 side-by-side and show a point of difference
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-notebook-cell-mode-vs-script-mode.png" alt="running cell mode notebook vs a script mode notebook" width=600/>
+
+*Running the two notebooks for section 05 side-by-side. You'll notice that the **script mode notebook has extra code cells** to turn code from the cell mode notebook into Python scripts.*
 
 ### What we're working towards
 
 By the end of this section we want to have two things:
 
-1. The ability to train the model we built in notebook 04 (Food Vision Mini) with one line of code:
-
-```
-python train.py
-```
-
+1. The ability to train the model we built in notebook 04 (Food Vision Mini) with one line of code on the command line: `python train.py`.
 2. A directory structure of reusable Python scripts, such as: 
 
 ```
@@ -319,6 +321,7 @@ def create_dataloaders(
 If we'd like to make `DataLoader`'s we can now use the function within `data_setup.py` like so:
 
 ```python
+# Import data_setup.py
 from going_modular import data_setup
 
 # Create train/test dataloader and get class names as a list
@@ -333,7 +336,7 @@ So it makes sense to put the model into its file so we can reuse it again and ag
 
 Let's put our `TinyVGG()` model class into a script with the line `%%writefile going_modular/model_builder.py`:
 
-```python
+```python title="model_builder.py"
 %%writefile going_modular/model_builder.py
 """
 Contains PyTorch model code to instantiate a TinyVGG model.
@@ -397,6 +400,7 @@ Now instead of coding the TinyVGG model from scratch every time, we can import i
 
 ```python
 import torch
+# Import model_builder.py
 from going_modular import model_builder
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -410,13 +414,14 @@ model = model_builder.TinyVGG(input_shape=3,
 ## TK - 4. Creating `train_step()` and `test_step()` functions and `train()` to combine them  
 
 We wrote several training functions in [notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#75-create-train-test-loop-functions):
+
 1. `train_step()` - takes in a model, a `DataLoader`, a loss function and an optimizer and trains the model on the `DataLoader`.
 2. `test_step()` - takes in a model, a `DataLoader` and a loss function and evaluates the model on the `DataLoader`.
 3. `train()` - performs 1. and 2. together for a given number of epochs and returns a results dictionary.
 
 Since these will be the "engine" of our model training, we can put them all into a Python script called `engine.py` with the line `%%writefile going_modular/engine.py`:
 
-```python
+```python title="engine.py"
 %%writefile going_modular/engine.py
 """
 Contains functions for training and testing a PyTorch model.
@@ -615,6 +620,7 @@ def train(model: torch.nn.Module,
 Now we've got the `engine.py` script, we can import functions from it via:
 
 ```python
+# Import engine.py
 from going_modular import engine
 
 # Use train() by calling it from engine.py
@@ -631,7 +637,7 @@ It's common practice to store helper functions in a file called `utils.py` (shor
 
 Let's save our `save_model()` function to a file called `utils.py` with the line `%%writefile going_modular/utils.py`: 
 
-```python
+```python title="utils.py"
 %%writefile going_modular/utils.py
 """
 Contains various utility functions for PyTorch model training and saving.
@@ -673,6 +679,7 @@ def save_model(model: torch.nn.Module,
 Now if we wanted to use our `save_model()` function, instead of writing it all over again, we can import it and use it via:
 
 ```python
+# Import utils.py
 from going_modular import utils
 
 # Save a model to file
@@ -696,6 +703,7 @@ python train.py
 ```
 
 To create `train.py` we'll go through the following steps:
+
 1. Import the various dependencies, namely `torch`, `os`, `torchvision.transforms` and all of the scripts from the `going_modular` directory, `data_setup`, `engine`, `model_builder`, `utils`.
   * **Note:** Since `train.py` will be *inside* the `going_modular` directory, we can import the other modules via `import ...` rather than `from going_modular import ...`.
 2. Setup various hyperparameters such as batch size, number of epochs, learning rate and number of hidden units (these could be set in the future via [Python's `argparse`](https://docs.python.org/3/library/argparse.html)).
@@ -710,7 +718,7 @@ To create `train.py` we'll go through the following steps:
 
 And we can create the file from a notebook cell using the line `%%writefile going_modular/train.py`:
 
-```python
+```python title="train.py"
 %%writefile going_modular/train.py
 """
 Trains a PyTorch image classification model using device-agnostic code.
@@ -793,13 +801,28 @@ python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --
 ```
 
 ## TK - Exercises
-* TK Add an argument for using a different:
-    * train/test dir
-    * optimizer
-    * etc...
-* Use `argparse` to be able to send `train.py` custom settings for training procedures
-* Create a script to predict on a target image given a file path with a saved model
+
+**Resources:**
+
+* TK - Exercise template notebook for 05
+* TK - Example solutions notebook for 05 (try the exercises before looking at this)
+
+1. Use [Python's `argparse` module](https://docs.python.org/3/library/argparse.html) to be able to send the `train.py` custom hyperparameter values for training procedures.
+    * Add an argument for using a different:
+        * Training/testing directory
+        * Learning rate
+        * Batch size
+        * Number of epochs to train for
+        * Number of hidden units in the TinyVGG model
+    * Keep the default values for each of the above arguments as what they already are (as in notebook 05).
+    * For example, you should be able to run something similar to the following line to train a TinyVGG model with a learning rate of 0.003 and a batch size of 64 for 20 epochs: `python train.py --learning_rate 0.003 batch_size 64 num_epochs 20`.
+2. Create a script to predict (such as `predict.py`) on a target image given a file path with a saved model.
+    * For example, you should be able to run the command `python predict.py some_image.jpeg` and have a trained PyTorch model predict on the image and return its prediction.
+    * To see example prediction code, check out the [predicting on a custom image section in notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function). 
+    * You may also have to write code to load in a trained model.
 
 ## TK - Extra-curriculum
-* Read up on structuring a Python project on RealPython - https://realpython.com/python-application-layouts/ 
-* Recommended code structure for training your PyTorch model - https://github.com/IgorSusmelj/pytorch-styleguide#recommended-code-structure-for-training-your-model 
+
+* To learn more about structuring a Python project, check out RealPython's guide on [Python Application Layouts](https://realpython.com/python-application-layouts/). 
+* For ideas on styling your PyTorch code, check out the [PyTorch style guide by Igor Susmelj](https://github.com/IgorSusmelj/pytorch-styleguide#recommended-code-structure-for-training-your-model) (much of styling in this chapter is based off this guide + various similar PyTorch repositories).
+* For an example `train.py` script and various other PyTorch scripts written by the PyTorch team to train state-of-the-art image classification models, check out their [`classification` repository on GitHub](https://github.com/pytorch/vision/tree/main/references/classification). 
