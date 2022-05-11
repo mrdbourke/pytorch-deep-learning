@@ -60,9 +60,9 @@ Each notebook will teach a maximum of 3 big ideas.
 * **Working on:** making materials for section 05
 * **Total video count:** 162
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done annotations (text) for:** 00, 01, 02, 03, 04
-* **Done images for:** 00, 01, 02, 03, 04
-* **Done keynotes for:** 00, 01, 02, 03, 04
+* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05
+* **Done images for:** 00, 01, 02, 03, 04, 05 
+* **Done keynotes for:** 00, 01, 02, 03, 04, 05
 * **Done exercises and solutions for:** 00, 01, 02, 03, 04
 * **Done vidoes for:** 00, 01, 02, 03, 04
 
@@ -82,6 +82,7 @@ High-level overview of things to do:
 
 Almost daily updates of what's happening.
 
+* 11 May 2022 - clean up part 1 and part 2 notebooks for 05, make slides for 05, start on exercises and solutions for 05
 * 10 May 2022 - huuuuge updates to the 05 section, see the website, it looks pretty: https://www.learnpytorch.io/05_pytorch_going_modular/ 
 * 09 May 2022 - add a bunch of materials for 05, cleanup docs
 * 08 May 2022 - add a bunch of materials for 05
