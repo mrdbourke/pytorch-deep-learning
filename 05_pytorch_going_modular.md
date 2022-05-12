@@ -799,12 +799,15 @@ And if we wanted to, we could adjust our `train.py` file to use argument flag in
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
 ```
 
-## TK - Exercises
+## Exercises
 
 **Resources:**
 
-* TK - Exercise template notebook for 05
-* TK - Example solutions notebook for 05 (try the exercises before looking at this)
+* [Exercise template notebook for 05](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/exercises/05_pytorch_going_modular_exercise_template.ipynb)
+* [Example solutions notebook for 05](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/solutions/05_pytorch_going_modular_exercise_solutions.ipynb)
+    * Live coding run through of [solutions notebook for 05 on YouTube](https://youtu.be/ijgFhMK3pp4)
+
+**Exercises:**
 
 1. Turn the code to get the data (from section 1. Get Data above) into a Python script, such as `get_data.py`.
     * When you run the script using `python get_data.py` it should check if the data already exists and skip downloading if it does.
@@ -823,7 +826,7 @@ python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --
     * To see example prediction code, check out the [predicting on a custom image section in notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function). 
     * You may also have to write code to load in a trained model.
 
-## TK - Extra-curriculum
+## Extra-curriculum
 
 * To learn more about structuring a Python project, check out Real Python's guide on [Python Application Layouts](https://realpython.com/python-application-layouts/). 
 * For ideas on styling your PyTorch code, check out the [PyTorch style guide by Igor Susmelj](https://github.com/IgorSusmelj/pytorch-styleguide#recommended-code-structure-for-training-your-model) (much of styling in this chapter is based off this guide + various similar PyTorch repositories).
