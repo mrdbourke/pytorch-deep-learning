@@ -821,6 +821,7 @@ python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --
         * Number of hidden units in the TinyVGG model
     * Keep the default values for each of the above arguments as what they already are (as in notebook 05).
     * For example, you should be able to run something similar to the following line to train a TinyVGG model with a learning rate of 0.003 and a batch size of 64 for 20 epochs: `python train.py --learning_rate 0.003 --batch_size 64 --num_epochs 20`.
+    * **Note:** Since `train.py` leverages the other scripts we created in section 05, such as, `model_builder.py`, `utils.py` and `engine.py`, you'll have to make sure they're available to use too. You can find these in the [`going_modular` folder on the course GitHub](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular/going_modular). 
 3. Create a script to predict (such as `predict.py`) on a target image given a file path with a saved model.
     * For example, you should be able to run the command `python predict.py some_image.jpeg` and have a trained PyTorch model predict on the image and return its prediction.
     * To see example prediction code, check out the [predicting on a custom image section in notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function). 
