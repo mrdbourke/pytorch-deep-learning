@@ -8,7 +8,7 @@ To do so, we're going to turn the most useful code cells in [notebook 04. PyTorc
 
 Going modular involves turning notebook code (from a Jupyter Notebook or Google Colab notebook) into a series of different Python scripts that offer similar functionality.
 
-For example, we could our notebook code from a series of cells into the following Python files:
+For example, we could turn our notebook code from a series of cells into the following Python files:
 
 * `data_setup.py` - a file to prepare and download data if needed.
 * `engine.py` - a file containing various training functions.
@@ -22,7 +22,7 @@ For example, we could our notebook code from a series of cells into the followin
 
 Notebooks are fantastic for iteratively exploring and running experiments quickly.
 
-However, for larger scale projects you may find Python scripting more reproducible and easier to run.
+However, for larger scale projects you may find Python scripts more reproducible and easier to run.
 
 Though this is a debated topic, as companies like [Netflix have shown how they use notebooks for production code](https://netflixtechblog.com/notebook-innovation-591ee3221233).
 
@@ -38,18 +38,18 @@ There's arguments for both sides.
 
 But this list sums up a few of the main topics.
 
-| | **Pros** | **Cons** | 
-| ----- | ----- | ----- |
-| **Notebooks** | Easy to experiment/get started | Versioning can be hard |
-| | Easy to share (e.g. a link to a Google Colab notebook) | Hard to use only specific parts |
-| | Very visual | Text and graphics can get in the way of code | 
+|               | **Pros**                                               | **Cons**                                     |
+| ------------- | ------------------------------------------------------ | -------------------------------------------- |
+| **Notebooks** | Easy to experiment/get started                         | Versioning can be hard                       |
+|               | Easy to share (e.g. a link to a Google Colab notebook) | Hard to use only specific parts              |
+|               | Very visual                                            | Text and graphics can get in the way of code |
 
-| | **Pros** | **Cons** |
-| ----- | ----- | ----- |
+|                    | **Pros**                                                                            | **Cons**                                                                                  |
+| ------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | **Python scripts** | Can package code together (saves rewriting similar code across different notebooks) | Experimenting isn't as visual (usually have to run the whole script rather than one cell) |
-| | Can use git for versioning | |
-| | Many open source projects use scripts | |  
-| | Larger projects can be run on cloud vendors (not as much support for notebooks) | | 
+|                    | Can use git for versioning                                                          |                                                                                           |
+|                    | Many open source projects use scripts                                               |                                                                                           |
+|                    | Larger projects can be run on cloud vendors (not as much support for notebooks)     |                                                                                           |
 
 ### My workflow
 
@@ -65,7 +65,7 @@ Then when I've got something working, I move the most useful pieces of code to P
 
 In your travels, you'll see many code repositories for PyTorch-based ML projects have instructions on how to run the PyTorch code in the form of Python scripts.
 
-For example, you might be instructred to run code like the following in a terminal/command line to train a model:
+For example, you might be instructed to run code like the following in a terminal/command line to train a model:
 
 ```
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
@@ -689,7 +689,7 @@ save_model(model=...
 
 ## 6. Train, evaluate and save the model (`train.py`)
 
-As previously disccused you'll often come across PyTorch repositories that combine all of their functionality together in a `train.py` file.
+As previously discussed, you'll often come across PyTorch repositories that combine all of their functionality together in a `train.py` file.
 
 This file is essentially saying "train the model using whatever data is available".
 
@@ -793,7 +793,7 @@ python train.py
 
 Doing this will leverage all of the other code scripts we've created.
 
-And if we wanted to we could adjust our `train.py` file to use argument flag inputs with Python's `argparse` module, this would allow us to provide different hyperparameter settings like previously discussed:
+And if we wanted to, we could adjust our `train.py` file to use argument flag inputs with Python's `argparse` module, this would allow us to provide different hyperparameter settings like previously discussed:
 
 ```
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
@@ -817,7 +817,7 @@ python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --
         * Number of epochs to train for
         * Number of hidden units in the TinyVGG model
     * Keep the default values for each of the above arguments as what they already are (as in notebook 05).
-    * For example, you should be able to run something similar to the following line to train a TinyVGG model with a learning rate of 0.003 and a batch size of 64 for 20 epochs: `python train.py --learning_rate 0.003 batch_size 64 num_epochs 20`.
+    * For example, you should be able to run something similar to the following line to train a TinyVGG model with a learning rate of 0.003 and a batch size of 64 for 20 epochs: `python train.py --learning_rate 0.003 --batch_size 64 --num_epochs 20`.
 3. Create a script to predict (such as `predict.py`) on a target image given a file path with a saved model.
     * For example, you should be able to run the command `python predict.py some_image.jpeg` and have a trained PyTorch model predict on the image and return its prediction.
     * To see example prediction code, check out the [predicting on a custom image section in notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function). 
@@ -825,6 +825,6 @@ python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --
 
 ## TK - Extra-curriculum
 
-* To learn more about structuring a Python project, check out RealPython's guide on [Python Application Layouts](https://realpython.com/python-application-layouts/). 
+* To learn more about structuring a Python project, check out Real Python's guide on [Python Application Layouts](https://realpython.com/python-application-layouts/). 
 * For ideas on styling your PyTorch code, check out the [PyTorch style guide by Igor Susmelj](https://github.com/IgorSusmelj/pytorch-styleguide#recommended-code-structure-for-training-your-model) (much of styling in this chapter is based off this guide + various similar PyTorch repositories).
 * For an example `train.py` script and various other PyTorch scripts written by the PyTorch team to train state-of-the-art image classification models, check out their [`classification` repository on GitHub](https://github.com/pytorch/vision/tree/main/references/classification). 
