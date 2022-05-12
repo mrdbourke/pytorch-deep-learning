@@ -9,3 +9,4 @@ You can video walkthroughs of me live-coding possible solutions to the notebooks
 | 02 PyTorch Neural Network Classification | https://youtu.be/ByyHwoEgF0Q |
 | 03 PyTorch Computer Vision | https://youtu.be/_PibmqpEyhA |
 | 04 PyTorch Custom Datasets | https://youtu.be/vsFMF9wqWx0 |
+| 05 PyTorch Going Modular | https://youtu.be/ijgFhMK3pp4 |
