@@ -57,31 +57,22 @@ Each notebook will teach a maximum of 3 big ideas.
 
 ## Status
 
-* **Working on:** shooting videos for 05
-* **Total video count:** 162
+See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
+
+* **Working on:** making materials for section 06: transfer learning
+* **Total video count:** 172
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05
 * **Done images for:** 00, 01, 02, 03, 04, 05 
 * **Done keynotes for:** 00, 01, 02, 03, 04, 05
 * **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05
-* **Done vidoes for:** 00, 01, 02, 03, 04
-
-## TODO
-
-See the project page for specifics - https://github.com/users/mrdbourke/projects/1 
-
-High-level overview of things to do:
-* How to use this repo (e.g. env setup, GPU/no GPU) - all notebooks should run fine in Colab and locally if needed.
-* Finish skeleton code for notebooks 00 - 07 ✅
-* Write annotations for 00 - 07
-* Make images for 00 - 07
-* Make slides for 00 - 07
-* Record videos for 00 - 07
+* **Done vidoes for:** 00, 01, 02, 03, 04, 05 
 
 ## Log
 
 Almost daily updates of what's happening.
 
+* 16 May 2022 - recorded 10 videos for section 05, finish videos for section 05 ✅
 * 12 May 2022 - added exercises and solutions for 05
 * 11 May 2022 - clean up part 1 and part 2 notebooks for 05, make slides for 05, start on exercises and solutions for 05
 * 10 May 2022 - huuuuge updates to the 05 section, see the website, it looks pretty: https://www.learnpytorch.io/05_pytorch_going_modular/ 
