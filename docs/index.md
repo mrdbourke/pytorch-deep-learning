@@ -10,11 +10,13 @@ For full code and resources see the [course GitHub](https://github.com/mrdbourke
 
 ## Status
 
-Videos are done for 00, 01, 02, 03, 04.
+Videos are done for 00, 01, 02, 03, 04, 05.
 
-Currently working on [chapter 05: going modular](https://www.learnpytorch.io/05_pytorch_going_modular/).
+Currently working on [chapter 06: transfer learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/).
 
-Chapters 06, 07, 08 will come after.
+Chapters 07, 08, 09 will come after.
+
+See progress on the course [GitHub Project](https://github.com/users/mrdbourke/projects/1/views/4).
 
 **Expected release date:** Early-Mid 2022.
 
