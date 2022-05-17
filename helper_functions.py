@@ -159,7 +159,7 @@ def pred_and_plot_image(
         image_path (str): filepath to target image.
         class_names (List[str], optional): different class names for target image. Defaults to None.
         transform (_type_, optional): transform of target image. Defaults to None.
-        device (torch.device, optional): target device to compute on. Defaults to "cuda" if torch.cuda.is_avilable() else "cpu".
+        device (torch.device, optional): target device to compute on. Defaults to "cuda" if torch.cuda.is_available() else "cpu".
     
     Returns:
         Matplotlib plot of target image and model prediction as title.
