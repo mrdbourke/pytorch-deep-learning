@@ -72,6 +72,7 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 18 May 2022 - add plenty of annotations to 06
 * 17 May 2022 - added a bunch of annotations for section 06
 * 16 May 2022 - recorded 10 videos for section 05, finish videos for section 05 ✅
 * 12 May 2022 - added exercises and solutions for 05
