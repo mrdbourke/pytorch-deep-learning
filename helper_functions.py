@@ -150,7 +150,7 @@ def pred_and_plot_image(
     image_path: str,
     class_names: List[str] = None,
     transform=None,
-    device: torch.device = "cuda" if torch.cuda.is_avilable() else "cpu",
+    device: torch.device = "cuda" if torch.cuda.is_available() else "cpu",
 ):
     """Makes a prediction on a target image with a trained model and plots the image.
 
