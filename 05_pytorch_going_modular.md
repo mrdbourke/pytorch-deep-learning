@@ -95,7 +95,7 @@ The PyTorch blog post for training state-of-the-art computer vision models uses 
 
 *PyTorch command line training script recipe for training state-of-the-art computer vision models with 8 GPUs. Source: [PyTorch blog](https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/#the-training-recipe).*
 
-## What we'ere going to cover
+## What we're going to cover
 
 The main concept of this section is: **turn useful notebook code cells into reusable Python files.**
 
