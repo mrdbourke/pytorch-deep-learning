@@ -62,16 +62,17 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 * **Working on:** making materials for section 06: transfer learning
 * **Total video count:** 172
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05
-* **Done images for:** 00, 01, 02, 03, 04, 05 
+* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06 
+* **Done images for:** 00, 01, 02, 03, 04, 05, 06
 * **Done keynotes for:** 00, 01, 02, 03, 04, 05
 * **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05
-* **Done vidoes for:** 00, 01, 02, 03, 04, 05 
 
 ## Log
 
 Almost daily updates of what's happening.
 
+* 23 May 2022 - finished annotations and images for 06, time to do exercises and solutions 
+* 22 May 2202 - add plenty of images to 06
 * 18 May 2022 - add plenty of annotations to 06
 * 17 May 2022 - added a bunch of annotations for section 06
 * 16 May 2022 - recorded 10 videos for section 05, finish videos for section 05 ✅
