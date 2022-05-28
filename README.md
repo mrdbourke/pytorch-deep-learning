@@ -60,7 +60,7 @@ Each notebook will teach a maximum of 3 big ideas.
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
 * **Working on:** making materials for section 06: transfer learning
-* **Total video count:** 172
+* **Total video count:** 182
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06 
 * **Done images for:** 00, 01, 02, 03, 04, 05, 06
@@ -71,6 +71,7 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 28 May 2022 - record 10 videos for 06
 * 24 May 2022 - add solutions and exercises for 06
 * 23 May 2022 - finished annotations and images for 06, time to do exercises and solutions 
 * 22 May 2202 - add plenty of images to 06
