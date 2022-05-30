@@ -10,11 +10,11 @@ For full code and resources see the [course GitHub](https://github.com/mrdbourke
 
 ## Status
 
-Videos are done for 00, 01, 02, 03, 04, 05.
+Videos are done for 00, 01, 02, 03, 04, 05, 06.
 
-Currently working on [chapter 06: transfer learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/).
+Currently working on [chapter 07: experiment tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/).
 
-Chapters 07, 08, 09 will come after.
+Chapters 08, 09 will come after.
 
 See progress on the course [GitHub Project](https://github.com/users/mrdbourke/projects/1/views/4).
 
