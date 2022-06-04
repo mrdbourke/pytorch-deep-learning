@@ -71,6 +71,7 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 04 June 2022 - add annotations for 07
 * 03 June 2022 - huuuuuuge amount of annotations added to 07 
 * 31 May 2022 - add a bunch of annotations for 07, make code runnable end-to-end
 * 30 May 2022 - record 4 videos for 06, finished section 06, onto section 07, total videos 186
