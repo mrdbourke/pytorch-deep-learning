@@ -71,6 +71,10 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 10 June 2022 - add annotations for 07 v2
+* 09 June 2022 - create 07 v2 for `torchvision` v0.13 (this will replace 07 v1 when `torchvision=0.13` is released)
+* 08 June 2022 - adapt 06 v2 for `torchvision` v0.13 (this will replace 06 v1 when `torchvision=0.13` is released)
+* 07 June 2022 - create notebook 06 v2 for upcoming `torchvision` v0.13 update (new transfer learning methods)
 * 04 June 2022 - add annotations for 07
 * 03 June 2022 - huuuuuuge amount of annotations added to 07 
 * 31 May 2022 - add a bunch of annotations for 07, make code runnable end-to-end
