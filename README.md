@@ -71,6 +71,7 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 13 June 2022 - add notebook 08 first version, starting to replicate the Vision Transformer paper
 * 10 June 2022 - add annotations for 07 v2
 * 09 June 2022 - create 07 v2 for `torchvision` v0.13 (this will replace 07 v1 when `torchvision=0.13` is released)
 * 08 June 2022 - adapt 06 v2 for `torchvision` v0.13 (this will replace 06 v1 when `torchvision=0.13` is released)
