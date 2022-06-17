@@ -59,7 +59,7 @@ Each notebook will teach a maximum of 3 big ideas.
 
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** making materials for section 07: experiment tracking
+* **Working on:** making materials for section 07: experiment tracking + section 08: paper replicating 
 * **Total video count:** 186
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06
@@ -71,6 +71,7 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 17 June 2022 - fix up 06, 07 v2 for upcoming torchvision version upgrade, add plenty of annotations to 08
 * 13 June 2022 - add notebook 08 first version, starting to replicate the Vision Transformer paper
 * 10 June 2022 - add annotations for 07 v2
 * 09 June 2022 - create 07 v2 for `torchvision` v0.13 (this will replace 07 v1 when `torchvision=0.13` is released)
