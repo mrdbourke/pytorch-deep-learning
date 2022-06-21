@@ -71,6 +71,7 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 21 Jun 2022 - make 08 runnable end-to-end, add images and annotations for 07
 * 17 June 2022 - fix up 06, 07 v2 for upcoming torchvision version upgrade, add plenty of annotations to 08
 * 13 June 2022 - add notebook 08 first version, starting to replicate the Vision Transformer paper
 * 10 June 2022 - add annotations for 07 v2
