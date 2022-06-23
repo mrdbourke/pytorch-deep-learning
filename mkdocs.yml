@@ -37,7 +37,6 @@ nav:
   - 06. PyTorch transfer learning: '06_pytorch_transfer_learning.ipynb'
   - 06. PyTorch transfer learning V2: '06_pytorch_transfer_learning_v2.ipynb'
   - (WIP) 07. PyTorch experiment tracking: '07_pytorch_experiment_tracking.ipynb'
-  - (WIP) 07. PyTorch experiment tracking V2: '07_pytorch_experiment_tracking_v2.ipynb'
 
 extra:
   social:
