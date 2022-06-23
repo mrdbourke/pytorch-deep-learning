@@ -2,7 +2,7 @@ All solution notebooks for the [exercise templates](https://github.com/mrdbourke
 
 **Note:** There may be more than one way of creating a solution for each exercise, the solutions are only one example. 
 
-You can video walkthroughs of me live-coding possible solutions to the notebooks on YouTube.
+You can video walkthroughs of me live-coding possible solutions (errors and all) to the notebooks on YouTube. 
 
 | **Notebook** | **Live-coding Exercise & Solution Video Walkthrough** | 
 | ----- | ----- |
@@ -11,3 +11,4 @@ You can video walkthroughs of me live-coding possible solutions to the notebooks
 | 04 PyTorch Custom Datasets | https://youtu.be/vsFMF9wqWx0 |
 | 05 PyTorch Going Modular | https://youtu.be/ijgFhMK3pp4 |
 | 06 PyTorch Transfer Learning | https://youtu.be/ueLolShyFqs | 
+| 07 PyTorch Experiment Tracking | https://youtu.be/cO_r2FYcAjU |
