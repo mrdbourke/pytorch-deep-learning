@@ -24,7 +24,7 @@ Launch early-mid 2022.
 | [04 - PyTorch Custom Datasets](https://www.learnpytorch.io/04_pytorch_custom_datasets/) | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05). | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/04_pytorch_custom_datasets/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/04_pytorch_custom_datasets.pdf) |
 | [05 - PyTorch Going Modular](https://www.learnpytorch.io/05_pytorch_going_modular/) | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/05_pytorch_going_modular/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf) |
 | [06 - PyTorch Transfer Learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/) | Let's take a well performing pre-trained model and adjust it to one of our own problems. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/06_pytorch_transfer_learning/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/06_pytorch_transfer_learning.pdf) |
-| [Coming soon: 07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | Go to exercises & extra-curriculum | Go to slides |
+| [07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/07_pytorch_experiment_tracking/#exercises) | Go to slides |
 | Coming soon: 08 - Milestone Project 2: PyTorch Paper Replicating | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 09 - Milestone Project 3: Model deployment | So you've built a working PyTorch model... how do you get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
 
@@ -59,19 +59,20 @@ Each notebook will teach a maximum of 3 big ideas.
 
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** making materials for section 07: experiment tracking + section 08: paper replicating 
+* **Working on:** re-recording videos for updated 06 v2 + section 07
 * **Total video count:** 186
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06
-* **Done images for:** 00, 01, 02, 03, 04, 05, 06
+* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07
+* **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done keynotes for:** 00, 01, 02, 03, 04, 05, 06
-* **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05, 06
+* **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05, 06, 07
 
 ## Log
 
 Almost daily updates of what's happening.
 
-* 21 Jun 2022 - make 08 runnable end-to-end, add images and annotations for 07
+* 23 June 2022 - finish annotations for 07, add exercise template and solutions for 07 + video walkthrough on YouTube: https://youtu.be/cO_r2FYcAjU
+* 21 June 2022 - make 08 runnable end-to-end, add images and annotations for 07
 * 17 June 2022 - fix up 06, 07 v2 for upcoming torchvision version upgrade, add plenty of annotations to 08
 * 13 June 2022 - add notebook 08 first version, starting to replicate the Vision Transformer paper
 * 10 June 2022 - add annotations for 07 v2
