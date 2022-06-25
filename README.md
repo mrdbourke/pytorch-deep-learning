@@ -59,8 +59,8 @@ Each notebook will teach a maximum of 3 big ideas.
 
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** re-recording videos for updated 06 v2 + section 07
-* **Total video count:** 186
+* **Working on:** creating slides and recording videos for section 07
+* **Total video count:** 191
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07
@@ -71,6 +71,8 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 Almost daily updates of what's happening.
 
+* 25 June 2022 - recreated 7 videos for section 06 to include updated APIs, total video count 191
+* 24 June 2022 - recreated 12 videos for section 06 to include updated APIs
 * 23 June 2022 - finish annotations for 07, add exercise template and solutions for 07 + video walkthrough on YouTube: https://youtu.be/cO_r2FYcAjU
 * 21 June 2022 - make 08 runnable end-to-end, add images and annotations for 07
 * 17 June 2022 - fix up 06, 07 v2 for upcoming torchvision version upgrade, add plenty of annotations to 08
