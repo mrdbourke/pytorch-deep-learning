@@ -35,7 +35,6 @@ nav:
   - 04. PyTorch custom datasets: '04_pytorch_custom_datasets.ipynb'
   - 05. PyTorch Going Modular: '05_pytorch_going_modular.md'
   - 06. PyTorch transfer learning: '06_pytorch_transfer_learning.ipynb'
-  - 06. PyTorch transfer learning V2: '06_pytorch_transfer_learning_v2.ipynb'
   - 07. PyTorch experiment tracking: '07_pytorch_experiment_tracking.ipynb'
 
 extra:
