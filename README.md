@@ -24,36 +24,9 @@ Launch early-mid 2022.
 | [04 - PyTorch Custom Datasets](https://www.learnpytorch.io/04_pytorch_custom_datasets/) | How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05). | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/04_pytorch_custom_datasets/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/04_pytorch_custom_datasets.pdf) |
 | [05 - PyTorch Going Modular](https://www.learnpytorch.io/05_pytorch_going_modular/) | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/05_pytorch_going_modular/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf) |
 | [06 - PyTorch Transfer Learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/) | Let's take a well performing pre-trained model and adjust it to one of our own problems. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/06_pytorch_transfer_learning/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/06_pytorch_transfer_learning.pdf) |
-| [07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/07_pytorch_experiment_tracking/#exercises) | Go to slides |
+| [07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/07_pytorch_experiment_tracking/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/07_pytorch_experiment_tracking.pdf) |
 | Coming soon: 08 - Milestone Project 2: PyTorch Paper Replicating | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 09 - Milestone Project 3: Model deployment | So you've built a working PyTorch model... how do you get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
-
-### Old outline version (will update this if necessary)
-
-0. PyTorch fundamentals - ML is all about representing data as numbers (tensors) and manipulating those tensors so this module will cover PyTorch tensors.
-1. PyTorch workflow - You'll use different techniques for different problem types but the workflow remains much the same:
-```
-data -> build model -> fit model to data (training) -> evaluate model and make predictions (inference) -> save & load model
-```
-Module 1 will showcase an end-to-end PyTorch workflow that can be leveraged for other problems.
-
-2. PyTorch classification - Let's take the workflow we learned in module 1 and apply it to a common machine learning problem type: classification (deciding whether something is one thing or another).
-3. PyTorch computer vision - We'll get even more specific now and see how PyTorch can be used for computer vision problems though still using the same workflow from 1 & 2. We'll also start functionizing the code we've been writing, for example: `def train(model, data, optimizer, loss_fn): ...`
-4. PyTorch custom datasets - How do you load a custom dataset into PyTorch? Also we'll be laying the foundations in this notebook for our modular code (covered in 05).
-5. Going modular - PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). For example:
-```
-code/
-    data_setup.py <- sets up data
-    model_builder.py <- builds the model ready to be used
-    engine.py <- training/eval functions for the model
-    train.py <- trains and saves the model
-```
-6. PyTorch transfer learning - Let's improve upon the models we've built ourselves using transfer learning.
-7. PyTorch experiment tracking - We've built a bunch of models... wouldn't it be good to track how they're all going?
-8. PyTorch paper replicating - Let's see why PyTorch is the most popular deep learning framework for machine learning research by replicating a machine learning research paper with it.
-9. PyTorch model deployment - How do you get your PyTorch models in the hands of others?
-
-Each notebook will teach a maximum of 3 big ideas. 
 
 ## Status
 
@@ -61,7 +34,7 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 
 * **Working on:** creating materials for section 08 PyTorch Paper Replicating
 * **Total video count:** 213
-* **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07
+* **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done keynotes for:** 00, 01, 02, 03, 04, 05, 06, 07
