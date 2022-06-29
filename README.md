@@ -97,8 +97,8 @@ These milestone projects will help you practice use PyTorch to cover important m
 
 ### How do I get started?
 
-1. Click on one of the notebook (the ) or section links above like "[00. PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/)" 
-2. Click the "Open in Colab" button 
+1. Click on one of the notebook or section links above like "[00. PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/)". 
+2. Click the "Open in Colab" button up the top.
 3. Press SHIFT+Enter a few times and see what happens.
 
 ### My question isn't answered 
