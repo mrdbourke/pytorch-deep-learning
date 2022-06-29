@@ -1,19 +1,19 @@
 # Learn PyTorch for Deep Learning (work in progress)
 
-I'd like to learn PyTorch. So I'm going to use this repo to:
+Welcome to the Zero to Mastery Learn PyTorch for Deep Learning course, the second best place to learn PyTorch on the internet (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
-1. Add what I've learned.
-2. Teach others in a beginner-friendly way.
+## Contents of this page
 
-Stay tuned to here for updates, course materials are being actively worked on.
-
-Launch early-mid 2022.
+* [Course materials/outline](https://github.com/mrdbourke/pytorch-deep-learning#course-materialsoutline)
+* [About this course](https://github.com/mrdbourke/pytorch-deep-learning#about-this-course)
+* [Status](https://github.com/mrdbourke/pytorch-deep-learning#status) (the progress of the course creation)
+* [Log](https://github.com/mrdbourke/pytorch-deep-learning#log) (a log of the course material creation process)
 
 ## Course materials/outline
 
-* **Note:** This is rough and subject to change.
-* **Course focus:** `code, code, code, experiment, experiment, experiment`
-* **Teaching style:** [https://sive.rs/kimo](https://sive.rs/kimo)
+* **Online book version:** You can find all of course materials below in a readable online book at [learnpytorch.io](https://learnpytorch.io).
+* **Course focus:** code, code, code, experiment, experiment, experiment.
+* **Teaching style:** [https://sive.rs/kimo](https://sive.rs/kimo).
 
 | **Section** | **What does it cover?** | **Exercises & Extra-curriculum** | **Slides** |
 | ----- | ----- | ----- | ----- |
@@ -39,6 +39,71 @@ See the project page for work-in-progress board - https://github.com/users/mrdbo
 * **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done keynotes for:** 00, 01, 02, 03, 04, 05, 06, 07
 * **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05, 06, 07
+
+## About this course
+
+### Who is this course for?
+
+**You:** Are a beginner in the field of machine learning or deep learning and would like to learn PyTorch.
+
+**This course:** Teaches you PyTorch and many machine learning concepts in a hands-on, code-first way.
+
+If you already have 1-year+ experience in machine learning, this course may help but it is specifically designed to be beginner-friendly.
+
+### What are the requirements?
+
+1. 3-6 months coding Python.
+2. At least one beginner machine learning course (though this might be able to be skipped, resources are linked for many different topics).
+3. Experience using Jupyter Notebooks or Google Colab (though you can pick this up as we go along).
+4. A willingness to learn (most important).
+
+For 1 & 2, I'd recommend the [Zero to Mastery Data Science and Machine Learning Bootcamp](https://dbourke.link/ZTMMLcourse), it'll teach the fundamentals of machine learning and Python (I'm biased though, I also teach that course).
+
+### How is the course taught?
+
+All of the course materials are available for free in an online book at [learnpytorch.io](https://learnpytorch.io). If you like to read, I'd recommend going through the resources there.
+
+If you prefer to learn via video, the course is also taught in apprenticeship-style format, meaning I write PyTorch code, you write PyTorch code.
+
+There's a reason the course motto's include *if in doubt, run the code* and *experiment, experiment, experiment!*.
+
+My whole goal is to get you to do one thing: learn machine learning by writing PyTorch code.
+
+The code is all written via [Google Colab Notebooks](https://colab.research.google.com) (you could also use Jupyter Notebooks), an incredible free resource to experiment with machine learning.
+
+### What will I get if I finish the course?
+
+There's certificates and all that jazz if you go through the videos.
+
+But certificates are meh.
+
+You can consider this course a machine learning momentum builder.
+
+By the end, you'll have written hundreds of lines of PyTorch code.
+
+And will have been exposed to many of the most important concepts in machine learning.
+
+So when you go to build your own machine learning projects or inspect a public machine learning project made with PyTorch, it'll feel familiar and if it doesn't, at least you'll know where to look.
+
+### What will I build in the course?
+
+We start with the barebone fundamentals of PyTorch and machine learning, so even if you're new to machine learning you'll be caught up to speed.
+
+Then we’ll explore more advanced areas including PyTorch neural network classification, PyTorch workflows, computer vision, custom datasets, experiment tracking, model deployment, and my personal favorite: transfer learning, a powerful technique for taking what one machine learning model has learned on another problem and applying it to your own!
+
+Along the way you’ll build three milestone projects surrounding an overarching project called FoodVision, a neural network computer vision model to classify images of food. 
+
+These milestone projects will help you practice use PyTorch to cover important machine learning concepts and create a portfolio you can to show employers and say "here's what I've done".
+
+### How do I get started?
+
+1. Click on one of the notebook (the ) or section links above like "[00. PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/)" 
+2. Click the "Open in Colab" button 
+3. Press SHIFT+Enter a few times and see what happens.
+
+### My question isn't answered 
+
+Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/discussions) or send me an email directly: daniel (at) mrdbourke (dot) com.
 
 ## Log
 
