@@ -91,9 +91,9 @@ We start with the barebone fundamentals of PyTorch and machine learning, so even
 
 Then we’ll explore more advanced areas including PyTorch neural network classification, PyTorch workflows, computer vision, custom datasets, experiment tracking, model deployment, and my personal favorite: transfer learning, a powerful technique for taking what one machine learning model has learned on another problem and applying it to your own!
 
-Along the way you’ll build three milestone projects surrounding an overarching project called FoodVision, a neural network computer vision model to classify images of food. 
+Along the way, you’ll build three milestone projects surrounding an overarching project called FoodVision, a neural network computer vision model to classify images of food. 
 
-These milestone projects will help you practice use PyTorch to cover important machine learning concepts and create a portfolio you can to show employers and say "here's what I've done".
+These milestone projects will help you practice using PyTorch to cover important machine learning concepts and create a portfolio you can show employers and say "here's what I've done".
 
 ### How do I get started?
 
