@@ -36,7 +36,7 @@ nav:
   - 05. PyTorch Going Modular: '05_pytorch_going_modular.md'
   - 06. PyTorch transfer learning: '06_pytorch_transfer_learning.ipynb'
   - 07. PyTorch experiment tracking: '07_pytorch_experiment_tracking.ipynb'
-  - 08. PyTorch paper replicating: '08_pytorch_paper_replicationg.ipynb'
+  - 08. PyTorch paper replicating: '08_pytorch_paper_replicating.ipynb'
 
 extra:
   social:
