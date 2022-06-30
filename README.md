@@ -52,7 +52,7 @@ See the [log](https://github.com/mrdbourke/pytorch-deep-learning#log) for almost
 
 If you already have 1-year+ experience in machine learning, this course may help but it is specifically designed to be beginner-friendly.
 
-### What are the requirements?
+### What are the prerequisites?
 
 1. 3-6 months coding Python.
 2. At least one beginner machine learning course (however this might be able to be skipped, resources are linked for many different topics).
