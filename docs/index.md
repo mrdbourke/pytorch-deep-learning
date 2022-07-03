@@ -1,6 +1,6 @@
-# Learn PyTorch for Deep Learnin: Zero to Mastery book
+# Learn PyTorch for Deep Learning: Zero to Mastery book
 
-Welcome to the second best place on the internet to learn PyTorch (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html).
+Welcome to the second best place on the internet to learn PyTorch (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
 This is the online book version of the Learn PyTorch for Deep Learning: Zero to Mastery course.
 
@@ -97,7 +97,7 @@ Along the way, you’ll build three milestone projects surrounding an overarchin
 
 These milestone projects will help you practice using PyTorch to cover important machine learning concepts and create a portfolio you can show employers and say "here's what I've done".
 
-## How do I approach this course?
+### How do I approach this course?
 
 <img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/docs-how-to-approach-this-course-no-header.png" width=900 alt="how to approach this course: 1. code along, 2. explore and experiment, 3. visualize what you don't understand, 4. ask questions, 5. do the exercises, 6. share your work"/>
 
@@ -114,7 +114,7 @@ But here's what I recommend:
 5. **Do the exercises** - Each module of the course comes with a dedicated exericses section. It's important to try these on your own. You will get stuck. But that's the nature of learning something new: everyone gets stuck.
 6. **Share your work** - If you've learned something cool or even better, made something cool, share it. It could be with the course Discord group or on the course GitHub page or on your own website. The benefits of sharing your work is you get to practice communicating as well as others can help you out if you're not sure of something.
 
-## Do I need to take things in order?
+### Do I need to take things in order?
 
 The notebooks/chapters build upon each other sequentially but feel free to jump around.
 
@@ -126,4 +126,4 @@ The notebooks/chapters build upon each other sequentially but feel free to jump 
 
 Happy machine learning!
 
-- Daniel Bourke
+[Daniel Bourke](https://www.mrdbourke.com)
