@@ -4,7 +4,7 @@ Welcome to the second best place on the internet to learn PyTorch (the first bei
 
 This is the online book version of the Learn PyTorch for Deep Learning: Zero to Mastery course.
 
-This course will teach you foundations of deep learning and PyTorch (a deep learning framework written in Python).
+This course will teach you the foundations of machine learning and deep learning with PyTorch (a machine learning framework written in Python).
 
 The course is video based. However, the videos are based on the contents of this online book.
 
