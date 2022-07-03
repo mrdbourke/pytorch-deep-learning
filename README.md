@@ -111,6 +111,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 1 July 2022 - add annotations and images for 08 
 * 30 June 2022 - add annotations for 08
 * 28 June 2022 - recorded 11 videos for section 07, total video count 213, all videos for section 07 complete!
 * 27 June 2022 - recorded 11 videos for section 07, total video count 202
