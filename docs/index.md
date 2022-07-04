@@ -1,6 +1,5 @@
 ---
-title: Learn PyTorch for Deep Learning: Zero to Mastery online book
-description: The second best place on the internet to learn PyTorch code-first.
+template: overrides/main.html
 ---
 
 # Learn PyTorch for Deep Learning: Zero to Mastery book
