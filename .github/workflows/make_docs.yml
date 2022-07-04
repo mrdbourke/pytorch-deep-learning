@@ -28,6 +28,7 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
+      # Required to install this way for extending the template (see overrides/main.html)
       - run: git clone --depth 1 https://${{ secrets.GH_MATERIAL_MKDOCS_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: pip install -e mkdocs-material-insiders
       - run: pip install mkdocs-jupyter
