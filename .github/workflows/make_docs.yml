@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.7
-      - run: pip install git+https://${GH_MATERIAL_MKDOCS_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://${{ secrets.GH_MATERIAL_MKDOCS_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: pip install mkdocs-jupyter
 #       - run: pip install jupyter
       - run: cp *.ipynb docs/ # copy all notebooks to docs folder
