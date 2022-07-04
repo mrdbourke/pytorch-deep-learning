@@ -24,6 +24,10 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.7
+      - uses: actions/cache@v2
+          with:
+            key: ${{ github.ref }}
+            path: .cache
       - run: pip install git+https://${{ secrets.GH_MATERIAL_MKDOCS_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: pip install mkdocs-jupyter
 #       - run: pip install jupyter
