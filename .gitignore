@@ -153,3 +153,6 @@ models/07_effnetb0_data_20_percent_5_epochs.pth
 models/07_effnetb2_data_10_percent_10_epochs.pth
 models/07_effnetb2_data_10_percent_5_epochs.pth
 models/07_effnetb2_data_20_percent_5_epochs.pth
+
+# Docs
+.cache
