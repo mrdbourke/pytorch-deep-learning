@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: docs/overrides/main.html
 ---
 
 # Learn PyTorch for Deep Learning: Zero to Mastery book

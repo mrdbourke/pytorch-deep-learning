@@ -13,7 +13,7 @@ theme:
     - navigation.top
   palette:
     primary: black
-  custom_dir: overrides
+  custom_dir: docs/overrides
 
 markdown_extensions:
   - meta
