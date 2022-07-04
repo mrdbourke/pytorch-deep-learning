@@ -13,14 +13,15 @@ theme:
     - navigation.top
   palette:
     primary: black
+  custom_dir: overrides
 
 markdown_extensions:
+  - meta
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-  - meta
-
+  
 plugins:
  - mkdocs-jupyter
  - search
