@@ -19,6 +19,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - meta
 
 plugins:
  - mkdocs-jupyter
@@ -29,15 +30,15 @@ edit_uri: ""
 
 nav:
   - Home: 'index.md'
-  - 00. Getting started with PyTorch: '00_pytorch_fundamentals.ipynb'
-  - 01. PyTorch workflow: '01_pytorch_workflow.ipynb'
-  - 02. PyTorch classification: '02_pytorch_classification.ipynb'
-  - 03. PyTorch computer vision: '03_pytorch_computer_vision.ipynb'
-  - 04. PyTorch custom datasets: '04_pytorch_custom_datasets.ipynb'
+  - 00. Getting Started with PyTorch: '00_pytorch_fundamentals.ipynb'
+  - 01. PyTorch Machine Learning Workflow: '01_pytorch_workflow.ipynb'
+  - 02. PyTorch Neural Network Classification: '02_pytorch_classification.ipynb'
+  - 03. PyTorch Computer Vision: '03_pytorch_computer_vision.ipynb'
+  - 04. PyTorch Custom Datasets: '04_pytorch_custom_datasets.ipynb'
   - 05. PyTorch Going Modular: '05_pytorch_going_modular.md'
-  - 06. PyTorch transfer learning: '06_pytorch_transfer_learning.ipynb'
-  - 07. PyTorch experiment tracking: '07_pytorch_experiment_tracking.ipynb'
-  - 08. PyTorch paper replicating: '08_pytorch_paper_replicating.ipynb'
+  - 06. PyTorch Transfer Learning: '06_pytorch_transfer_learning.ipynb'
+  - 07. PyTorch Experiment Tracking: '07_pytorch_experiment_tracking.ipynb'
+  - 08. Replicating Machine Learning Research Papers with PyTorch: '08_pytorch_paper_replicating.ipynb'
 
 extra:
   social:
