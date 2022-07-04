@@ -28,7 +28,8 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install git+https://${{ secrets.GH_MATERIAL_MKDOCS_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: git clone --depth 1 https://${{ secrets.GH_MATERIAL_MKDOCS_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install -e mkdocs-material-insiders
       - run: pip install mkdocs-jupyter
 #       - run: pip install jupyter
       - run: cp *.ipynb docs/ # copy all notebooks to docs folder
