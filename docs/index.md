@@ -124,10 +124,12 @@ The notebooks/chapters build upon each other sequentially but feel free to jump 
 
 ### How do I get started?
 
+You can read the materials on any device but this course is best viewed and coded along within a desktop browser.
+
+To start:
+
 1. Click on one of the notebook or section links like "[00. PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/)". 
 2. Click the "Open in Colab" button up the top.
 3. Press SHIFT+Enter a few times and see what happens.
 
 Happy machine learning!
-
-[Daniel Bourke](https://www.mrdbourke.com)
