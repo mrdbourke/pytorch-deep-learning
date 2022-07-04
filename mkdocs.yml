@@ -23,7 +23,8 @@ markdown_extensions:
       custom_checkbox: true
   
 plugins:
- - mkdocs-jupyter
+ - mkdocs-jupyter:
+    include_source: True
  - search
  - social
 
