@@ -10,7 +10,7 @@ template: overrides/main.html
 
 Welcome to the second best place on the internet to learn PyTorch (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
-This is the online book version of the Learn PyTorch for Deep Learning: Zero to Mastery course.
+This is the online book version of the [Learn PyTorch for Deep Learning: Zero to Mastery course](https://dbourke.link/ZTMPyTorch).
 
 This course will teach you the foundations of machine learning and deep learning with PyTorch (a machine learning framework written in Python).
 
@@ -22,13 +22,15 @@ Otherwise, you can find more about the course below.
 
 ## Status
 
-* Last update: July 04 2022.
+Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
+
+Sections 00-07 are done, videos will come for 08 and 09 shortly.
+
+* Last update: July 06 2022.
 * Videos are done for chapters: 00, 01, 02, 03, 04, 05, 06, 07.
 * Currently working on: [chapter 08: paper replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/).
 * Chapter 09: model deployment will come after.
 * See progress on the course [GitHub Project](https://github.com/users/mrdbourke/projects/1/views/4).
-
-**Expected release date:** Mid 2022.
 
 **Get updates:** Follow the [`pytorch-deep-learning`](https://github.com/mrdbourke/pytorch-deep-learning#log) repo log or [sign up for emails](https://www.mrdbourke.com/newsletter/).
 
