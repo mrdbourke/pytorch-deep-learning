@@ -14,7 +14,6 @@ theme:
     - navigation.top
   palette:
     primary: black
-  custom_dir: overrides
 
 markdown_extensions:
   - meta
