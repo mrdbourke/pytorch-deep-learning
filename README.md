@@ -119,6 +119,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 8 July 2022 - add a bunch of annotations to 08
 * 6 July 2022 - course launched on ZTM Academy with videos for sections 00-07! 🚀 - https://dbourke.link/ZTMPyTorch 
 * 1 July 2022 - add annotations and images for 08 
 * 30 June 2022 - add annotations for 08
