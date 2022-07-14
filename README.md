@@ -119,6 +119,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 14 July 2022 - add annotations for 08
 * 12 July 2022 - add annotations for 08, woo woo this is bigggg section! 
 * 11 July 2022 - add annotations for 08 
 * 9 July 2022 - add annotations for 08
