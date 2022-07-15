@@ -1,6 +1,6 @@
 # Learn PyTorch for Deep Learning (work in progress)
 
-**Update July 06 2022:** The [course is out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with sections 00-07, 08 & 09 will come soon. Use code PYTORCH15 for 15% off for the next 48 hours.
+**Update July 06 2022:** The [course is out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with sections 00-07, 08 & 09 will come soon.
 
 Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://dbourke.link/ZTMPyTorch), the second best place to learn PyTorch on the internet (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
