@@ -119,6 +119,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 20 July 2022 - add annotations and images for 08, getting so close! this is an epic section 
 * 19 July 2022 - add annotations and images for 08
 * 15 July 2022 - add annotations and images for 08 
 * 14 July 2022 - add annotations for 08
