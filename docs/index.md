@@ -1,7 +1,3 @@
----
-template: overrides/main.html
----
-
 # Learn PyTorch for Deep Learning: Zero to Mastery book
 
  <a href="https://learnpytorch.io">
