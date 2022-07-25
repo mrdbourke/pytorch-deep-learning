@@ -119,6 +119,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 25 July 2022 - add annotations for 08 
 * 24 July 2022 - launched first half of course (notebooks 00-04) in a single video (25+ hours!!!) on YouTube: https://youtu.be/Z_ikDlimN6A 
 * 21 July 2022 - add annotations and images for 08
 * 20 July 2022 - add annotations and images for 08, getting so close! this is an epic section 
