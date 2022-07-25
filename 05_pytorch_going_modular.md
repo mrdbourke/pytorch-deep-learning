@@ -392,7 +392,7 @@ class TinyVGG(nn.Module):
       x = self.conv_block_2(x)
       x = self.classifier(x)
       return x
-      # return self.classifier(self.block_2(self.block_1(x))) # <- leverage the benefits of operator fusion
+      # return self.classifier(self.conv_block_2(self.conv_block_1(x))) # <- leverage the benefits of operator fusion
 ```
 
 Now instead of coding the TinyVGG model from scratch every time, we can import it using:
