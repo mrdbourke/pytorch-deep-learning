@@ -19,8 +19,8 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 
 ## Course materials/outline
 
-* 📖 **Online book version:** You can find all of course materials below in a readable online book at [learnpytorch.io](https://learnpytorch.io).
-* 🎥 **First five sections on YouTube:** Learn Pytorch in a day by watching the [first 25-hours of material on YouTube](https://youtu.be/Z_ikDlimN6A).
+* 📖 **Online book version:** All of course materials are available in a readable online book at [learnpytorch.io](https://learnpytorch.io).
+* 🎥 **First five sections on YouTube:** Learn Pytorch in a day by watching the [first 25-hours of material](https://youtu.be/Z_ikDlimN6A).
 * 🔬 **Course focus:** code, code, code, experiment, experiment, experiment.
 * 🏃‍♂️ **Teaching style:** [https://sive.rs/kimo](https://sive.rs/kimo).
 
