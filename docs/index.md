@@ -22,7 +22,7 @@ Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 
 Sections 00-07 are done, videos will come for 08 and 09 shortly.
 
-* Last update: July 06 2022.
+* Last update: July 25 2022.
 * Videos are done for chapters: 00, 01, 02, 03, 04, 05, 06, 07.
 * Currently working on: [chapter 08: paper replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/).
 * Chapter 09: model deployment will come after.
