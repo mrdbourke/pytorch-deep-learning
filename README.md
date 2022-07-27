@@ -34,7 +34,7 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 | [05 - PyTorch Going Modular](https://www.learnpytorch.io/05_pytorch_going_modular/) | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/05_pytorch_going_modular/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf) |
 | [06 - PyTorch Transfer Learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/) | Let's take a well performing pre-trained model and adjust it to one of our own problems. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/06_pytorch_transfer_learning/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/06_pytorch_transfer_learning.pdf) |
 | [07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/07_pytorch_experiment_tracking/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/07_pytorch_experiment_tracking.pdf) |
-| Coming soon: 08 - Milestone Project 2: PyTorch Paper Replicating | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | Go to slides |
+| [08 - Milestone Project 2: PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/) | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | Go to slides |
 | Coming soon: 09 - Milestone Project 3: Model deployment | So you've built a working PyTorch model... how do you get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
 
 ## Status
@@ -120,6 +120,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 27 July 2022 - cleanup much of 08, start on slides for 08, exercises and extra-curriculum next
 * 26 July 2022 - add annotations and images for 08
 * 25 July 2022 - add annotations for 08 
 * 24 July 2022 - launched first half of course (notebooks 00-04) in a single video (25+ hours!!!) on YouTube: https://youtu.be/Z_ikDlimN6A 
