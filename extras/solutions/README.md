@@ -12,3 +12,4 @@ You can video walkthroughs of me live-coding possible solutions (errors and all)
 | 05 PyTorch Going Modular | https://youtu.be/ijgFhMK3pp4 |
 | 06 PyTorch Transfer Learning | https://youtu.be/ueLolShyFqs | 
 | 07 PyTorch Experiment Tracking | https://youtu.be/cO_r2FYcAjU |
+| 08 PyTorch Paper Replicating | https://youtu.be/tjpW_BY8y3g | 
