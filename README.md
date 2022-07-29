@@ -34,20 +34,20 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 | [05 - PyTorch Going Modular](https://www.learnpytorch.io/05_pytorch_going_modular/) | PyTorch is designed to be modular, let's turn what we've created into a series of Python scripts (this is how you'll often find PyTorch code in the wild). | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/05_pytorch_going_modular/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf) |
 | [06 - PyTorch Transfer Learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/) | Let's take a well performing pre-trained model and adjust it to one of our own problems. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/06_pytorch_transfer_learning/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/06_pytorch_transfer_learning.pdf) |
 | [07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/07_pytorch_experiment_tracking/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/07_pytorch_experiment_tracking.pdf) |
-| [08 - Milestone Project 2: PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/) | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | Go to exercises & extra-curriculum | Go to slides |
-| Coming soon: 09 - Milestone Project 3: Model deployment | So you've built a working PyTorch model... how do you get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
+| [08 - Milestone Project 2: PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/) | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/08_pytorch_paper_replicating/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/08_pytorch_paper_replicating.pdf) |
+| Coming soon: 09 - Milestone Project 3: Model deployment | So we've built a working PyTorch model... how do we get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
 
 ## Status
 
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** creating materials for section 08 PyTorch Paper Replicating
+* **Working on:** recording videos for section 08: PyTorch Paper Replicating
 * **Total video count:** 213
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
-* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done keynotes for:** 00, 01, 02, 03, 04, 05, 06, 07
-* **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05, 06, 07
+* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
+* **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
+* **Done keynotes for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
+* **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
 
 See the [log](https://github.com/mrdbourke/pytorch-deep-learning#log) for almost daily updates.
 
@@ -120,6 +120,8 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 29 July 2022 - add exercises + solutions for 08, see live walkthrough on YouTube: https://youtu.be/tjpW_BY8y3g
+* 28 July 2022 - add slides for 08
 * 27 July 2022 - cleanup much of 08, start on slides for 08, exercises and extra-curriculum next
 * 26 July 2022 - add annotations and images for 08
 * 25 July 2022 - add annotations for 08 
