@@ -41,8 +41,8 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** recording videos for section 08: PyTorch Paper Replicating
-* **Total video count:** 252
+* **Working on:** creating materials for 09. PyTorch Model Deployment
+* **Total video count:** 263
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
 * **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
@@ -120,6 +120,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 05 Aug 2022 - recorded 11 videos for 08, total videos: 263, section 08 videos finished!... the biggest section so far
 * 04 Aug 2022 - recorded 13 videos for 08, total videos: 252
 * 03 Aug 2022 - recorded 3 videos for 08, total videos: 239
 * 02 Aug 2022 - recorded 12 videos for 08, total videos: 236
