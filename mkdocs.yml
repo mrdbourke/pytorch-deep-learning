@@ -41,6 +41,7 @@ nav:
   - 06. PyTorch Transfer Learning: '06_pytorch_transfer_learning.ipynb'
   - 07. PyTorch Experiment Tracking: '07_pytorch_experiment_tracking.ipynb'
   - 08. Replicating Machine Learning Research Papers with PyTorch: '08_pytorch_paper_replicating.ipynb'
+  - 09. Deploying PyTorch Machine Learning Models: '09_pytorch_model_deployment.ipynb' 
 
 extra:
   social:
