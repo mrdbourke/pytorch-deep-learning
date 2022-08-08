@@ -20,12 +20,11 @@ Otherwise, you can find more about the course below.
 
 Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 
-Sections 00-07 are done, videos will come for 08 and 09 shortly.
+Sections 00-08 are done, 09 is being actively developed.
 
-* Last update: July 25 2022.
-* Videos are done for chapters: 00, 01, 02, 03, 04, 05, 06, 07.
-* Currently working on: [chapter 08: paper replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/).
-* Chapter 09: model deployment will come after.
+* Last update: August 8 2022.
+* Videos are done for chapters: 00, 01, 02, 03, 04, 05, 06, 07, 08.
+* Currently working on: [chapter 09: model deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/).
 * See progress on the course [GitHub Project](https://github.com/users/mrdbourke/projects/1/views/4).
 
 **Get updates:** Follow the [`pytorch-deep-learning`](https://github.com/mrdbourke/pytorch-deep-learning#log) repo log or [sign up for emails](https://www.mrdbourke.com/newsletter/).
@@ -46,7 +45,7 @@ Sections 00-07 are done, videos will come for 08 and 09 shortly.
 | [06 - PyTorch Transfer Learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/) | Let's take a well performing pre-trained model and adjust it to one of our own problems. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/06_pytorch_transfer_learning/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/06_pytorch_transfer_learning.pdf) |
 | [07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/07_pytorch_experiment_tracking/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/07_pytorch_experiment_tracking.pdf) |
 | [08 - Milestone Project 2: PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/) | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/08_pytorch_paper_replicating/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/08_pytorch_paper_replicating.pdf) |
-| Coming soon: 09 - Milestone Project 3: Model deployment | So you've built a working PyTorch model... how do you get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
+| Work in progress: [09 - Milestone Project 3: Model deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/) | So you've built a working PyTorch model... how do you get it in the hands of others? Hint: deploy it to the internet. | Go to exercises & extra-curriculum | Go to slides |
 
 ## About this course
 
