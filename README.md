@@ -108,6 +108,12 @@ These milestone projects will help you practice using PyTorch to cover important
 
 ### How do I get started?
 
+You can read the materials on any device but this course is best viewed and coded along within a desktop browser.
+
+The course uses a free tool called Google Colab. If you've got no experience with it, I'd go through the free [Introduction to Google Colab tutorial](https://colab.research.google.com/notebooks/basic_features_overview.ipynb) and then come back here.
+
+To start:
+
 1. Click on one of the notebook or section links above like "[00. PyTorch Fundamentals](https://www.learnpytorch.io/00_pytorch_fundamentals/)". 
 2. Click the "Open in Colab" button up the top.
 3. Press SHIFT+Enter a few times and see what happens.
