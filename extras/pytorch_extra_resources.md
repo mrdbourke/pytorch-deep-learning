@@ -20,19 +20,21 @@ Most are PyTorch-specific, fitting extensions to the course but a couple are non
 
 - [**PyTorch blog**](https://pytorch.org/blog/) — Stay up to date on the latest from PyTorch right from the source. I check the blog once a month or so for updates.
 - [**PyTorch documentation**](https://pytorch.org/docs) — We’ll have explored this plenty throughout the course but there’s still a large amount we haven’t touched. No trouble, explore often and when necessary.
-- **[PyTorch Performance Tuning Guide](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html#)** — One of the first things you’ll likely want to do after the course is to make your PyTorch models faster (training and inference), the PyTorch Performance Tuning Guide helps you do just that.
-- [**PyTorch Recipes](https://pytorch.org/tutorials/recipes/recipes_index.html)** — PyTorch recipes is a collection of small tutorials to showcase common PyTorch features and workflows you may want to create, such as [Loading Data in PyTorch](https://pytorch.org/tutorials/recipes/recipes/loading_data_recipe.html) and [Saving and Loading models for Inference in PyTorch](https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_models_for_inference.html).
+- [**PyTorch Performance Tuning Guide**](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html#)** — One of the first things you’ll likely want to do after the course is to make your PyTorch models faster (training and inference), the PyTorch Performance Tuning Guide helps you do just that.
+- [**PyTorch Recipes**](https://pytorch.org/tutorials/recipes/recipes_index.html) — PyTorch recipes is a collection of small tutorials to showcase common PyTorch features and workflows you may want to create, such as [Loading Data in PyTorch](https://pytorch.org/tutorials/recipes/recipes/loading_data_recipe.html) and [Saving and Loading models for Inference in PyTorch](https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_models_for_inference.html).
 - [**Setting up PyTorch in VSCode**](https://code.visualstudio.com/docs/datascience/pytorch-support) — VSCode is one of the most popular IDEs out there. And its PyTorch support is getting better and better. Throughout the Zero to Mastery PyTorch course, we use Google Colab because of its ease of use. But chances are you’ll be developing in an IDE like VSCode soon.
 
 ## 📈 Libraries that make pure PyTorch better/add features
 
 The course focuses on pure PyTorch (using minimal external libraries) because if you know how to write plain PyTorch, you can learn to use the various extension libraries.
 
-- [**fast.ai](https://github.com/fastai/fastai)** — fastai is an open-source library that takes care of many of the boring parts of building neural networks and makes creating state-of-the-art models possible with a few lines of code. Their free library, [course](https://course.fast.ai) and [documentation](https://docs.fast.ai) are all world-class.
+- [**fast.ai**](https://github.com/fastai/fastai) — fastai is an open-source library that takes care of many of the boring parts of building neural networks and makes creating state-of-the-art models possible with a few lines of code. Their free library, [course](https://course.fast.ai) and [documentation](https://docs.fast.ai) are all world-class.
 - [**MosaicML for more efficient model training**](https://github.com/mosaicml/composer) — The faster you can train models, the faster you can figure out what works and what doesn’t. MosaicML’s open-source `Composer` library helps you train neural networks with PyTorch faster by implementing speedup algorithms behind the scenes which means you can get better results out of your existing PyTorch models faster. All of their code is open-source and their docs are fantastic.
 - [**PyTorch Lightning for reducing boilerplate**](https://www.pytorchlightning.ai) — PyTorch Lightning takes care of many of the steps that you often have to do by hand in vanilla PyTorch, such as writing a training and test loop, model checkpointing, logging and more. PyTorch Lightning builds on top of PyTorch to allow you to make PyTorch models with less code.
 
-![Libraries that extend/make pure PyTorch better.]()
+![Libraries that extend/make pure PyTorch better.](https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/extras-001-libraries-to-make-pytorch-better-or-faster.jpeg)
+
+*Libraries that extend/make pure PyTorch better.*
 
 ## 📖 Books for PyTorch
 
@@ -41,9 +43,9 @@ The course focuses on pure PyTorch (using minimal external libraries) because if
 - [**Dive into Deep Learning book**](https://d2l.ai) — Possibly one of the most comprehensive resources on the internet for deep learning concepts along with code examples in PyTorch, TensorFlow and Gluon. And all for free! For example, take a look at the author’s explanation of the [Vision Transformer](https://d2l.ai/chapter_attention-mechanisms-and-transformers/vision-transformer.html) we cover in [08. PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/).
 - **Bonus:** The [fast.ai course](https://course.fast.ai) (available free online) also comes as a freely available online book, [Deep Learning for Coders with fastai & PyTorch](https://course.fast.ai/Resources/book.html).
 
-![Textbooks to learn more about PyTorch as well as deep learning in general.]()
+![Textbooks to learn more about PyTorch as well as deep learning in general.](https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/extras-002-books-for-pytorch.jpeg)
 
-Textbooks to learn more about PyTorch as well as deep learning in general.
+*Textbooks to learn more about PyTorch as well as deep learning in general.*
 
 ## 🏗 Resources for Machine Learning and Deep Learning Engineering
 
@@ -51,14 +53,14 @@ Machine Learning Engineering (also referred to as MLOps or ML operations) is the
 
 The following resources will help you learn more about the steps around deploying a machine learning model.
 
-- **[Designing Machine Learning Systems book by Chip Huyen](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)** — ****If you want to build an ML system, it’d be good to know how others have done it. Chip’s book focuses less on building a single machine learning model (though there’s plenty of content on that in the book) but rather building a cohesive ML system. It covers everything from data engineering to model building to model deployment (online and offline) to model monitoring. Even better, it’s a joy to read, you can tell the book is written by a writer (Chip has previously authored several books).
-- [**Made With ML by Goku Mohandas**](https://madewithml.com) — Whenever I want to learn or reference something to do with MLOps, I go to [madewithml.com/mlops](https://madewithml.com/#mlops) and see if there’s a lesson on it. Made with ML not only teaches you the  fundamentals of many different ML models but goes through how to build an end-to-end ML system with plenty of code and tooling examples.
+- **[Designing Machine Learning Systems book by Chip Huyen](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)** — If you want to build an ML system, it’d be good to know how others have done it. Chip’s book focuses less on building a single machine learning model (though there’s plenty of content on that in the book) but rather building a cohesive ML system. It covers everything from data engineering to model building to model deployment (online and offline) to model monitoring. Even better, it’s a joy to read, you can tell the book is written by a writer (Chip has previously authored several books).
+- **[Made With ML by Goku Mohandas**](https://madewithml.com)** — Whenever I want to learn or reference something to do with MLOps, I go to [madewithml.com/mlops](https://madewithml.com/#mlops) and see if there’s a lesson on it. Made with ML not only teaches you the  fundamentals of many different ML models but goes through how to build an end-to-end ML system with plenty of code and tooling examples.
 - **[The Machine Learning Engineering book by Andriy Burkov](http://www.mlebook.com)** — Even though this book is available to read online for free, I bought it as soon as it came out. I’ve used it as a reference and to learn more about ML engineering so much it’s basically always on my desk/within arms reach. Burkov does an excellent job at getting to the point and referencing further materials when necessary.
 - **[Full Stack Deep Learning course](https://fullstackdeeplearning.com)** — I first did this course in 2021. And it’s continued to evolve to cover the latest and greatest tools in the field. It’ll teach you how to plan a project to solve an ML problem, how to source or create data, how to troubleshoot an ML project when it goes wrong and most of all, how to build ML-powered products.
 
-![Resources to improve your machine learning engineering skills (all of the steps that go around building a machine learning model).]()
+![Resources to improve your machine learning engineering skills (all of the steps that go around building a machine learning model).](https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/extras-003-places-to-learn-ml-ops.jpeg)
 
-Resources to improve your machine learning engineering skills (all of the steps that go around building a machine learning model).
+*Resources to improve your machine learning engineering skills (all of the steps that go around building a machine learning model).*
 
 ## 🗃 Where to find datasets
 
@@ -75,9 +77,9 @@ The following resources are some of the best for finding open-source and often r
 
 These should be plenty to get started, however, for your own specific problems you’ll likely want to build your own dataset.
 
-![Places to find existing and open-source datasets for a variety of problem spaces.]()
+![Places to find existing and open-source datasets for a variety of problem spaces.](https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/extras-004-places-to-find-datasets.jpeg)
 
-Places to find existing and open-source datasets for a variety of problem spaces.
+*Places to find existing and open-source datasets for a variety of problem spaces.*
 
 ## Tools for Deep Learning Domains
 
@@ -130,7 +132,7 @@ If your data has a time component and you’d like to leverage patterns from the
 Both of these libraries don’t necessarily use PyTorch, however, since time series is such a common problem, I’ve included them here.
 
 - [**Salesforce Merlion**](https://github.com/salesforce/Merlion) — Turn your time series data into intelligence by using Merlion’s data loaders, pre-built models, AutoML (automated machine learning) hyperparameter tuning and more for time series forecasting and time series anomaly detection all inspired by practical use cases.
-- **[Facebook Kats](https://github.com/facebookresearch/Kats)** — Facebook’s entire business depends on prediction: when’s the best time to place an advertisement? So you can bet they’re invested heavily in their time series prediction software. Kats (Kit to Analyze Time Series data) is their open-source library for time series forecasting, detection and data processing.
+- [**Facebook Kats**](https://github.com/facebookresearch/Kats) — Facebook’s entire business depends on prediction: when’s the best time to place an advertisement? So you can bet they’re invested heavily in their time series prediction software. Kats (Kit to Analyze Time Series data) is their open-source library for time series forecasting, detection and data processing.
 
 ## 👩‍💻 How to get a job
 
@@ -140,6 +142,6 @@ And even better, get paid for them.
 
 The following resources are good guides on what to do to get one.
 
-- ****["How can a beginner data scientist like me gain experience?"](https://www.mrdbourke.com/how-can-a-beginner-data-scientist-like-me-gain-experience/) by Daniel Bourke** — I get the question of “how do I get experience?” often because many different job requirements state “experience needed”. Well, it turns out one of the best ways to get experience (and a job) is to: *start the job before you have it*.
+- **["How can a beginner data scientist like me gain experience?"](https://www.mrdbourke.com/how-can-a-beginner-data-scientist-like-me-gain-experience/) by Daniel Bourke** — I get the question of “how do I get experience?” often because many different job requirements state “experience needed”. Well, it turns out one of the best ways to get experience (and a job) is to: *start the job before you have it*.
 - **[You Don’t Really Need Another MOOC](https://eugeneyan.com/writing/you-dont-need-another-mooc/) by Eugene Yan** — MOOC stands for massive online open course (or something similar). MOOCs are beautiful. They enable people all over the world at their own pace. However, it can be tempting to just continually do MOOCs over and over again thinking “if I just do one more, I’ll be ready”. The truth is, a few is enough, the returns of a MOOC quickly start to trail off. Instead, go off the trail, start to build, start to create, start to learn skills that can’t be taught. Showcase those skills to get a job.
 - **Bonus:** For the most thorough resource on the internet for machine learning interviews, check out Chip Huyen’s free [Introduction to Machine Learning Interviews book](https://huyenchip.com/ml-interviews-book/).
