@@ -144,6 +144,11 @@ going_modular/data/
 data/cifar-*
 logs/
 runs/
+
+# Notebooks
+09_pytorch_model_deployment-*
+
+# Models
 models/03_pytorch_computer_vision_model_2.pth
 models/04_pytorch_custom_datasets_tinyvgg.pth
 models/07_effnetb0_data_10_percent_10_epochs.pth
@@ -153,6 +158,12 @@ models/07_effnetb0_data_20_percent_5_epochs.pth
 models/07_effnetb2_data_10_percent_10_epochs.pth
 models/07_effnetb2_data_10_percent_5_epochs.pth
 models/07_effnetb2_data_20_percent_5_epochs.pth
+models/08_*
+models/09_*
+
+# Demos
+demos/foodvision_big/
+demos/foodvision_mini/
 
 # Docs
 .cache
