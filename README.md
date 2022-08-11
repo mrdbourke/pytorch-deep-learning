@@ -126,6 +126,8 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 11 Aug 2022 - finish skeleton code for notebook 09, course finishes deploying 2x models, one for FoodVision Mini & one for (secret)
+* 10 Aug 2022 - add section for PyTorch Extra Resources (places to learn more about PyTorch/deep learning): https://www.learnpytorch.io/pytorch_extra_resources/ 
 * 09 Aug 2022 - add more skeleton code to notebook 09
 * 08 Aug 2022 - create draft notebook for 09, end goal to deploy FoodVision Mini model and make it publically accessible
 * 05 Aug 2022 - recorded 11 videos for 08, total videos: 263, section 08 videos finished!... the biggest section so far
