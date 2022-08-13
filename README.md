@@ -127,6 +127,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 13 Aug 2022 - add annotations to 09
 * 12 Aug 2022 - add demo files for notebook 09 to `demos/`, start annotating notebook 09 with explainer text
 * 11 Aug 2022 - finish skeleton code for notebook 09, course finishes deploying 2x models, one for FoodVision Mini & one for (secret)
 * 10 Aug 2022 - add section for PyTorch Extra Resources (places to learn more about PyTorch/deep learning): https://www.learnpytorch.io/pytorch_extra_resources/ 
