@@ -127,6 +127,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 16 Aug 2022 - add annotations to 09
 * 15 Aug 2022 - add annotations to 09
 * 13 Aug 2022 - add annotations to 09
 * 12 Aug 2022 - add demo files for notebook 09 to `demos/`, start annotating notebook 09 with explainer text
