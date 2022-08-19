@@ -164,6 +164,7 @@ models/09_*
 # Demos
 demos/foodvision_big/
 demos/foodvision_mini/
+flagged/
 
 # Docs
 .cache
