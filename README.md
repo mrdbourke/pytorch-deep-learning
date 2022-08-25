@@ -127,6 +127,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 25 Aug 2022 - add annotations and cleanup 09, remove TK's, cleanup images, make slides for 09
 * 24 Aug 2022 - add annotations to 09, main takeaways, exercises and extra-curriculum done
 * 23 Aug 2022 - add annotations to 09, add plenty of images/slides
 * 22 Aug 2022 - add annotations to 09, start working on slides/images
