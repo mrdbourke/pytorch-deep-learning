@@ -35,20 +35,20 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 | [06 - PyTorch Transfer Learning](https://www.learnpytorch.io/06_pytorch_transfer_learning/) | Let's take a well performing pre-trained model and adjust it to one of our own problems. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/06_pytorch_transfer_learning/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/06_pytorch_transfer_learning.pdf) |
 | [07 - Milestone Project 1: PyTorch Experiment Tracking](https://www.learnpytorch.io/07_pytorch_experiment_tracking/) | We've built a bunch of models... wouldn't it be good to track how they're all going? | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/07_pytorch_experiment_tracking/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/07_pytorch_experiment_tracking.pdf) |
 | [08 - Milestone Project 2: PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/) | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/08_pytorch_paper_replicating/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/08_pytorch_paper_replicating.pdf) |
-| Work in progress: [09 - Milestone Project 3: Model Deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/) | So we've built a working PyTorch model... how do we get it in the hands of others? Hint: deploy it to the internet. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/09_pytorch_model_deployment/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/09_pytorch_model_deployment.pdf) |
+| [09 - Milestone Project 3: Model Deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/) | So we've built a working PyTorch model... how do we get it in the hands of others? Hint: deploy it to the internet. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/09_pytorch_model_deployment/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/09_pytorch_model_deployment.pdf) |
 | [PyTorch Extra Resources](https://www.learnpytorch.io/pytorch_extra_resources/) | This course covers a large amount PyTorch and deep learning but the field of machine learning is vast, inside here you'll find recommended books and resources for: PyTorch and deep learning, ML engineering, NLP (natural language processing), time series data, where to find datasets and more. | - | - |
 
 ## Status
 
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** creating materials for 09. PyTorch Model Deployment
+* **Working on:** recording videos for 09. PyTorch Model Deployment
 * **Total video count:** 263
-* **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
-* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
-* **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
-* **Done keynotes for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
-* **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05, 06, 07, 08
+* **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
+* **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
+* **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
+* **Done keynotes for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
+* **Done exercises and solutions for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 
 See the [log](https://github.com/mrdbourke/pytorch-deep-learning#log) for almost daily updates.
 
@@ -127,7 +127,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
-* 26 Aug 2022 - add finishing touchs to notebook 09, add slides for 09
+* 26 Aug 2022 - add finishing touchs to notebook 09, add slides for 09, create solutions and exercises for 09
 * 25 Aug 2022 - add annotations and cleanup 09, remove TK's, cleanup images, make slides for 09
 * 24 Aug 2022 - add annotations to 09, main takeaways, exercises and extra-curriculum done
 * 23 Aug 2022 - add annotations to 09, add plenty of images/slides
