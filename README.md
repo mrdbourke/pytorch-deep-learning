@@ -42,8 +42,8 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** recording videos for 09. PyTorch Model Deployment
-* **Total video count:** 306
+* **Working on:** finished videos for 09, editing videos for 08 and 09 ready for upload 
+* **Total video count:** 321
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 * **Done images for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
@@ -127,6 +127,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 30 Aug 2022 - recorded 15 videos for 09, total videos: 321, finished section 09 videos!!!! ... even bigger than 08!!
 * 29 Aug 2022 - recorded 16 videos for 09, total videos: 306
 * 28 Aug 2022 - recorded 11 videos for 09, total videos: 290
 * 27 Aug 2022 - recorded 16 videos for 09, total videos: 279
