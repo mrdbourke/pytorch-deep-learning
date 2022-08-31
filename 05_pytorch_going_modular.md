@@ -1,3 +1,5 @@
+[View Source Code](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/05_pytorch_going_modular.md) | [View Slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf) 
+
 # 05. PyTorch Going Modular
 
 This section answers the question, "how do I turn my notebook code into Python scripts?"
