@@ -1,6 +1,6 @@
 # Learn PyTorch for Deep Learning
 
-**Update 2 October 2022:** The [course is out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with 10 sections and 300+ videos ranging from the fundamentals to state of the art machine learning research paper replicating.
+**Update (2 October 2022):** The [course is out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with 10 sections and 300+ videos ranging from the fundamentals to state of the art machine learning research paper replicating.
 
 Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://dbourke.link/ZTMPyTorch), the second best place to learn PyTorch on the internet (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
