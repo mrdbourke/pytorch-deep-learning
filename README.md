@@ -1,6 +1,6 @@
-# Learn PyTorch for Deep Learning (work in progress)
+# Learn PyTorch for Deep Learning
 
-**Update August 31 2022:** The [course is out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with videos for sections 00-07, 08 & 09 will come soon.
+**Update 2 October 2022:** The [course is out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with 10 sections and 300+ videos ranging from the fundamentals to state of the art machine learning research paper replicating.
 
 Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://dbourke.link/ZTMPyTorch), the second best place to learn PyTorch on the internet (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
@@ -41,9 +41,10 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 
 ## Status
 
+All materials completed and videos published on Zero to Mastery!
+
 See the project page for work-in-progress board - https://github.com/users/mrdbourke/projects/1 
 
-* **Working on:** finished videos for 09, editing videos for 08 and 09 ready for upload 
 * **Total video count:** 321
 * **Done skeleton code for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 * **Done annotations (text) for:** 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
@@ -128,6 +129,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 2 Oct 2022 - all videos for section 08 and 09 published (100+ videos for the last two sections)!
 * 30 Aug 2022 - recorded 15 videos for 09, total videos: 321, finished section 09 videos!!!! ... even bigger than 08!!
 * 29 Aug 2022 - recorded 16 videos for 09, total videos: 306
 * 28 Aug 2022 - recorded 11 videos for 09, total videos: 290
