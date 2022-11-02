@@ -118,7 +118,7 @@ But here's what I recommend:
 2. **Explore and experiment (*experiment, experiment, experiment!*)** - Machine learning (and deep learning) is very experimental. So if you find yourself wanting to try something on your own and ignoring the materials, do it.
 3. **Visualize what you don't understand (*visualize, visualize, visualize!*)** - Numbers on a page can get confusing. So make things colourful, see what the inputs and outputs of your code looks like.
 4. **Ask questions** - If you're stuck with something, ask a question, trying searching for it or if nothing comes up, the course [GitHub Discussions page](https://github.com/mrdbourke/pytorch-deep-learning/discussions) will be the place to go.
-5. **Do the exercises** - Each module of the course comes with a dedicated exericses section. It's important to try these on your own. You will get stuck. But that's the nature of learning something new: everyone gets stuck.
+5. **Do the exercises** - Each module of the course comes with a dedicated exercises section. It's important to try these on your own. You will get stuck. But that's the nature of learning something new: everyone gets stuck.
 6. **Share your work** - If you've learned something cool or even better, made something cool, share it. It could be with the course Discord group or on the course GitHub page or on your own website. The benefits of sharing your work is you get to practice communicating as well as others can help you out if you're not sure of something.
 
 ### Do I need to take things in order?
