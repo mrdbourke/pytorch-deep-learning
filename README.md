@@ -129,6 +129,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 4 Nov 2022 - add a notebook for PyTorch Cheatsheet in `extras/` (a simple overview of many of the most important functionality of PyTorch)
 * 2 Oct 2022 - all videos for section 08 and 09 published (100+ videos for the last two sections)!
 * 30 Aug 2022 - recorded 15 videos for 09, total videos: 321, finished section 09 videos!!!! ... even bigger than 08!!
 * 29 Aug 2022 - recorded 16 videos for 09, total videos: 306
