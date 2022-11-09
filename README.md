@@ -1,6 +1,8 @@
 # Learn PyTorch for Deep Learning
 
-**Update (2 October 2022):** The [course is out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with 10 sections and 300+ videos ranging from the fundamentals to state of the art machine learning research paper replicating.
+**Update (9 November 2022):** 
+* Udemy launch is live! [Sign up over the next 3-4 days](https://www.udemy.com/course/pytorch-for-deep-learning/?couponCode=ZTMGOODIES7) for a fantastic launch deal! 🔥
+* The [course is also out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with 10 sections and 300+ videos ranging from the fundamentals to state of the art machine learning research paper replicating.
 
 Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://dbourke.link/ZTMPyTorch), the second best place to learn PyTorch on the internet (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
@@ -129,6 +131,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 9 Nov 2022 - full course materials (300+ videos) are now live on Udemy! You can sign up here: https://www.udemy.com/course/pytorch-for-deep-learning/?couponCode=ZTMGOODIES7 (launch deal code valid for 3-4 days from this line)
 * 4 Nov 2022 - add a notebook for PyTorch Cheatsheet in `extras/` (a simple overview of many of the most important functionality of PyTorch)
 * 2 Oct 2022 - all videos for section 08 and 09 published (100+ videos for the last two sections)!
 * 30 Aug 2022 - recorded 15 videos for 09, total videos: 321, finished section 09 videos!!!! ... even bigger than 08!!
