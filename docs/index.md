@@ -20,7 +20,7 @@ Otherwise, you can find more about the course below.
 
 Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 
-* Last update: August 31 2022
+* Last update: November 9 2022
 * Videos are done for chapters: 00, 01, 02, 03, 04, 05, 06, 07, 08, 09 (all chapters!)
 * Currently working on: editing and uploading videos for 08 and 09
 * See progress on the course [GitHub Project](https://github.com/users/mrdbourke/projects/1/views/4).
@@ -48,6 +48,7 @@ Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 | [08 - Milestone Project 2: PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/) | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/08_pytorch_paper_replicating/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/08_pytorch_paper_replicating.pdf) |
 | [09 - Milestone Project 3: Model Deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/) | So we've built a working PyTorch model... how do we get it in the hands of others? Hint: deploy it to the internet. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/09_pytorch_model_deployment/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/09_pytorch_model_deployment.pdf) |
 | [PyTorch Extra Resources](https://www.learnpytorch.io/pytorch_extra_resources/) | This course covers a large amount of PyTorch and deep learning but the field of machine learning is vast, inside here you'll find recommended books and resources for: PyTorch and deep learning, ML engineering, NLP (natural language processing), time series data, where to find datasets and more. | - | - |
+| [PyTorch Cheatsheet](https://www.learnpytorch.io/pytorch_cheatsheet/) | A very quick overview of some of the main features of PyTorch plus links to various resources where more can be found in the course and in the PyTorch documentation. | - | - |
 
 ## About this course
 
