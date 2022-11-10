@@ -40,6 +40,7 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 | [08 - Milestone Project 2: PyTorch Paper Replicating](https://www.learnpytorch.io/08_pytorch_paper_replicating/) | PyTorch is the most popular deep learning framework for machine learning research, let's see why by replicating a machine learning paper. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/08_pytorch_paper_replicating/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/08_pytorch_paper_replicating.pdf) |
 | [09 - Milestone Project 3: Model Deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/) | So we've built a working PyTorch model... how do we get it in the hands of others? Hint: deploy it to the internet. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/09_pytorch_model_deployment/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/09_pytorch_model_deployment.pdf) |
 | [PyTorch Extra Resources](https://www.learnpytorch.io/pytorch_extra_resources/) | This course covers a large amount of PyTorch and deep learning but the field of machine learning is vast, inside here you'll find recommended books and resources for: PyTorch and deep learning, ML engineering, NLP (natural language processing), time series data, where to find datasets and more. | - | - |
+| [PyTorch Cheatsheet](https://www.learnpytorch.io/pytorch_cheatsheet/) | A very quick overview of some of the main features of PyTorch plus links to various resources where more can be found in the course and in the PyTorch documentation. | - | - |
 
 ## Status
 
@@ -131,6 +132,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 9 Nov 2022 - add PyTorch cheatsheet for a very quick overview of the main features of PyTorch + links to course sections: https://www.learnpytorch.io/pytorch_cheatsheet/ 
 * 9 Nov 2022 - full course materials (300+ videos) are now live on Udemy! You can sign up here: https://www.udemy.com/course/pytorch-for-deep-learning/?couponCode=ZTMGOODIES7 (launch deal code valid for 3-4 days from this line)
 * 4 Nov 2022 - add a notebook for PyTorch Cheatsheet in `extras/` (a simple overview of many of the most important functionality of PyTorch)
 * 2 Oct 2022 - all videos for section 08 and 09 published (100+ videos for the last two sections)!
