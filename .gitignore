@@ -131,6 +131,7 @@ dmypy.json
 # Misc
 *.DS_Store
 */.DS_Store
+extras/data/*
 
 # Data files
 data/10_whole_foods*
