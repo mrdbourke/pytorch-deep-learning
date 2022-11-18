@@ -36,4 +36,5 @@ jobs:
       - run: cp 05_pytorch_going_modular.md docs/ # copy markdown section for 05 to docs folder
       - run: cp extras/pytorch_extra_resources.md docs/
       - run: cp extras/pytorch_cheatsheet.ipynb docs/
+      - run: cp extras/pytorch_most_common_errors.ipynb docs/
       - run: mkdocs gh-deploy --force

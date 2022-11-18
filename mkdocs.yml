@@ -44,6 +44,7 @@ nav:
   - 09. Deploying PyTorch Machine Learning Models: '09_pytorch_model_deployment.ipynb'
   - PyTorch Extra Resources: 'pytorch_extra_resources.md'
   - PyTorch Cheatsheet: 'pytorch_cheatsheet.ipynb'
+  - Three Most Common PyTorch Errors: 'pytorch_most_common_errors.ipynb'
 
 extra:
   social:
