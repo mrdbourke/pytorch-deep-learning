@@ -1,9 +1,5 @@
 # Learn PyTorch for Deep Learning
 
-**Update (9 November 2022):** 
-* Udemy launch is live! [Sign up over the next 3-4 days](https://www.udemy.com/course/pytorch-for-deep-learning/?couponCode=ZTMGOODIES7) for a fantastic launch deal! 🔥
-* The [course is also out on the Zero to Mastery Academy](https://dbourke.link/ZTMPyTorch) with 10 sections and 300+ videos ranging from the fundamentals to state of the art machine learning research paper replicating.
-
 Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://dbourke.link/ZTMPyTorch), the second best place to learn PyTorch on the internet (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
 <div align="center">
