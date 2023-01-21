@@ -45,7 +45,7 @@ nav:
   - PyTorch Extra Resources: 'pytorch_extra_resources.md'
   - PyTorch Cheatsheet: 'pytorch_cheatsheet.ipynb'
   - Three Most Common PyTorch Errors: 'pytorch_most_common_errors.ipynb'
-  - Test 00 as markdown: '00_pytorch_fundamentals.md'
+  # - Test 00 as markdown: '00_pytorch_fundamentals.md'
 
 extra:
   social:

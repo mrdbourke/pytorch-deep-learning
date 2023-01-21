@@ -37,5 +37,5 @@ jobs:
       - run: cp extras/pytorch_extra_resources.md docs/
       - run: cp extras/pytorch_cheatsheet.ipynb docs/
       - run: cp extras/pytorch_most_common_errors.ipynb docs/
-      - run: cp extras/00_pytorch_fundamentals.md docs/
+      # - run: cp extras/00_pytorch_fundamentals.md docs/
       - run: mkdocs gh-deploy --force
