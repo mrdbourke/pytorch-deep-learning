@@ -145,6 +145,7 @@ going_modular/data/
 data/cifar-*
 logs/
 runs/
+extras/cifar-10*
 
 # Notebooks
 09_pytorch_model_deployment-*
