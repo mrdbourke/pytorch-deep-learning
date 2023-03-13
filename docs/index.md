@@ -20,9 +20,9 @@ Otherwise, you can find more about the course below.
 
 Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 
-* Last update: November 9 2022
+* Last update: March 13 2023
 * Videos are done for chapters: 00, 01, 02, 03, 04, 05, 06, 07, 08, 09 (all chapters!)
-* Currently working on: editing and uploading videos for 08 and 09
+* Currently working on: PyTorch 2.0 Tutorial
 * See progress on the course [GitHub Project](https://github.com/users/mrdbourke/projects/1/views/4).
 
 **Get updates:** Follow the [`pytorch-deep-learning`](https://github.com/mrdbourke/pytorch-deep-learning#log) repo log or [sign up for emails](https://www.mrdbourke.com/newsletter/).
