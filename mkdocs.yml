@@ -42,6 +42,7 @@ nav:
   - 07. PyTorch Experiment Tracking: '07_pytorch_experiment_tracking.ipynb'
   - 08. Replicating Machine Learning Research Papers with PyTorch: '08_pytorch_paper_replicating.ipynb'
   - 09. Deploying PyTorch Machine Learning Models: '09_pytorch_model_deployment.ipynb'
+  - A Quick PyTorch 2 Tutorial: 'pytorch_2_intro.ipynb'
   - PyTorch Extra Resources: 'pytorch_extra_resources.md'
   - PyTorch Cheatsheet: 'pytorch_cheatsheet.ipynb'
   - Three Most Common PyTorch Errors: 'pytorch_most_common_errors.ipynb'
