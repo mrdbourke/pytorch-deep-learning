@@ -16,13 +16,23 @@ For full code and resources see the [course GitHub](https://github.com/mrdbourke
 
 Otherwise, you can find more about the course below.
 
+## Does this course cover PyTorch 2.0?
+
+Yes. PyTorch 2.0 is an additive release to previous versions of PyTorch.
+
+This means it adds new features on top of the existing baseline features of PyTorch.
+
+This course covers focuses on the baseline features of PyTorch (e.g. you're a beginner wanting to get into deep learning/AI).
+
+Once you know the fundamentals of PyTorch, PyTorch 2.0 is quick upgrade, there's a [tutorial on this website](https://www.learnpytorch.io/pytorch_2_intro/) which runs through the new features. 
+
 ## Status
 
 Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 
-* Last update: March 13 2023
+* Last update: April 16 2023
 * Videos are done for chapters: 00, 01, 02, 03, 04, 05, 06, 07, 08, 09 (all chapters!)
-* Currently working on: PyTorch 2.0 Tutorial
+* Currently working on: [PyTorch 2.0 Tutorial](https://www.learnpytorch.io/pytorch_2_intro/)
 * See progress on the course [GitHub Project](https://github.com/users/mrdbourke/projects/1/views/4).
 
 **Get updates:** Follow the [`pytorch-deep-learning`](https://github.com/mrdbourke/pytorch-deep-learning#log) repo log or [sign up for emails](https://www.mrdbourke.com/newsletter/).
@@ -50,12 +60,13 @@ Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 | [PyTorch Extra Resources](https://www.learnpytorch.io/pytorch_extra_resources/) | This course covers a large amount of PyTorch and deep learning but the field of machine learning is vast, inside here you'll find recommended books and resources for: PyTorch and deep learning, ML engineering, NLP (natural language processing), time series data, where to find datasets and more. | - | - |
 | [PyTorch Cheatsheet](https://www.learnpytorch.io/pytorch_cheatsheet/) | A very quick overview of some of the main features of PyTorch plus links to various resources where more can be found in the course and in the PyTorch documentation. | - | - |
 | [Three Most Common Errors in PyTorch](https://www.learnpytorch.io/pytorch_most_common_errors/) | An overview of the three most common errors in PyTorch (shape, device and datatype errors), how they happen and how to fix them. | - | - | 
+| [A Quick PyTorch 2.0 Tutorial](https://www.learnpytorch.io/pytorch_2_intro/) | A fasssssst introduction to PyTorch 2.0, what's new and how to get started along with resources to learn more. | - | - |
 
 ## About this course
 
 ### Who is this course for?
 
-**You:** Are a beginner in the field of machine learning or deep learning and would like to learn PyTorch.
+**You:** Are a beginner in the field of machine learning or deep learning or AI and would like to learn PyTorch.
 
 **This course:** Teaches you PyTorch and many machine learning concepts in a hands-on, code-first way.
 

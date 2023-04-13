@@ -2,6 +2,8 @@
 
 Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://dbourke.link/ZTMPyTorch), the second best place to learn PyTorch on the internet (the first being the [PyTorch documentation](https://pytorch.org/docs/stable/index.html)).
 
+* **Update April 2023:** New [tutorial for PyTorch 2.0](https://www.learnpytorch.io/pytorch_2_intro/) is live! And because PyTorch 2.0 is an additive (new features) and backward-compatible release, all previous course materials will *still* work with PyTorch 2.0.
+
 <div align="center">
     <a href="https://learnpytorch.io">
         <img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/misc-pytorch-course-launch-cover-white-text-black-background.jpg" width=750 alt="pytorch deep learning by zero to mastery cover photo with different sections of the course">
@@ -37,6 +39,7 @@ Welcome to the [Zero to Mastery Learn PyTorch for Deep Learning course](https://
 | [09 - Milestone Project 3: Model Deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/) | So we've built a working PyTorch model... how do we get it in the hands of others? Hint: deploy it to the internet. | [Go to exercises & extra-curriculum](https://www.learnpytorch.io/09_pytorch_model_deployment/#exercises) | [Go to slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/09_pytorch_model_deployment.pdf) |
 | [PyTorch Extra Resources](https://www.learnpytorch.io/pytorch_extra_resources/) | This course covers a large amount of PyTorch and deep learning but the field of machine learning is vast, inside here you'll find recommended books and resources for: PyTorch and deep learning, ML engineering, NLP (natural language processing), time series data, where to find datasets and more. | - | - |
 | [PyTorch Cheatsheet](https://www.learnpytorch.io/pytorch_cheatsheet/) | A very quick overview of some of the main features of PyTorch plus links to various resources where more can be found in the course and in the PyTorch documentation. | - | - |
+| [A Quick PyTorch 2.0 Tutorial](https://www.learnpytorch.io/pytorch_2_intro/) | A fasssssst introduction to PyTorch 2.0, what's new and how to get started along with resources to learn more. | - | - |
 
 ## Status
 
@@ -128,6 +131,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 13 Apr 2023 - update PyTorch 2.0 notebook
 * 30 Mar 2023 - update PyTorch 2.0 notebook with more info/clean code
 * 23 Mar 2023 - upgrade PyTorch 2.0 tutorial with annotations and images
 * 13 Mar 2023 - add starter code for PyTorch 2.0 tutorial 
