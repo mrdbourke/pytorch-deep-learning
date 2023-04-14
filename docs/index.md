@@ -22,7 +22,7 @@ Yes. PyTorch 2.0 is an additive release to previous versions of PyTorch.
 
 This means it adds new features on top of the existing baseline features of PyTorch.
 
-This course covers focuses on the baseline features of PyTorch (e.g. you're a beginner wanting to get into deep learning/AI).
+This course focuses on the baseline features of PyTorch (e.g. you're a beginner wanting to get into deep learning/AI).
 
 Once you know the fundamentals of PyTorch, PyTorch 2.0 is a quick upgrade, there's a [tutorial on this website](https://www.learnpytorch.io/pytorch_2_intro/) which runs through the new features. 
 
@@ -68,7 +68,7 @@ Course [launched on ZTM Academy](https://dbourke.link/ZTMPyTorch)!
 
 **You:** Are a beginner in the field of machine learning or deep learning or AI and would like to learn PyTorch.
 
-**This course:** Teaches you PyTorch and many machine learning concepts in a hands-on, code-first way.
+**This course:** Teaches you PyTorch and many machine learning, deep learning and AI concepts in a hands-on, code-first way.
 
 If you already have 1-year+ experience in machine learning, this course may help but it is specifically designed to be beginner-friendly.
 
