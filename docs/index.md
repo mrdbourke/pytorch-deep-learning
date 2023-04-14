@@ -24,7 +24,7 @@ This means it adds new features on top of the existing baseline features of PyTo
 
 This course covers focuses on the baseline features of PyTorch (e.g. you're a beginner wanting to get into deep learning/AI).
 
-Once you know the fundamentals of PyTorch, PyTorch 2.0 is quick upgrade, there's a [tutorial on this website](https://www.learnpytorch.io/pytorch_2_intro/) which runs through the new features. 
+Once you know the fundamentals of PyTorch, PyTorch 2.0 is a quick upgrade, there's a [tutorial on this website](https://www.learnpytorch.io/pytorch_2_intro/) which runs through the new features. 
 
 ## Status
 
