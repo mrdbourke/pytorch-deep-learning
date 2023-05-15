@@ -131,6 +131,7 @@ Please leave a [discussion](https://github.com/mrdbourke/pytorch-deep-learning/d
 
 Almost daily updates of what's happening.
 
+* 15 May 2023 - PyTorch 2.0 tutorial finished + videos added to ZTM/Udemy, see code: https://www.learnpytorch.io/pytorch_2_intro/
 * 13 Apr 2023 - update PyTorch 2.0 notebook
 * 30 Mar 2023 - update PyTorch 2.0 notebook with more info/clean code
 * 23 Mar 2023 - upgrade PyTorch 2.0 tutorial with annotations and images
