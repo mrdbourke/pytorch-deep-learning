@@ -112,7 +112,7 @@ cd ztm-pytorch-course
 ```
 3. Create a `conda` environment in the directory you just created. The following command will create a `conda` enviroment that lives in the folder called `env` which lives in the folder you just created (e.g. `ztm-pytorch-course/env`). Press `y` when the command below asks `y/n?`.
 ```
-conda create --prefix ./env python=3.8
+conda create --prefix ./env python=3.8.13
 ```
 4. Activate the environment you just created.
 ```
