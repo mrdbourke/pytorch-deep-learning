@@ -1,0 +1,1993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn important machine learning concepts hands-on by writing PyTorch code.">
+      
+      
+      
+        <link rel="canonical" href="https://www.learnpytorch.io/05_pytorch_going_modular/">
+      
+      
+        <link rel="prev" href="../04_pytorch_custom_datasets/">
+      
+      
+        <link rel="next" href="../06_pytorch_transfer_learning/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/ztm-logo-and-pytorch-logo.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14+insiders-4.35.1">
+    
+    
+      
+        <title>05. PyTorch Going Modular - Zero to Mastery Learn PyTorch for Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.14411569.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.df142b89.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="05. PyTorch Going Modular - Zero to Mastery Learn PyTorch for Deep Learning" />
+<meta property="og:description" content="Learn important machine learning concepts hands-on by writing PyTorch code." />
+<meta property="og:image" content="https://www.learnpytorch.io/assets/images/social/05_pytorch_going_modular.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://www.learnpytorch.io/05_pytorch_going_modular/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter.title" content="05. PyTorch Going Modular - Zero to Mastery Learn PyTorch for Deep Learning" />
+<meta property="twitter:description" content="Learn important machine learning concepts hands-on by writing PyTorch code." />
+<meta property="twitter:image" content="https://www.learnpytorch.io/assets/images/social/05_pytorch_going_modular.png" />
+</head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#05-pytorch-going-modular" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Zero to Mastery Learn PyTorch for Deep Learning" class="md-header__button md-logo" aria-label="Zero to Mastery Learn PyTorch for Deep Learning" data-md-component="logo">
+      
+  <img src="../assets/ztm-logo-and-pytorch-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero to Mastery Learn PyTorch for Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              05. PyTorch Going Modular
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mrdbourke/pytorch-deep-learning/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mrdbourke/pytorch_deep_learning
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Zero to Mastery Learn PyTorch for Deep Learning" class="md-nav__button md-logo" aria-label="Zero to Mastery Learn PyTorch for Deep Learning" data-md-component="logo">
+      
+  <img src="../assets/ztm-logo-and-pytorch-logo.png" alt="logo">
+
+    </a>
+    Zero to Mastery Learn PyTorch for Deep Learning
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mrdbourke/pytorch-deep-learning/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mrdbourke/pytorch_deep_learning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_pytorch_fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    00. PyTorch Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_pytorch_workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    01. PyTorch Workflow Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_pytorch_classification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    02. PyTorch Neural Network Classification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_pytorch_computer_vision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    03. PyTorch Computer Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_pytorch_custom_datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    04. PyTorch Custom Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    05. PyTorch Going Modular
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    05. PyTorch Going Modular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-going-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is going modular?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-would-you-want-to-go-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why would you want to go modular?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why would you want to go modular?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons-of-notebooks-vs-python-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros and cons of notebooks vs Python scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch-in-the-wild" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PyTorch in the wild
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-were-going-to-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What we're going to cover
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What we're going to cover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-two-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why two parts?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-were-working-towards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What we're working towards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-to-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Things to note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-can-you-get-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where can you get help?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-cell-mode-vs-script-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Cell mode vs. script mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-get-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Get data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-datasets-and-dataloaders-data_setuppy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create Datasets and DataLoaders (data_setup.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-making-a-model-model_builderpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Making a model (model_builder.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creating-train_step-and-test_step-functions-and-train-to-combine-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Creating train_step() and test_step() functions and train() to combine them
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-creating-a-function-to-save-the-model-utilspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Creating a function to save the model (utils.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-train-evaluate-and-save-the-model-trainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Train, evaluate and save the model (train.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-curriculum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra-curriculum
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_pytorch_transfer_learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    06. PyTorch Transfer Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_pytorch_experiment_tracking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    07. PyTorch Experiment Tracking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_pytorch_paper_replicating/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    08. PyTorch Paper Replicating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_pytorch_model_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    09. PyTorch Model Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytorch_2_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    A Quick PyTorch 2.0 Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytorch_extra_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PyTorch Extra Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytorch_cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PyTorch Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytorch_most_common_errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    The Three Most Common Errors in PyTorch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-going-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is going modular?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-would-you-want-to-go-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why would you want to go modular?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why would you want to go modular?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons-of-notebooks-vs-python-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros and cons of notebooks vs Python scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch-in-the-wild" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PyTorch in the wild
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-were-going-to-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What we're going to cover
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What we're going to cover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-two-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why two parts?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-were-working-towards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What we're working towards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-to-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Things to note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-can-you-get-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where can you get help?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-cell-mode-vs-script-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Cell mode vs. script mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-get-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Get data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-datasets-and-dataloaders-data_setuppy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create Datasets and DataLoaders (data_setup.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-making-a-model-model_builderpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Making a model (model_builder.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creating-train_step-and-test_step-functions-and-train-to-combine-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Creating train_step() and test_step() functions and train() to combine them
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-creating-a-function-to-save-the-model-utilspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Creating a function to save the model (utils.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-train-evaluate-and-save-the-model-trainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Train, evaluate and save the model (train.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-curriculum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra-curriculum
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/05_pytorch_going_modular.md">View Source Code</a> | <a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf">View Slides</a> </p>
+<h1 id="05-pytorch-going-modular">05. PyTorch Going Modular</h1>
+<p>This section answers the question, "how do I turn my notebook code into Python scripts?"</p>
+<p>To do so, we're going to turn the most useful code cells in <a href="https://www.learnpytorch.io/04_pytorch_custom_datasets/">notebook 04. PyTorch Custom Datasets</a> into a series of Python scripts saved to a directory called <a href="https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular"><code>going_modular</code></a>.</p>
+<h2 id="what-is-going-modular">What is going modular?</h2>
+<p>Going modular involves turning notebook code (from a Jupyter Notebook or Google Colab notebook) into a series of different Python scripts that offer similar functionality.</p>
+<p>For example, we could turn our notebook code from a series of cells into the following Python files:</p>
+<ul>
+<li><code>data_setup.py</code> - a file to prepare and download data if needed.</li>
+<li><code>engine.py</code> - a file containing various training functions.</li>
+<li><code>model_builder.py</code> or <code>model.py</code> - a file to create a PyTorch model.</li>
+<li><code>train.py</code> - a file to leverage all other files and train a target PyTorch model.</li>
+<li><code>utils.py</code> - a file dedicated to helpful utility functions.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> The naming and layout of the above files will depend on your use case and code requirements. Python scripts are as general as individual notebook cells, meaning, you could create one for almost any kind of functionality.</p>
+</blockquote>
+<h2 id="why-would-you-want-to-go-modular">Why would you want to go modular?</h2>
+<p>Notebooks are fantastic for iteratively exploring and running experiments quickly.</p>
+<p>However, for larger scale projects you may find Python scripts more reproducible and easier to run.</p>
+<p>Though this is a debated topic, as companies like <a href="https://netflixtechblog.com/notebook-innovation-591ee3221233">Netflix have shown how they use notebooks for production code</a>.</p>
+<p><strong>Production code</strong> is code that runs to offer a service to someone or something.</p>
+<p>For example, if you have an app running online that other people can access and use, the code running that app is considered <strong>production code</strong>.</p>
+<p>And libraries like fast.ai's <a href="https://github.com/fastai/nbdev"><code>nb-dev</code></a> (short for notebook development) enable you to write whole Python libraries (including documentation) with Jupyter Notebooks.</p>
+<h3 id="pros-and-cons-of-notebooks-vs-python-scripts">Pros and cons of notebooks vs Python scripts</h3>
+<p>There's arguments for both sides.</p>
+<p>But this list sums up a few of the main topics.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Notebooks</strong></td>
+<td>Easy to experiment/get started</td>
+<td>Versioning can be hard</td>
+</tr>
+<tr>
+<td></td>
+<td>Easy to share (e.g. a link to a Google Colab notebook)</td>
+<td>Hard to use only specific parts</td>
+</tr>
+<tr>
+<td></td>
+<td>Very visual</td>
+<td>Text and graphics can get in the way of code</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Python scripts</strong></td>
+<td>Can package code together (saves rewriting similar code across different notebooks)</td>
+<td>Experimenting isn't as visual (usually have to run the whole script rather than one cell)</td>
+</tr>
+<tr>
+<td></td>
+<td>Can use git for versioning</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Many open source projects use scripts</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Larger projects can be run on cloud vendors (not as much support for notebooks)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-workflow">My workflow</h3>
+<p>I usually start machine learning projects in Jupyter/Google Colab notebooks for quick experimentation and visualization.</p>
+<p>Then when I've got something working, I move the most useful pieces of code to Python scripts.</p>
+<p><img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-my-workflow-for-experimenting.png" alt="one possible workflow for writing machine learning code, start with jupyter or google colab notebooks and then move to Python scripts when you've got something working." width=1000/></p>
+<p><em>There are many possible workflows for writing machine learning code. Some prefer to start with scripts, others (like me) prefer to start with notebooks and go to scripts later on.</em></p>
+<h3 id="pytorch-in-the-wild">PyTorch in the wild</h3>
+<p>In your travels, you'll see many code repositories for PyTorch-based ML projects have instructions on how to run the PyTorch code in the form of Python scripts.</p>
+<p>For example, you might be instructed to run code like the following in a terminal/command line to train a model:</p>
+<div class="highlight"><pre><span></span><code>python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
+</code></pre></div>
+<p><img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-python-train-command-line-annotated.png" alt="command line call for training a PyTorch model with different hyperparameters" width=1000/> </p>
+<p><em>Running a PyTorch <code>train.py</code> script on the command line with various hyperparameter settings.</em></p>
+<p>In this case, <code>train.py</code> is the target Python script, it'll likely contain functions to train a PyTorch model.</p>
+<p>And <code>--model</code>, <code>--batch_size</code>, <code>--lr</code> and <code>--num_epochs</code> are known as argument flags.</p>
+<p>You can set these to whatever values you like and if they're compatible with <code>train.py</code>, they'll work, if not, they'll error.</p>
+<p>For example, let's say we wanted to train our TinyVGG model from notebook 04 for 10 epochs with a batch size of 32 and a learning rate of 0.001:</p>
+<div class="highlight"><pre><span></span><code>python train.py --model tinyvgg --batch_size 32 --lr 0.001 --num_epochs 10
+</code></pre></div>
+<p>You could setup any number of these argument flags in your <code>train.py</code> script to suit your needs.</p>
+<p>The PyTorch blog post for training state-of-the-art computer vision models uses this style.</p>
+<p><img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-training-sota-recipe.png" alt="PyTorch training script recipe for training state of the art computer vision models" width=800/></p>
+<p><em>PyTorch command line training script recipe for training state-of-the-art computer vision models with 8 GPUs. Source: <a href="https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/#the-training-recipe">PyTorch blog</a>.</em></p>
+<h2 id="what-were-going-to-cover">What we're going to cover</h2>
+<p>The main concept of this section is: <strong>turn useful notebook code cells into reusable Python files.</strong></p>
+<p>Doing this will save us writing the same code over and over again.</p>
+<p>There are two notebooks for this section:</p>
+<ol>
+<li><a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb"><strong>05. Going Modular: Part 1 (cell mode)</strong></a> - this notebook is run as a traditional Jupyter Notebook/Google Colab notebook and is a condensed version of <a href="https://www.learnpytorch.io/04_pytorch_custom_datasets/">notebook 04</a>.</li>
+<li><a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb"><strong>05. Going Modular: Part 2 (script mode)</strong></a> - this notebook is the same as number 1 but with added functionality to turn each of the major sections into Python scripts, such as, <code>data_setup.py</code> and <code>train.py</code>. </li>
+</ol>
+<p>The text in this document focuses on the code cells 05. Going Modular: Part 2 (script mode), the ones with <code>%%writefile ...</code> at the top.</p>
+<h3 id="why-two-parts">Why two parts?</h3>
+<p>Because sometimes the best way to learn something is to see how it <em>differs</em> from something else.</p>
+<p>If you run each notebook side-by-side you'll see how they differ and that's where the key learnings are.</p>
+<p><img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-notebook-cell-mode-vs-script-mode.png" alt="running cell mode notebook vs a script mode notebook" width=1000/></p>
+<p><em>Running the two notebooks for section 05 side-by-side. You'll notice that the </em><em>script mode notebook has extra code cells</em><em> to turn code from the cell mode notebook into Python scripts.</em></p>
+<h3 id="what-were-working-towards">What we're working towards</h3>
+<p>By the end of this section we want to have two things:</p>
+<ol>
+<li>The ability to train the model we built in notebook 04 (Food Vision Mini) with one line of code on the command line: <code>python train.py</code>.</li>
+<li>A directory structure of reusable Python scripts, such as: </li>
+</ol>
+<div class="highlight"><pre><span></span><code>going_modular/
+├── going_modular/
+│   ├── data_setup.py
+│   ├── engine.py
+│   ├── model_builder.py
+│   ├── train.py
+│   └── utils.py
+├── models/
+│   ├── 05_going_modular_cell_mode_tinyvgg_model.pth
+│   └── 05_going_modular_script_mode_tinyvgg_model.pth
+└── data/
+    └── pizza_steak_sushi/
+        ├── train/
+        │   ├── pizza/
+        │   │   ├── image01.jpeg
+        │   │   └── ...
+        │   ├── steak/
+        │   └── sushi/
+        └── test/
+            ├── pizza/
+            ├── steak/
+            └── sushi/
+</code></pre></div>
+<h3 id="things-to-note">Things to note</h3>
+<ul>
+<li><strong>Docstrings</strong> - Writing reproducible and understandable code is important. And with this in mind, each of the functions/classes we'll be putting into scripts has been created with Google's <a href="https://google.github.io/styleguide/pyguide.html#383-functions-and-methods">Python docstring style in mind</a>.</li>
+<li><strong>Imports at the top of scripts</strong> - Since all of the Python scripts we're going to create could be considered a small program on their own, all of the scripts require their input modules be imported at the start of the script for example:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import modules required for train.py</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">data_setup</span><span class="o">,</span> <span class="nn">engine</span><span class="o">,</span> <span class="nn">model_builder</span><span class="o">,</span> <span class="nn">utils</span>
+
+<span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">transforms</span>
+</code></pre></div>
+<h2 id="where-can-you-get-help">Where can you get help?</h2>
+<p>All of the materials for this course <a href="https://github.com/mrdbourke/pytorch-deep-learning">are available on GitHub</a>.</p>
+<p>If you run into trouble, you can ask a question on the course <a href="https://github.com/mrdbourke/pytorch-deep-learning/discussions">GitHub Discussions page</a>.</p>
+<p>And of course, there's the <a href="https://pytorch.org/docs/stable/index.html">PyTorch documentation</a> and <a href="https://discuss.pytorch.org/">PyTorch developer forums</a>, a very helpful place for all things PyTorch. </p>
+<h2 id="0-cell-mode-vs-script-mode">0. Cell mode vs. script mode</h2>
+<p>A cell mode notebook such as <a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb">05. Going Modular Part 1 (cell mode)</a> is a notebook run normally, each cell in the notebook is either code or markdown.</p>
+<p>A script mode notebook such as <a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb">05. Going Modular Part 2 (script mode)</a> is very similar to a cell mode notebook, however, many of the code cells may be turned into Python scripts.</p>
+<blockquote>
+<p><strong>Note:</strong> You don't <em>need</em> to create Python scripts via a notebook, you can create them directly through an IDE (integrated developer environment) such as <a href="https://code.visualstudio.com/">VS Code</a>. Having the script mode notebook as part of this section is just to demonstrate one way of going from notebooks to Python scripts.</p>
+</blockquote>
+<h2 id="1-get-data">1. Get data</h2>
+<p>Getting the data in each of the 05 notebooks happens the same as in <a href="https://www.learnpytorch.io/04_pytorch_custom_datasets/#1-get-data">notebook 04</a>.</p>
+<p>A call is made to GitHub via Python's <code>requests</code> module to download a <code>.zip</code> file and unzip it.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Setup path to data folder</span>
+<span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;data/&quot;</span><span class="p">)</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;pizza_steak_sushi&quot;</span>
+
+<span class="c1"># If the image folder doesn&#39;t exist, download it and prepare it... </span>
+<span class="k">if</span> <span class="n">image_path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">image_path</span><span class="si">}</span><span class="s2"> directory exists.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Did not find </span><span class="si">{</span><span class="n">image_path</span><span class="si">}</span><span class="s2"> directory, creating one...&quot;</span><span class="p">)</span>
+    <span class="n">image_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Download pizza, steak, sushi data</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;pizza_steak_sushi.zip&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://github.com/mrdbourke/pytorch-deep-learning/raw/main/data/pizza_steak_sushi.zip&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading pizza, steak, sushi data...&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># Unzip pizza, steak, sushi data</span>
+<span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;pizza_steak_sushi.zip&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unzipping pizza, steak, sushi data...&quot;</span><span class="p">)</span> 
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+
+<span class="c1"># Remove zip file</span>
+<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;pizza_steak_sushi.zip&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>This results in having a file called <code>data</code> that contains another directory called <code>pizza_steak_sushi</code> with images of pizza, steak and sushi in standard image classification format.</p>
+<div class="highlight"><pre><span></span><code>data/
+└── pizza_steak_sushi/
+    ├── train/
+    │   ├── pizza/
+    │   │   ├── train_image01.jpeg
+    │   │   ├── test_image02.jpeg
+    │   │   └── ...
+    │   ├── steak/
+    │   │   └── ...
+    │   └── sushi/
+    │       └── ...
+    └── test/
+        ├── pizza/
+        │   ├── test_image01.jpeg
+        │   └── test_image02.jpeg
+        ├── steak/
+        └── sushi/
+</code></pre></div>
+<h2 id="2-create-datasets-and-dataloaders-data_setuppy">2. Create Datasets and DataLoaders (<code>data_setup.py</code>)</h2>
+<p>Once we've got data, we can then turn it into PyTorch <code>Dataset</code>'s and <code>DataLoader</code>'s (one for training data and one for testing data).</p>
+<p>We convert the useful <code>Dataset</code> and <code>DataLoader</code> creation code into a function called <code>create_dataloaders()</code>.</p>
+<p>And we write it to file using the line <code>%%writefile going_modular/data_setup.py</code>. </p>
+<div class="highlight"><span class="filename">data_setup.py</span><pre><span></span><code><span class="o">%%</span><span class="n">writefile</span> <span class="n">going_modular</span><span class="o">/</span><span class="n">data_setup</span><span class="o">.</span><span class="n">py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Contains functionality for creating PyTorch DataLoaders for </span>
+<span class="sd">image classification data.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">transforms</span>
+<span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">DataLoader</span>
+
+<span class="n">NUM_WORKERS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">create_dataloaders</span><span class="p">(</span>
+    <span class="n">train_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+    <span class="n">test_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+    <span class="n">transform</span><span class="p">:</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">,</span> 
+    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> 
+    <span class="n">num_workers</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="n">NUM_WORKERS</span>
+<span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Creates training and testing DataLoaders.</span>
+
+<span class="sd">  Takes in a training directory and testing directory path and turns</span>
+<span class="sd">  them into PyTorch Datasets and then into PyTorch DataLoaders.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    train_dir: Path to training directory.</span>
+<span class="sd">    test_dir: Path to testing directory.</span>
+<span class="sd">    transform: torchvision transforms to perform on training and testing data.</span>
+<span class="sd">    batch_size: Number of samples per batch in each of the DataLoaders.</span>
+<span class="sd">    num_workers: An integer for number of workers per DataLoader.</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    A tuple of (train_dataloader, test_dataloader, class_names).</span>
+<span class="sd">    Where class_names is a list of the target classes.</span>
+<span class="sd">    Example usage:</span>
+<span class="sd">      train_dataloader, test_dataloader, class_names = \</span>
+<span class="sd">        = create_dataloaders(train_dir=path/to/train_dir,</span>
+<span class="sd">                             test_dir=path/to/test_dir,</span>
+<span class="sd">                             transform=some_transform,</span>
+<span class="sd">                             batch_size=32,</span>
+<span class="sd">                             num_workers=4)</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1"># Use ImageFolder to create dataset(s)</span>
+  <span class="n">train_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">)</span>
+  <span class="n">test_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">test_dir</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">)</span>
+
+  <span class="c1"># Get class names</span>
+  <span class="n">class_names</span> <span class="o">=</span> <span class="n">train_data</span><span class="o">.</span><span class="n">classes</span>
+
+  <span class="c1"># Turn images into data loaders</span>
+  <span class="n">train_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+      <span class="n">train_data</span><span class="p">,</span>
+      <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+      <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+      <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+      <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+  <span class="p">)</span>
+  <span class="n">test_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+      <span class="n">test_data</span><span class="p">,</span>
+      <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+      <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+      <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+      <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+  <span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">train_dataloader</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">,</span> <span class="n">class_names</span>
+</code></pre></div>
+<p>If we'd like to make <code>DataLoader</code>'s we can now use the function within <code>data_setup.py</code> like so:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import data_setup.py</span>
+<span class="kn">from</span> <span class="nn">going_modular</span> <span class="kn">import</span> <span class="n">data_setup</span>
+
+<span class="c1"># Create train/test dataloader and get class names as a list</span>
+<span class="n">train_dataloader</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">,</span> <span class="n">class_names</span> <span class="o">=</span> <span class="n">data_setup</span><span class="o">.</span><span class="n">create_dataloaders</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="3-making-a-model-model_builderpy">3. Making a model (<code>model_builder.py</code>)</h2>
+<p>Over the past few notebooks (notebook 03 and notebook 04), we've built the TinyVGG model a few times.</p>
+<p>So it makes sense to put the model into its file so we can reuse it again and again.</p>
+<p>Let's put our <code>TinyVGG()</code> model class into a script with the line <code>%%writefile going_modular/model_builder.py</code>:</p>
+<div class="highlight"><span class="filename">model_builder.py</span><pre><span></span><code><span class="o">%%</span><span class="n">writefile</span> <span class="n">going_modular</span><span class="o">/</span><span class="n">model_builder</span><span class="o">.</span><span class="n">py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Contains PyTorch model code to instantiate a TinyVGG model.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span> 
+
+<span class="k">class</span> <span class="nc">TinyVGG</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Creates the TinyVGG architecture.</span>
+
+<span class="sd">  Replicates the TinyVGG architecture from the CNN explainer website in PyTorch.</span>
+<span class="sd">  See the original architecture here: https://poloclub.github.io/cnn-explainer/</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    input_shape: An integer indicating number of input channels.</span>
+<span class="sd">    hidden_units: An integer indicating number of hidden units between layers.</span>
+<span class="sd">    output_shape: An integer indicating number of output units.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">hidden_units</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">output_shape</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="n">input_shape</span><span class="p">,</span> 
+                    <span class="n">out_channels</span><span class="o">=</span><span class="n">hidden_units</span><span class="p">,</span> 
+                    <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> 
+                    <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                    <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>  
+          <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="n">hidden_units</span><span class="p">,</span> 
+                    <span class="n">out_channels</span><span class="o">=</span><span class="n">hidden_units</span><span class="p">,</span>
+                    <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                    <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                        <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+      <span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">hidden_units</span><span class="p">,</span> <span class="n">hidden_units</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">hidden_units</span><span class="p">,</span> <span class="n">hidden_units</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+      <span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
+          <span class="c1"># Where did this in_features shape come from? </span>
+          <span class="c1"># It&#39;s because each layer of our network compresses and changes the shape of our inputs data.</span>
+          <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="n">hidden_units</span><span class="o">*</span><span class="mi">13</span><span class="o">*</span><span class="mi">13</span><span class="p">,</span>
+                    <span class="n">out_features</span><span class="o">=</span><span class="n">output_shape</span><span class="p">)</span>
+      <span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classifier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">x</span>
+      <span class="c1"># return self.classifier(self.conv_block_2(self.conv_block_1(x))) # &lt;- leverage the benefits of operator fusion</span>
+</code></pre></div>
+<p>Now instead of coding the TinyVGG model from scratch every time, we can import it using:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="c1"># Import model_builder.py</span>
+<span class="kn">from</span> <span class="nn">going_modular</span> <span class="kn">import</span> <span class="n">model_builder</span>
+<span class="n">device</span> <span class="o">=</span> <span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span>
+
+<span class="c1"># Instantiate an instance of the model from the &quot;model_builder.py&quot; script</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">model_builder</span><span class="o">.</span><span class="n">TinyVGG</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                              <span class="n">hidden_units</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
+                              <span class="n">output_shape</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">class_names</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="4-creating-train_step-and-test_step-functions-and-train-to-combine-them">4. Creating <code>train_step()</code> and <code>test_step()</code> functions and <code>train()</code> to combine them</h2>
+<p>We wrote several training functions in <a href="https://www.learnpytorch.io/04_pytorch_custom_datasets/#75-create-train-test-loop-functions">notebook 04</a>:</p>
+<ol>
+<li><code>train_step()</code> - takes in a model, a <code>DataLoader</code>, a loss function and an optimizer and trains the model on the <code>DataLoader</code>.</li>
+<li><code>test_step()</code> - takes in a model, a <code>DataLoader</code> and a loss function and evaluates the model on the <code>DataLoader</code>.</li>
+<li><code>train()</code> - performs 1. and 2. together for a given number of epochs and returns a results dictionary.</li>
+</ol>
+<p>Since these will be the <em>engine</em> of our model training, we can put them all into a Python script called <code>engine.py</code> with the line <code>%%writefile going_modular/engine.py</code>:</p>
+<div class="highlight"><span class="filename">engine.py</span><pre><span></span><code><span class="o">%%</span><span class="n">writefile</span> <span class="n">going_modular</span><span class="o">/</span><span class="n">engine</span><span class="o">.</span><span class="n">py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Contains functions for training and testing a PyTorch model.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="kn">from</span> <span class="nn">tqdm.auto</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">train_step</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> 
+               <span class="n">dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span> 
+               <span class="n">loss_fn</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> 
+               <span class="n">optimizer</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Optimizer</span><span class="p">,</span>
+               <span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Trains a PyTorch model for a single epoch.</span>
+
+<span class="sd">  Turns a target PyTorch model to training mode and then</span>
+<span class="sd">  runs through all of the required training steps (forward</span>
+<span class="sd">  pass, loss calculation, optimizer step).</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    model: A PyTorch model to be trained.</span>
+<span class="sd">    dataloader: A DataLoader instance for the model to be trained on.</span>
+<span class="sd">    loss_fn: A PyTorch loss function to minimize.</span>
+<span class="sd">    optimizer: A PyTorch optimizer to help minimize the loss function.</span>
+<span class="sd">    device: A target device to compute on (e.g. &quot;cuda&quot; or &quot;cpu&quot;).</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    A tuple of training loss and training accuracy metrics.</span>
+<span class="sd">    In the form (train_loss, train_accuracy). For example:</span>
+
+<span class="sd">    (0.1112, 0.8743)</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1"># Put model in train mode</span>
+  <span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+
+  <span class="c1"># Setup train loss and train accuracy values</span>
+  <span class="n">train_loss</span><span class="p">,</span> <span class="n">train_acc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+
+  <span class="c1"># Loop through data loader data batches</span>
+  <span class="k">for</span> <span class="n">batch</span><span class="p">,</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataloader</span><span class="p">):</span>
+      <span class="c1"># Send data to target device</span>
+      <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">),</span> <span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+      <span class="c1"># 1. Forward pass</span>
+      <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+      <span class="c1"># 2. Calculate  and accumulate loss</span>
+      <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+      <span class="n">train_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> 
+
+      <span class="c1"># 3. Optimizer zero grad</span>
+      <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+
+      <span class="c1"># 4. Loss backward</span>
+      <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+      <span class="c1"># 5. Optimizer step</span>
+      <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+      <span class="c1"># Calculate and accumulate accuracy metric across all batches</span>
+      <span class="n">y_pred_class</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">train_acc</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y_pred_class</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span>
+
+  <span class="c1"># Adjust metrics to get average loss and accuracy per batch </span>
+  <span class="n">train_loss</span> <span class="o">=</span> <span class="n">train_loss</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataloader</span><span class="p">)</span>
+  <span class="n">train_acc</span> <span class="o">=</span> <span class="n">train_acc</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataloader</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">train_loss</span><span class="p">,</span> <span class="n">train_acc</span>
+
+<span class="k">def</span> <span class="nf">test_step</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> 
+              <span class="n">dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span> 
+              <span class="n">loss_fn</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
+              <span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Tests a PyTorch model for a single epoch.</span>
+
+<span class="sd">  Turns a target PyTorch model to &quot;eval&quot; mode and then performs</span>
+<span class="sd">  a forward pass on a testing dataset.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    model: A PyTorch model to be tested.</span>
+<span class="sd">    dataloader: A DataLoader instance for the model to be tested on.</span>
+<span class="sd">    loss_fn: A PyTorch loss function to calculate loss on the test data.</span>
+<span class="sd">    device: A target device to compute on (e.g. &quot;cuda&quot; or &quot;cpu&quot;).</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    A tuple of testing loss and testing accuracy metrics.</span>
+<span class="sd">    In the form (test_loss, test_accuracy). For example:</span>
+
+<span class="sd">    (0.0223, 0.8985)</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1"># Put model in eval mode</span>
+  <span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span> 
+
+  <span class="c1"># Setup test loss and test accuracy values</span>
+  <span class="n">test_loss</span><span class="p">,</span> <span class="n">test_acc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+
+  <span class="c1"># Turn on inference context manager</span>
+  <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">inference_mode</span><span class="p">():</span>
+      <span class="c1"># Loop through DataLoader batches</span>
+      <span class="k">for</span> <span class="n">batch</span><span class="p">,</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataloader</span><span class="p">):</span>
+          <span class="c1"># Send data to target device</span>
+          <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">),</span> <span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+          <span class="c1"># 1. Forward pass</span>
+          <span class="n">test_pred_logits</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+          <span class="c1"># 2. Calculate and accumulate loss</span>
+          <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">test_pred_logits</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+          <span class="n">test_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+
+          <span class="c1"># Calculate and accumulate accuracy</span>
+          <span class="n">test_pred_labels</span> <span class="o">=</span> <span class="n">test_pred_logits</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+          <span class="n">test_acc</span> <span class="o">+=</span> <span class="p">((</span><span class="n">test_pred_labels</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">test_pred_labels</span><span class="p">))</span>
+
+  <span class="c1"># Adjust metrics to get average loss and accuracy per batch </span>
+  <span class="n">test_loss</span> <span class="o">=</span> <span class="n">test_loss</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataloader</span><span class="p">)</span>
+  <span class="n">test_acc</span> <span class="o">=</span> <span class="n">test_acc</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataloader</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">test_loss</span><span class="p">,</span> <span class="n">test_acc</span>
+
+<span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> 
+          <span class="n">train_dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span> 
+          <span class="n">test_dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span> 
+          <span class="n">optimizer</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Optimizer</span><span class="p">,</span>
+          <span class="n">loss_fn</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
+          <span class="n">epochs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">]:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Trains and tests a PyTorch model.</span>
+
+<span class="sd">  Passes a target PyTorch models through train_step() and test_step()</span>
+<span class="sd">  functions for a number of epochs, training and testing the model</span>
+<span class="sd">  in the same epoch loop.</span>
+
+<span class="sd">  Calculates, prints and stores evaluation metrics throughout.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    model: A PyTorch model to be trained and tested.</span>
+<span class="sd">    train_dataloader: A DataLoader instance for the model to be trained on.</span>
+<span class="sd">    test_dataloader: A DataLoader instance for the model to be tested on.</span>
+<span class="sd">    optimizer: A PyTorch optimizer to help minimize the loss function.</span>
+<span class="sd">    loss_fn: A PyTorch loss function to calculate loss on both datasets.</span>
+<span class="sd">    epochs: An integer indicating how many epochs to train for.</span>
+<span class="sd">    device: A target device to compute on (e.g. &quot;cuda&quot; or &quot;cpu&quot;).</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    A dictionary of training and testing loss as well as training and</span>
+<span class="sd">    testing accuracy metrics. Each metric has a value in a list for </span>
+<span class="sd">    each epoch.</span>
+<span class="sd">    In the form: {train_loss: [...],</span>
+<span class="sd">                  train_acc: [...],</span>
+<span class="sd">                  test_loss: [...],</span>
+<span class="sd">                  test_acc: [...]} </span>
+<span class="sd">    For example if training for epochs=2: </span>
+<span class="sd">                 {train_loss: [2.0616, 1.0537],</span>
+<span class="sd">                  train_acc: [0.3945, 0.3945],</span>
+<span class="sd">                  test_loss: [1.2641, 1.5706],</span>
+<span class="sd">                  test_acc: [0.3400, 0.2973]} </span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1"># Create empty results dictionary</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;train_loss&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;train_acc&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;test_loss&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;test_acc&quot;</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">}</span>
+
+  <span class="c1"># Loop through training and testing steps for a number of epochs</span>
+  <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">)):</span>
+      <span class="n">train_loss</span><span class="p">,</span> <span class="n">train_acc</span> <span class="o">=</span> <span class="n">train_step</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+                                          <span class="n">dataloader</span><span class="o">=</span><span class="n">train_dataloader</span><span class="p">,</span>
+                                          <span class="n">loss_fn</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">,</span>
+                                          <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span>
+                                          <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+      <span class="n">test_loss</span><span class="p">,</span> <span class="n">test_acc</span> <span class="o">=</span> <span class="n">test_step</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+          <span class="n">dataloader</span><span class="o">=</span><span class="n">test_dataloader</span><span class="p">,</span>
+          <span class="n">loss_fn</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">,</span>
+          <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+
+      <span class="c1"># Print out what&#39;s happening</span>
+      <span class="nb">print</span><span class="p">(</span>
+          <span class="sa">f</span><span class="s2">&quot;Epoch: </span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> | &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;train_loss: </span><span class="si">{</span><span class="n">train_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;train_acc: </span><span class="si">{</span><span class="n">train_acc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;test_loss: </span><span class="si">{</span><span class="n">test_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;test_acc: </span><span class="si">{</span><span class="n">test_acc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="p">)</span>
+
+      <span class="c1"># Update results dictionary</span>
+      <span class="n">results</span><span class="p">[</span><span class="s2">&quot;train_loss&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_loss</span><span class="p">)</span>
+      <span class="n">results</span><span class="p">[</span><span class="s2">&quot;train_acc&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_acc</span><span class="p">)</span>
+      <span class="n">results</span><span class="p">[</span><span class="s2">&quot;test_loss&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_loss</span><span class="p">)</span>
+      <span class="n">results</span><span class="p">[</span><span class="s2">&quot;test_acc&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_acc</span><span class="p">)</span>
+
+  <span class="c1"># Return the filled results at the end of the epochs</span>
+  <span class="k">return</span> <span class="n">results</span>
+</code></pre></div>
+<p>Now we've got the <code>engine.py</code> script, we can import functions from it via:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import engine.py</span>
+<span class="kn">from</span> <span class="nn">going_modular</span> <span class="kn">import</span> <span class="n">engine</span>
+
+<span class="c1"># Use train() by calling it from engine.py</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="5-creating-a-function-to-save-the-model-utilspy">5. Creating a function to save the model (<code>utils.py</code>)</h2>
+<p>Often you'll want to save a model whilst it's training or after training.</p>
+<p>Since we've written the code to save a model a few times now in previous notebooks, it makes sense to turn it into a function and save it to file.</p>
+<p>It's common practice to store helper functions in a file called <code>utils.py</code> (short for utilities).</p>
+<p>Let's save our <code>save_model()</code> function to a file called <code>utils.py</code> with the line <code>%%writefile going_modular/utils.py</code>: </p>
+<div class="highlight"><span class="filename">utils.py</span><pre><span></span><code><span class="o">%%</span><span class="n">writefile</span> <span class="n">going_modular</span><span class="o">/</span><span class="n">utils</span><span class="o">.</span><span class="n">py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Contains various utility functions for PyTorch model training and saving.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
+               <span class="n">target_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+               <span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Saves a PyTorch model to a target directory.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    model: A target PyTorch model to save.</span>
+<span class="sd">    target_dir: A directory for saving the model to.</span>
+<span class="sd">    model_name: A filename for the saved model. Should include</span>
+<span class="sd">      either &quot;.pth&quot; or &quot;.pt&quot; as the file extension.</span>
+
+<span class="sd">  Example usage:</span>
+<span class="sd">    save_model(model=model_0,</span>
+<span class="sd">               target_dir=&quot;models&quot;,</span>
+<span class="sd">               model_name=&quot;05_going_modular_tingvgg_model.pth&quot;)</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1"># Create target directory</span>
+  <span class="n">target_dir_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">target_dir</span><span class="p">)</span>
+  <span class="n">target_dir_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+  <span class="c1"># Create model save path</span>
+  <span class="k">assert</span> <span class="n">model_name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pth&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">model_name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pt&quot;</span><span class="p">),</span> <span class="s2">&quot;model_name should end with &#39;.pt&#39; or &#39;.pth&#39;&quot;</span>
+  <span class="n">model_save_path</span> <span class="o">=</span> <span class="n">target_dir_path</span> <span class="o">/</span> <span class="n">model_name</span>
+
+  <span class="c1"># Save the model state_dict()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Saving model to: </span><span class="si">{</span><span class="n">model_save_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">obj</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+             <span class="n">f</span><span class="o">=</span><span class="n">model_save_path</span><span class="p">)</span>
+</code></pre></div>
+<p>Now if we wanted to use our <code>save_model()</code> function, instead of writing it all over again, we can import it and use it via:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import utils.py</span>
+<span class="kn">from</span> <span class="nn">going_modular</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="c1"># Save a model to file</span>
+<span class="n">save_model</span><span class="p">(</span><span class="n">model</span><span class="o">=...</span>
+           <span class="n">target_dir</span><span class="o">=...</span><span class="p">,</span>
+           <span class="n">model_name</span><span class="o">=...</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="6-train-evaluate-and-save-the-model-trainpy">6. Train, evaluate and save the model (<code>train.py</code>)</h2>
+<p>As previously discussed, you'll often come across PyTorch repositories that combine all of their functionality together in a <code>train.py</code> file.</p>
+<p>This file is essentially saying "train the model using whatever data is available".</p>
+<p>In our <code>train.py</code> file, we'll combine all of the functionality of the other Python scripts we've created and use it to train a model.</p>
+<p>This way we can train a PyTorch model using a single line of code on the command line:</p>
+<div class="highlight"><pre><span></span><code>python train.py
+</code></pre></div>
+<p>To create <code>train.py</code> we'll go through the following steps:</p>
+<ol>
+<li>Import the various dependencies, namely <code>torch</code>, <code>os</code>, <code>torchvision.transforms</code> and all of the scripts from the <code>going_modular</code> directory, <code>data_setup</code>, <code>engine</code>, <code>model_builder</code>, <code>utils</code>.</li>
+<li><strong>Note:</strong> Since <code>train.py</code> will be <em>inside</em> the <code>going_modular</code> directory, we can import the other modules via <code>import ...</code> rather than <code>from going_modular import ...</code>.</li>
+<li>Setup various hyperparameters such as batch size, number of epochs, learning rate and number of hidden units (these could be set in the future via <a href="https://docs.python.org/3/library/argparse.html">Python's <code>argparse</code></a>).</li>
+<li>Setup the training and test directories.</li>
+<li>Setup device-agnostic code.</li>
+<li>Create the necessary data transforms.</li>
+<li>Create the DataLoaders using <code>data_setup.py</code>.</li>
+<li>Create the model using <code>model_builder.py</code>.</li>
+<li>Setup the loss function and optimizer.</li>
+<li>Train the model using <code>engine.py</code>.</li>
+<li>Save the model using <code>utils.py</code>. </li>
+</ol>
+<p>And we can create the file from a notebook cell using the line <code>%%writefile going_modular/train.py</code>:</p>
+<div class="highlight"><span class="filename">train.py</span><pre><span></span><code><span class="o">%%</span><span class="n">writefile</span> <span class="n">going_modular</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Trains a PyTorch image classification model using device-agnostic code.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">data_setup</span><span class="o">,</span> <span class="nn">engine</span><span class="o">,</span> <span class="nn">model_builder</span><span class="o">,</span> <span class="nn">utils</span>
+
+<span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">transforms</span>
+
+<span class="c1"># Setup hyperparameters</span>
+<span class="n">NUM_EPOCHS</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="n">HIDDEN_UNITS</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">LEARNING_RATE</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="c1"># Setup directories</span>
+<span class="n">train_dir</span> <span class="o">=</span> <span class="s2">&quot;data/pizza_steak_sushi/train&quot;</span>
+<span class="n">test_dir</span> <span class="o">=</span> <span class="s2">&quot;data/pizza_steak_sushi/test&quot;</span>
+
+<span class="c1"># Setup target device</span>
+<span class="n">device</span> <span class="o">=</span> <span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span>
+
+<span class="c1"># Create transforms</span>
+<span class="n">data_transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+  <span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)),</span>
+  <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
+<span class="p">])</span>
+
+<span class="c1"># Create DataLoaders with help from data_setup.py</span>
+<span class="n">train_dataloader</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">,</span> <span class="n">class_names</span> <span class="o">=</span> <span class="n">data_setup</span><span class="o">.</span><span class="n">create_dataloaders</span><span class="p">(</span>
+    <span class="n">train_dir</span><span class="o">=</span><span class="n">train_dir</span><span class="p">,</span>
+    <span class="n">test_dir</span><span class="o">=</span><span class="n">test_dir</span><span class="p">,</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">data_transform</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span>
+<span class="p">)</span>
+
+<span class="c1"># Create model with help from model_builder.py</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">model_builder</span><span class="o">.</span><span class="n">TinyVGG</span><span class="p">(</span>
+    <span class="n">input_shape</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">hidden_units</span><span class="o">=</span><span class="n">HIDDEN_UNITS</span><span class="p">,</span>
+    <span class="n">output_shape</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">class_names</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+<span class="c1"># Set loss and optimizer</span>
+<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span>
+                             <span class="n">lr</span><span class="o">=</span><span class="n">LEARNING_RATE</span><span class="p">)</span>
+
+<span class="c1"># Start training with help from engine.py</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+             <span class="n">train_dataloader</span><span class="o">=</span><span class="n">train_dataloader</span><span class="p">,</span>
+             <span class="n">test_dataloader</span><span class="o">=</span><span class="n">test_dataloader</span><span class="p">,</span>
+             <span class="n">loss_fn</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">,</span>
+             <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span>
+             <span class="n">epochs</span><span class="o">=</span><span class="n">NUM_EPOCHS</span><span class="p">,</span>
+             <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+
+<span class="c1"># Save the model with help from utils.py</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+                 <span class="n">target_dir</span><span class="o">=</span><span class="s2">&quot;models&quot;</span><span class="p">,</span>
+                 <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;05_going_modular_script_mode_tinyvgg_model.pth&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Woohoo!</p>
+<p>Now we can train a PyTorch model by running the following line on the command line:</p>
+<div class="highlight"><pre><span></span><code>python train.py
+</code></pre></div>
+<p>Doing this will leverage all of the other code scripts we've created.</p>
+<p>And if we wanted to, we could adjust our <code>train.py</code> file to use argument flag inputs with Python's <code>argparse</code> module, this would allow us to provide different hyperparameter settings like previously discussed:</p>
+<div class="highlight"><pre><span></span><code>python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
+</code></pre></div>
+<h2 id="exercises">Exercises</h2>
+<p><strong>Resources:</strong></p>
+<ul>
+<li><a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/exercises/05_pytorch_going_modular_exercise_template.ipynb">Exercise template notebook for 05</a></li>
+<li><a href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/solutions/05_pytorch_going_modular_exercise_solutions.ipynb">Example solutions notebook for 05</a><ul>
+<li>Live coding run through of <a href="https://youtu.be/ijgFhMK3pp4">solutions notebook for 05 on YouTube</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Exercises:</strong></p>
+<ol>
+<li>Turn the code to get the data (from section 1. Get Data above) into a Python script, such as <code>get_data.py</code>.<ul>
+<li>When you run the script using <code>python get_data.py</code> it should check if the data already exists and skip downloading if it does.</li>
+<li>If the data download is successful, you should be able to access the <code>pizza_steak_sushi</code> images from the <code>data</code> directory.</li>
+</ul>
+</li>
+<li>Use <a href="https://docs.python.org/3/library/argparse.html">Python's <code>argparse</code> module</a> to be able to send the <code>train.py</code> custom hyperparameter values for training procedures.<ul>
+<li>Add an argument for using a different:<ul>
+<li>Training/testing directory</li>
+<li>Learning rate</li>
+<li>Batch size</li>
+<li>Number of epochs to train for</li>
+<li>Number of hidden units in the TinyVGG model</li>
+</ul>
+</li>
+<li>Keep the default values for each of the above arguments as what they already are (as in notebook 05).</li>
+<li>For example, you should be able to run something similar to the following line to train a TinyVGG model with a learning rate of 0.003 and a batch size of 64 for 20 epochs: <code>python train.py --learning_rate 0.003 --batch_size 64 --num_epochs 20</code>.</li>
+<li><strong>Note:</strong> Since <code>train.py</code> leverages the other scripts we created in section 05, such as, <code>model_builder.py</code>, <code>utils.py</code> and <code>engine.py</code>, you'll have to make sure they're available to use too. You can find these in the <a href="https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular/going_modular"><code>going_modular</code> folder on the course GitHub</a>. </li>
+</ul>
+</li>
+<li>Create a script to predict (such as <code>predict.py</code>) on a target image given a file path with a saved model.<ul>
+<li>For example, you should be able to run the command <code>python predict.py some_image.jpeg</code> and have a trained PyTorch model predict on the image and return its prediction.</li>
+<li>To see example prediction code, check out the <a href="https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function">predicting on a custom image section in notebook 04</a>. </li>
+<li>You may also have to write code to load in a trained model.</li>
+</ul>
+</li>
+</ol>
+<h2 id="extra-curriculum">Extra-curriculum</h2>
+<ul>
+<li>To learn more about structuring a Python project, check out Real Python's guide on <a href="https://realpython.com/python-application-layouts/">Python Application Layouts</a>. </li>
+<li>For ideas on styling your PyTorch code, check out the <a href="https://github.com/IgorSusmelj/pytorch-styleguide#recommended-code-structure-for-training-your-model">PyTorch style guide by Igor Susmelj</a> (much of styling in this chapter is based off this guide + various similar PyTorch repositories).</li>
+<li>For an example <code>train.py</code> script and various other PyTorch scripts written by the PyTorch team to train state-of-the-art image classification models, check out their <a href="https://github.com/pytorch/vision/tree/main/references/classification"><code>classification</code> repository on GitHub</a>. </li>
+</ul>
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs Insiders
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/mrdbourke" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/mrdbourke/pytorch-deep-learning" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCr8O8l5cCX85Oem1d18EezQ" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top"], "search": "../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.10c6cd24.min.js"></script>
+      
+    
+  </body>
+</html>
