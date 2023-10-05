@@ -311,7 +311,7 @@ def create_dataloaders(
   test_dataloader = DataLoader(
       test_data,
       batch_size=batch_size,
-      shuffle=True,
+      shuffle=False, # don't need to shuffle test data
       num_workers=num_workers,
       pin_memory=True,
   )
