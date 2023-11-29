@@ -12,6 +12,11 @@ import torch.nn as nn
 import torch.optim as optim
 import time
 from tqdm import tqdm
+from torch.nn import Module
+from torch.optim import Optimizer
+from torch.utils.data import DataLoader
+
+
 
 EPOCHS = 50         # 50x: 97% Test Accuracy
                     # 100x:98% Test Accuracy 
@@ -132,7 +137,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 # use gpu if available
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # device = "cpu"
-model.to(device)
+
 
 
 # define the lists to store the loss and accuracy
@@ -141,52 +146,13 @@ train_accuracy = []
 test_loss = []
 test_accuracy = []
 
-
-# train the model
-start_time = time.time()
-for epoch in tqdm(range(EPOCHS)):
-    # train the model
-    correct = 0
-    for i, (images, labels) in enumerate(train_loader):
-        # move data to gpu
-        images = images.to(device)
-        labels = labels.to(device)
-        
-        # make the predictions
-        outputs = model(images)
-        
-        # calculate the loss
-        loss = criterion(outputs, labels)
-        
-        # calculate gradients
-        loss.backward()
-        
-        # update parameters
-        optimizer.step()
-        
-        # clear gradients
-        optimizer.zero_grad()
-        
-        # get the predictions
-        _, predicted = torch.max(outputs.data, 1)
-        
-        # update the number of correct predictions
-        correct += (predicted == labels).sum().item()
-        
-        # print the loss and accuracy for every 100th batch
-        if (i+1) % 100 == 0:
-            print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
-                  .format(epoch+1, EPOCHS, i+1, len(train_loader), loss.item()))
-    
-    # update the train loss and accuracy for the epoch
-    train_loss.append(loss.item())
-    train_accuracy.append(100 * correct / len(train_loader.dataset))
-    
-    # test the model
-    correct = 0
-    with torch.no_grad():
-        for i, (images, labels) in enumerate(test_loader):
-            # move data to gpu 
+def training_loop(model: Module, epochs: int, train_loader: DataLoader, loss: Module, optimizer: Optimizer, device: str):
+    model.to(device)
+    for epoch in tqdm(range(epochs)):
+        # train the model
+        correct = 0
+        for i, (images, labels) in enumerate(train_loader):
+            # move data to gpu
             images = images.to(device)
             labels = labels.to(device)
             
@@ -196,24 +162,141 @@ for epoch in tqdm(range(EPOCHS)):
             # calculate the loss
             loss = criterion(outputs, labels)
             
+            # calculate gradients
+            loss.backward()
+            
+            # update parameters
+            optimizer.step()
+            
+            # clear gradients
+            optimizer.zero_grad()
+            
             # get the predictions
             _, predicted = torch.max(outputs.data, 1)
             
             # update the number of correct predictions
-            correct += (predicted == labels).sum().item()
+            correct += (predicted == labels).sum().item()          
             
-    # update the test loss and accuracy for the epoch
-    test_loss.append(loss.item())
-    test_accuracy.append(100 * correct / len(test_loader.dataset))
+            # print the loss and accuracy for every 100th batch
+            if (i+1) % 100 == 0:
+                print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
+                    .format(epoch+1, EPOCHS, i+1, len(train_loader), loss.item()))
+            
+        # update the train loss and accuracy for the epoch
+        train_loss.append(loss.item())
+        train_accuracy.append(100 * correct / len(train_loader.dataset))
+        
+        # print the loss and accuracy for the epoch
+        # print('Epoch [{}/{}], Train Loss: {:.4f}, Train Accuracy: {:.2f}%'
+        #     .format(epoch+1, EPOCHS, train_loss[-1], train_accuracy[-1]))
     
-    # print the loss and accuracy for the epoch
-    print('Epoch [{}/{}], Train Loss: {:.4f}, Train Accuracy: {:.2f}%, Test Loss: {:.4f}, Test Accuracy: {:.2f}%'
-          .format(epoch+1, EPOCHS, train_loss[-1], train_accuracy[-1], test_loss[-1], test_accuracy[-1]))
+        # test the model
+        correct = 0
+        with torch.no_grad():
+            for i, (images, labels) in enumerate(test_loader):
+                # move data to gpu 
+                images = images.to(device)
+                labels = labels.to(device)
+                
+                # make the predictions
+                outputs = model(images)
+                
+                # calculate the loss
+                loss = criterion(outputs, labels)
+                
+                # get the predictions
+                _, predicted = torch.max(outputs.data, 1)
+                
+                # update the number of correct predictions
+                correct += (predicted == labels).sum().item()
+                
+        # update the test loss and accuracy for the epoch
+        test_loss.append(loss.item())
+        test_accuracy.append(100 * correct / len(test_loader.dataset))
+        
+        # print the loss and accuracy for the epoch
+        print('Epoch [{}/{}], Train Loss: {:.4f}, Train Accuracy: {:.2f}%, Test Loss: {:.4f}, Test Accuracy: {:.2f}%'
+                .format(epoch+1, EPOCHS, train_loss[-1], train_accuracy[-1], test_loss[-1], test_accuracy[-1]))
     
-end_time = time.time()
-# print elapsed time
-print('Elapsed time: {:.2f} seconds'.format(end_time - start_time))
+  
 
+
+# call the training loop
+start_time = time.time()
+training_loop(model, EPOCHS, train_loader, criterion, optimizer, device)
+# print elapsed time
+print('Elapsed time: {:.2f} seconds'.format(time.time() - start_time))
+
+
+
+# train the model
+# start_time = time.time()
+# for epoch in tqdm(range(EPOCHS)):
+#     # train the model
+#     correct = 0
+#     for i, (images, labels) in enumerate(train_loader):
+#         # move data to gpu
+#         images = images.to(device)
+#         labels = labels.to(device)
+        
+#         # make the predictions
+#         outputs = model(images)
+        
+#         # calculate the loss
+#         loss = criterion(outputs, labels)
+        
+#         # calculate gradients
+#         loss.backward()
+        
+#         # update parameters
+#         optimizer.step()
+        
+#         # clear gradients
+#         optimizer.zero_grad()
+        
+#         # get the predictions
+#         _, predicted = torch.max(outputs.data, 1)
+        
+#         # update the number of correct predictions
+#         correct += (predicted == labels).sum().item()
+        
+#         # print the loss and accuracy for every 100th batch
+#         if (i+1) % 100 == 0:
+#             print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
+#                   .format(epoch+1, EPOCHS, i+1, len(train_loader), loss.item()))
+    
+#     # update the train loss and accuracy for the epoch
+#     train_loss.append(loss.item())
+#     train_accuracy.append(100 * correct / len(train_loader.dataset))
+    
+#     # test the model
+#     correct = 0
+#     with torch.no_grad():
+#         for i, (images, labels) in enumerate(test_loader):
+#             # move data to gpu 
+#             images = images.to(device)
+#             labels = labels.to(device)
+            
+#             # make the predictions
+#             outputs = model(images)
+            
+#             # calculate the loss
+#             loss = criterion(outputs, labels)
+            
+#             # get the predictions
+#             _, predicted = torch.max(outputs.data, 1)
+            
+#             # update the number of correct predictions
+#             correct += (predicted == labels).sum().item()
+            
+#     # update the test loss and accuracy for the epoch
+#     test_loss.append(loss.item())
+#     test_accuracy.append(100 * correct / len(test_loader.dataset))
+    
+#     # print the loss and accuracy for the epoch
+#     print('Epoch [{}/{}], Train Loss: {:.4f}, Train Accuracy: {:.2f}%, Test Loss: {:.4f}, Test Accuracy: {:.2f}%'
+#           .format(epoch+1, EPOCHS, train_loss[-1], train_accuracy[-1], test_loss[-1], test_accuracy[-1]))
+ 
 
 
     
