@@ -1,0 +1,39 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
+
+# Set up Selenium WebDriver
+driver = webdriver.Chrome()  # You need to have chromedriver installed and in PATH
+url = "https://data.census.gov/table/ACSST1Y2022.S1501"
+driver.get(url)
+
+# Wait for the table to load
+wait = WebDriverWait(driver, 10)
+wait.until(EC.presence_of_element_located((By.CLASS_NAME, "table-responsive")))
+
+# Get page source
+page_source = driver.page_source
+
+# Close Selenium WebDriver
+driver.quit()
+
+# Parse page source with BeautifulSoup
+soup = BeautifulSoup(page_source, 'html.parser')
+
+# Find the table containing the data
+table = soup.find('table', {'class': 'table'})
+
+# Extract data from the table
+data = []
+for row in table.find_all('tr'):
+    data_row = []
+    for cell in row.find_all(['th', 'td']):
+        data_row.append(cell.text.strip())
+    if data_row:
+        data.append(data_row)
+
+# Print the scraped data
+for row in data:
+    print('\t'.join(row))
