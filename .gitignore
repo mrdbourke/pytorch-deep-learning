@@ -146,6 +146,7 @@ data/cifar-*
 logs/
 runs/
 extras/cifar-10*
+extras/00/data/
 
 # Notebooks
 09_pytorch_model_deployment-*
@@ -162,6 +163,7 @@ models/07_effnetb2_data_10_percent_5_epochs.pth
 models/07_effnetb2_data_20_percent_5_epochs.pth
 models/08_*
 models/09_*
+extras/00/model.pth
 
 # Demos
 demos/foodvision_big/
