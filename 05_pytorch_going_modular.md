@@ -32,7 +32,7 @@ Though this is a debated topic, as companies like [Netflix have shown how they u
 
 For example, if you have an app running online that other people can access and use, the code running that app is considered **production code**.
 
-And libraries like fast.ai's [`nb-dev`](https://github.com/fastai/nbdev) (short for notebook development) enable you to write whole Python libraries (including documentation) with Jupyter Notebooks.
+And libraries like fast.ai's [`nb-dev`](https://github.com/fastai/nbdev) (short for notebook development) enables you to write whole Python libraries (including documentation) with Jupyter Notebooks.
 
 ### Pros and cons of notebooks vs Python scripts
 
@@ -384,7 +384,7 @@ class TinyVGG(nn.Module):
       self.classifier = nn.Sequential(
           nn.Flatten(),
           # Where did this in_features shape come from? 
-          # It's because each layer of our network compresses and changes the shape of our inputs data.
+          # It's because each layer of our network compresses and changes the shape of our input data.
           nn.Linear(in_features=hidden_units*13*13,
                     out_features=output_shape)
       )
@@ -483,7 +483,7 @@ def train_step(model: torch.nn.Module,
       # 5. Optimizer step
       optimizer.step()
 
-      # Calculate and accumulate accuracy metric across all batches
+      # Calculate and accumulate accuracy metrics across all batches
       y_pred_class = torch.argmax(torch.softmax(y_pred, dim=1), dim=1)
       train_acc += (y_pred_class == y).sum().item()/len(y_pred)
 
