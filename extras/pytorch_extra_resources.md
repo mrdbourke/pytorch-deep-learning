@@ -93,7 +93,7 @@ We cover computer vision in [03. PyTorch Computer Vision](https://www.learnpytor
 If your data is visual, images, x-rays, production line video or even hand-written documents, it may be a computer vision problem.
 
 - **[TorchVision](https://pytorch.org/vision/stable/index.html)** — PyTorch’s resident computer vision library. Find plenty of methods for loading vision data as well as plenty of pretrained computer vision models to use for your own problems.
-- [**timm (Torch Image Models) library**](https://github.com/rwightman/pytorch-image-models) — One of the most comprehensive computer vision libraries and resources for pretrained computer vision models. Almost all new research in that uses PyTorch for computer vision leverages the `timm` library in some way.
+- [**timm (Torch Image Models) library**](https://github.com/rwightman/pytorch-image-models) — One of the most comprehensive computer vision libraries and resources for pretrained computer vision models. Almost all new research that uses PyTorch for computer vision leverages the `timm` library in some way.
 - **[Yolov5 for object detection](https://github.com/ultralytics/yolov5)** — If you’re looking to build an object detection model in PyTorch, the `yolov5` GitHub repository might be the quickest way to get started.
 - **[VISSL (Vision Self-Supervised Learning) library](https://github.com/facebookresearch/vissl)** — Self-supervised learning is the art of getting data to learn patterns in itself. Rather than providing labels for different classes and learning a representation like that, self-supervised learning tries to replicate similar results without labels. VISSL provides an easy to use way to get started using self-supervised learning computer vision models with PyTorch.
 
@@ -103,7 +103,7 @@ Natural language processing involves finding patterns in text.
 
 For example, you might want to extract important entities in support tickets or classify a document into different categories.
 
-If your problem involves a large of amount of text, you’ll want to look into the following resources.
+If your problem involves a large amount of text, you’ll want to look into the following resources.
 
 - **[TorchText](https://pytorch.org/text/stable/index.html)** — PyTorch’s in-built domain library for text. Like TorchVision, it contains plenty of pre-built methods for loading data and a healthy collection of pretrained models you can adapt to your own problems.
 - [**HuggingFace Transformers library**](https://huggingface.co/docs/transformers/index) — The HuggingFace Transformers library has more stars on GitHub than the PyTorch library itself. And there’s a reason. Not that HuggingFace Transformers is better than PyTorch but because it’s the best at what it does: provide data loaders and pretrained state-of-the-art models for NLP (and a whole bunch more).
@@ -124,7 +124,7 @@ If you’re building an online store or online marketplace, chances are you’ll
 
 For that, you’ll want to look into building a recommendation engine. 
 
-- **[TorchRec](https://pytorch.org/torchrec/)** — PyTorch’s newest in-built domain library for powering recommendation engines with deep learning. TorchRec comes with recommendation datasets and models ready to try and use. Though if a custom recommendation egnine isn’t up to par with what you’re after (or too much work), many cloud vendors offer recommendation engine services.
+- **[TorchRec](https://pytorch.org/torchrec/)** — PyTorch’s newest in-built domain library for powering recommendation engines with deep learning. TorchRec comes with recommendation datasets and models ready to try and use. Though if a custom recommendation engine isn’t up to par with what you’re after (or too much work), many cloud vendors offer recommendation engine services.
 
 ### ⏳ Time Series
 
