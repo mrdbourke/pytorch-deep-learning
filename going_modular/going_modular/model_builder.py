@@ -2,7 +2,8 @@
 Contains PyTorch model code to instantiate a TinyVGG model.
 """
 import torch
-from torch import nn 
+
+from torch import nn
 
 class TinyVGG(nn.Module):
     """Creates the TinyVGG architecture.
@@ -30,8 +31,7 @@ class TinyVGG(nn.Module):
                     stride=1,
                     padding=0),
           nn.ReLU(),
-          nn.MaxPool2d(kernel_size=2,
-                        stride=2)
+          nn.MaxPool2d(kernel_size=2, stride=2)
         )
         self.conv_block_2 = nn.Sequential(
           nn.Conv2d(hidden_units, hidden_units, kernel_size=3, padding=0),
@@ -49,8 +49,8 @@ class TinyVGG(nn.Module):
         )
     
     def forward(self, x: torch.Tensor):
-        x = self.conv_block_1(x)
-        x = self.conv_block_2(x)
-        x = self.classifier(x)
-        return x
-        # return self.classifier(self.block_2(self.block_1(x))) # <- leverage the benefits of operator fusion
+        #x = self.conv_block_1(x)
+        #x = self.conv_block_2(x)
+        #x = self.classifier(x)
+        #return x
+        return self.classifier(self.conv_block_2(self.conv_block_1(x))) # <- leverage the benefits of operator fusion

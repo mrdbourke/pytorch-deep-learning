@@ -1,8 +1,11 @@
 """
 Contains various utility functions for PyTorch model training and saving.
 """
-import torch
 from pathlib import Path
+
+import torch
+
+import model_builder
 
 def save_model(model: torch.nn.Module,
                target_dir: str,
@@ -33,3 +36,43 @@ def save_model(model: torch.nn.Module,
     print(f"[INFO] Saving model to: {model_save_path}")
     torch.save(obj=model.state_dict(),
              f=model_save_path)
+
+def load_model(model_dir: str,
+               model_name: str,
+               hidden_units: int):
+    """Loads a PyTorch model from a target directory.
+
+    Args:
+    model_dir: A directory where the model is located.
+    model_name: The name of the model to load.
+      Should include either ".pth" or ".pt" as the file extension.
+    hidden_uints: number of hidden units in the model.
+
+    Example usage:
+    model = load_model(model_dir="models",
+                       model_name="05_going_modular_tingvgg_model.pth",
+                       hidden_units=128)
+
+    Returns:
+    The loaded PyTorch model.
+    """
+    # Create the model directory path
+    model_dir_path = Path(model_dir)
+
+    # Create the model path
+    assert model_name.endswith(".pth") or model_name.endswith(".pt"), "model_name should end with '.pt' or '.pth'"
+    model_path = model_dir_path / model_name
+
+    # Load the model
+    print(f"[INFO] Loading model from: {model_path}")
+    
+    # Build the model with pre-trained parameters
+    model = model_builder.TinyVGG(
+        input_shape=3,
+        hidden_units=hidden_units,
+        output_shape=3
+        )
+
+    model.load_state_dict(torch.load(model_path, weights_only=True))
+    
+    return model
