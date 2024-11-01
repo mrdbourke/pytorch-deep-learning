@@ -3,19 +3,15 @@ Trains a PyTorch image classification model using device-agnostic code.
 """
 
 import os
-
 import torch
-
 import argparse
-
 from torchvision import transforms
-
 import data_setup, engine, model_builder, utils
 
-if __name__ == '__main__':
+def get_args_parser(add_help=True):
   
   # Argument parser for input arguments
-  parser = argparse.ArgumentParser(description="Train a TinyVGG model on a custom dataset.")
+  parser = argparse.ArgumentParser(description="Train a TinyVGG model on a custom dataset.", add_help=add_help)
 
   # Define arguments
   parser.add_argument("--num_epochs", type=int, default=5, help="Number of epochs to train for.")
@@ -27,19 +23,14 @@ if __name__ == '__main__':
   parser.add_argument("--model_dir", type=str, default="models", help="Directory to save the trained model.")
   parser.add_argument("--model_name", type=str, default="05_going_modular_script_mode_tinyvgg_model.pth", help="Name for the saved model.")
 
-  # Parse arguments
-  args = parser.parse_args()
+  return parser
 
-  # Setup hyperparameters
-  #NUM_EPOCHS = 5
-  #BATCH_SIZE = 32
-  #HIDDEN_UNITS = 10
-  #LEARNING_RATE = 0.001
-
-  # Setup directories
-  #train_dir = "../data/pizza_steak_sushi/train"
-  #test_dir = "../data/pizza_steak_sushi/test"
-
+def main(args):
+  
+  # Set up device
+  torch.manual_seed(42)
+  torch.cuda.manual_seed(42)
+  
   # Setup target device
   device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -87,3 +78,7 @@ if __name__ == '__main__':
   utils.save_model(model=model,
                   target_dir=args.model_dir,
                   model_name=args.model_name) #"05_going_modular_script_mode_tinyvgg_model.pth")
+
+if __name__ == '__main__':
+  args = get_args_parser().parse_args()
+  main(args)  

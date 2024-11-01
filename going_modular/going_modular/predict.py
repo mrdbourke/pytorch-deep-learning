@@ -4,35 +4,32 @@ Predicts the class of an input image using a trained TinyVGG model. Posible clas
 """
 
 import os
-
 import torch
-
 import argparse
-
 import torchvision
-
 import matplotlib.pyplot as plt
-
 from torchvision.transforms import v2
-
 import model_builder, utils
 
-if __name__ == '__main__':
-    
+def get_args_parser(add_help=True):
+
     # Argument parser for input arguments
-    parser = argparse.ArgumentParser(description="Predicts the class of an input image using a trained TinyVGG model. Posible class names are: pizza, steak, sushi.")
-    
+    parser = argparse.ArgumentParser(description="Predicts the class of an input image using a trained TinyVGG model. Posible class names are: pizza, steak, sushi.", add_help=add_help)
+
     parser.add_argument('--image_path', type=str, required=True, help="Path to the input image.")
     parser.add_argument('--image_name', type=str, required=True, help="Image name.")
     parser.add_argument('--model_path', type=str, required=True, help="Path to the trained model.")
     parser.add_argument('--model_name', type=str, required=True, help="Model name.")
     parser.add_argument('--hidden_units', type=int, default=None, help="Number of hidden units per stage.")
-    
-    # Parse arguments
-    args = parser.parse_args()
 
-    # Setup class names
-    
+    return parser
+
+def main(args):
+    """
+    Predicts the class of an input image using a trained TinyVGG model.
+    """
+
+    # Create class_names (one output unit unit)
     class_names = ["pizza", "steak", "sushi"]
 
     # Setup target device
@@ -79,3 +76,8 @@ if __name__ == '__main__':
     pred_image_label_class = class_names[target_image_pred_label]
     
     print(f"[INFO] Pred class: {pred_image_label_class}, Pred prob: {target_image_pred_probs.max():.3f}")
+
+
+if __name__ == '__main__':    
+    args = get_args_parser().parse_args()
+    main(args)  
