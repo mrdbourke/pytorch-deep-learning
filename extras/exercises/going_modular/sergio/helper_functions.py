@@ -6,15 +6,15 @@ If a function gets defined once and could be used over and over, it'll go in her
 import torch
 import matplotlib.pyplot as plt
 import numpy as np
-
 from torch import nn
-
 import os
 import zipfile
-
 from pathlib import Path
-
 import requests
+from typing import List, Dict, Tuple
+import random
+from PIL import Image
+from torchvision.transforms import v2
 
 # Walk through an image classification directory and find out how many files (images)
 # are in each subdirectory.
@@ -236,6 +236,70 @@ def pred_and_plot_image(
     plt.title(title)
     plt.axis(False)
 
+
+# 1. Take in a trained model, class names, image path, image size, a transform and target device
+def pred_and_plot_image_imagenet(model: torch.nn.Module,
+                                 image_path: str, 
+                                 class_names: List[str],
+                                 image_size: Tuple[int, int] = (224, 224),
+                                 transform: torchvision.transforms = None,
+                                 device: torch.device = "cuda" if torch.cuda.is_available() else "cpu"):
+    """Predicts on a target image with a target model.
+
+    Args:
+        model (torch.nn.Module): A trained (or untrained) PyTorch model to predict on an image.
+        image_path (str): A file path to the image being predicted on. 
+        class_names (List[str]): A list of class names such as ["pizza", "steak", "sushi"].
+        image_size (Tuple[int, int], optional): Size to transform target image to. Defaults to (224, 224).
+        transform (torchvision.transforms, optional): Transform to perform on image. Defaults to None which uses ImageNet normalization.
+        device (torch.device, optional): Target device to perform prediction on. Defaults to device.
+    """
+
+    # 0. Make sure the model is on the target device
+    model.to(device) 
+    
+    # 2. Open image
+    img = Image.open(image_path)
+
+    # 3. Create transformation for image (if one doesn't exist)
+    if transform is not None:
+        image_transform = transform
+    else:
+        image_transform = v2.Compose([
+            v2.Resize((224, 224)),                                  # 1. Reshape all images to 224x224 (though some models may require different sizes)
+            v2.ToImage(), v2.ToDtype(torch.float32, scale=True),    # 2. convert to tensor and normalize
+            v2.Normalize(mean=[0.485, 0.456, 0.406],                # 3. A mean of [0.485, 0.456, 0.406] (across each colour channel)
+                         std=[0.229, 0.224, 0.225])                 # 4. A standard deviation of [0.229, 0.224, 0.225] (across each colour channel),
+                         ])
+
+    ### Predict on image ### 
+
+    # 4. Make sure the model is on the target device
+    model.to(device)
+
+    # 5. Turn on model evaluation mode and inference mode
+    model.eval()
+    with torch.inference_mode():
+      # 6. Transform and add an extra dimension to image (model requires samples in [batch_size, color_channels, height, width])
+      transformed_image = image_transform(img).unsqueeze(dim=0)
+
+      # 7. Make a prediction on image with an extra dimension and send it to the target device
+      target_image_pred = model(transformed_image.to(device))
+
+    # 8. Convert logits -> prediction probabilities (using torch.softmax() for multi-class classification)
+    target_image_pred_probs = torch.softmax(target_image_pred, dim=1)
+
+    # 9. Convert prediction probabilities -> prediction labels
+    target_image_pred_label = torch.argmax(target_image_pred_probs, dim=1)
+
+    # 10. Plot image with predicted label and probability 
+    plt.figure()
+    plt.imshow(img)
+    plt.title(f"Pred: {class_names[target_image_pred_label]} | Prob: {target_image_pred_probs.max():.3f}")
+    plt.axis(False)
+
+
+
 def set_seeds(seed: int=42):
     """Sets random sets for torch operations.
 
@@ -292,3 +356,134 @@ def download_data(source: str,
             os.remove(data_path / target_file)
     
     return image_path
+
+def display_random_images(dataset: torch.utils.data.dataset.Dataset, # or torchvision.datasets.ImageFolder?
+                          classes: List[str] = None,
+                          n: int = 10,
+                          display_shape: bool = True,
+                          rows: int = 5,
+                          cols: int = 5,
+                          seed: int = None):
+    
+   
+    """Displays a number of random images from a given dataset.
+
+    Args:
+        dataset (torch.utils.data.dataset.Dataset): Dataset to select random images from.
+        classes (List[str], optional): Names of the classes. Defaults to None.
+        n (int, optional): Number of images to display. Defaults to 10.
+        display_shape (bool, optional): Whether to display the shape of the image tensors. Defaults to True.
+        rows: number of rows of the subplot
+        cols: number of columns of the subplot
+        seed (int, optional): The seed to set before drawing random images. Defaults to None.
+    
+    Usage:
+    display_random_images(train_data, 
+                      n=16, 
+                      classes=class_names,
+                      rows=4,
+                      cols=4,
+                      display_shape=False,
+                      seed=None)
+    """
+
+    # 1. Setup the range to select images
+    n = min(n, len(dataset))
+    # 2. Adjust display if n too high
+    if n > rows*cols:
+        n = rows*cols
+        #display_shape = False
+        print(f"For display purposes, n shouldn't be larger than {rows*cols}, setting to {n} and removing shape display.")
+    
+    # 3. Set random seed
+    if seed:
+        random.seed(seed)
+
+    # 4. Get random sample indexes
+    random_samples_idx = random.sample(range(len(dataset)), k=n)
+
+    # 5. Setup plot
+    plt.figure(figsize=(cols*4, rows*4))
+
+    # 6. Loop through samples and display random samples 
+    for i, targ_sample in enumerate(random_samples_idx):
+        targ_image, targ_label = dataset[targ_sample][0], dataset[targ_sample][1]
+
+        # 7. Adjust image tensor shape for plotting: [color_channels, height, width] -> [color_channels, height, width]
+        targ_image_adjust = targ_image.permute(1, 2, 0)
+
+        # Plot adjusted samples
+        plt.subplot(rows, cols, i+1)        
+        plt.imshow(targ_image_adjust)
+        plt.axis("off")
+        if classes:
+            title = f"class: {classes[targ_label]}"
+            if display_shape:
+                title = title + f"\nshape: {targ_image_adjust.shape}"
+        plt.title(title)
+
+
+def save_model(model: torch.nn.Module,
+               target_dir: str,
+               model_name: str):
+    """Saves a PyTorch model to a target directory.
+
+    Args:
+    model: A target PyTorch model to save.
+    target_dir: A directory for saving the model to.
+    model_name: A filename for the saved model. Should include
+      either ".pth" or ".pt" as the file extension.
+
+    Example usage:
+    save_model(model=model_0,
+               target_dir="models",
+               model_name="05_going_modular_tingvgg_model.pth")
+    """
+    # Create target directory
+    target_dir_path = Path(target_dir)
+    target_dir_path.mkdir(parents=True,
+                        exist_ok=True)
+
+    # Create model save path
+    assert model_name.endswith(".pth") or model_name.endswith(".pt"), "model_name should end with '.pt' or '.pth'"
+    model_save_path = target_dir_path / model_name
+
+    # Save the model state_dict()
+    print(f"[INFO] Saving model to: {model_save_path}")
+    torch.save(obj=model.state_dict(), f=model_save_path)
+    
+
+def load_model(model: torch.nn.Module,
+               model_weights_dir: str,
+               model_weights_name: str):
+               #hidden_units: int):
+
+    """Loads a PyTorch model from a target directory.
+
+    Args:
+    model: A target PyTorch model to load.
+    model_weights_dir: A directory where the model is located.
+    model_weights_name: The name of the model to load.
+      Should include either ".pth" or ".pt" as the file extension.
+
+    Example usage:
+    model = load_model(model=model,
+                       model_weights_dir="models",
+                       model_weights_name="05_going_modular_tingvgg_model.pth")
+
+    Returns:
+    The loaded PyTorch model.
+    """
+    # Create the model directory path
+    model_dir_path = Path(model_weights_dir)
+
+    # Create the model path
+    assert model_weights_name.endswith(".pth") or model_weights_name.endswith(".pt"), "model_name should end with '.pt' or '.pth'"
+    model_path = model_dir_path / model_weights_name
+
+    # Load the model
+    print(f"[INFO] Loading model from: {model_path}")
+    
+    model.load_state_dict(torch.load(model_path, weights_only=True))
+    
+    return model
