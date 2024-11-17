@@ -118,12 +118,12 @@ def test_step(model: torch.nn.Module,
     return test_loss, test_acc
 
 def train(model: torch.nn.Module, 
-          train_dataloader: torch.utils.data.DataLoader, 
-          test_dataloader: torch.utils.data.DataLoader, 
-          optimizer: torch.optim.Optimizer,
-          loss_fn: torch.nn.Module,
-          epochs: int,
-          device: torch.device) -> Dict[str, List[float]]:
+                train_dataloader: torch.utils.data.DataLoader, 
+                test_dataloader: torch.utils.data.DataLoader, 
+                optimizer: torch.optim.Optimizer,
+                loss_fn: torch.nn.Module,
+                epochs: int,
+                device: torch.device = "cuda" if torch.cuda.is_available() else "cpu") -> Dict[str, List[float]]:
     """Trains and tests a PyTorch model.
 
     Passes a target PyTorch models through train_step() and test_step()
@@ -146,41 +146,42 @@ def train(model: torch.nn.Module,
     testing accuracy metrics. Each metric has a value in a list for 
     each epoch.
     In the form: {train_loss: [...],
-              train_acc: [...],
-              test_loss: [...],
-              test_acc: [...]} 
+                        train_acc: [...],
+                        test_loss: [...],
+                        test_acc: [...]} 
     For example if training for epochs=2: 
-             {train_loss: [2.0616, 1.0537],
-              train_acc: [0.3945, 0.3945],
-              test_loss: [1.2641, 1.5706],
-              test_acc: [0.3400, 0.2973]} 
+                        {train_loss: [2.0616, 1.0537],
+                        train_acc: [0.3945, 0.3945],
+                        test_loss: [1.2641, 1.5706],
+                        test_acc: [0.3400, 0.2973]} 
     """
     # Create empty results dictionary
     results = {"train_loss": [],
-               "train_acc": [],
-               "test_loss": [],
-               "test_acc": []
+                            "train_acc": [],
+                            "test_loss": [],
+                            "test_acc": []
     }
 
     # Loop through training and testing steps for a number of epochs
     for epoch in tqdm(range(epochs)):
         train_loss, train_acc = train_step(model=model,
-                                          dataloader=train_dataloader,
-                                          loss_fn=loss_fn,
-                                          optimizer=optimizer,
-                                          device=device)
+                                           dataloader=train_dataloader,
+                                           loss_fn=loss_fn,
+                                           optimizer=optimizer,
+                                           device=device)
+        
         test_loss, test_acc = test_step(model=model,
-          dataloader=test_dataloader,
-          loss_fn=loss_fn,
-          device=device)
+                                        dataloader=test_dataloader,
+                                        loss_fn=loss_fn,
+                                        device=device)
 
         # Print out what's happening
         print(
-          f"Epoch: {epoch+1} | "
-          f"train_loss: {train_loss:.4f} | "
-          f"train_acc: {train_acc:.4f} | "
-          f"test_loss: {test_loss:.4f} | "
-          f"test_acc: {test_acc:.4f}"
+            f"Epoch: {epoch+1} | "
+            f"train_loss: {train_loss:.4f} | "
+            f"train_acc: {train_acc:.4f} | "
+            f"test_loss: {test_loss:.4f} | "
+            f"test_acc: {test_acc:.4f}"
         )
 
         # Update results dictionary

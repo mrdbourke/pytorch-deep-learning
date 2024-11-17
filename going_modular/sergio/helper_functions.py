@@ -14,6 +14,8 @@ import requests
 from typing import List, Dict, Tuple
 import random
 from PIL import Image
+from torchvision.transforms import v2
+
 
 # Walk through an image classification directory and find out how many files (images)
 # are in each subdirectory.
@@ -265,7 +267,7 @@ def pred_and_plot_image_imagenet(model: torch.nn.Module,
         image_transform = transform
     else:
         image_transform = v2.Compose([
-            v2.Resize((224, 224)),                                  # 1. Reshape all images to 224x224 (though some models may require different sizes)
+            v2.Resize(image_size),                                  # 1. Reshape all images to 224x224 (though some models may require different sizes)
             v2.ToImage(), v2.ToDtype(torch.float32, scale=True),    # 2. convert to tensor and normalize
             v2.Normalize(mean=[0.485, 0.456, 0.406],                # 3. A mean of [0.485, 0.456, 0.406] (across each colour channel)
                          std=[0.229, 0.224, 0.225])                 # 4. A standard deviation of [0.229, 0.224, 0.225] (across each colour channel),
