@@ -51,6 +51,7 @@ def train_step(model: torch.nn.Module,
     """
     # Put model in train mode
     model.train()
+    model.to(device)
 
     # Setup train loss and train accuracy values
     train_loss, train_acc = 0, 0
@@ -108,6 +109,7 @@ def test_step(model: torch.nn.Module,
     """
     # Put model in eval mode
     model.eval() 
+    model.to(device)
 
     # Setup test loss and test accuracy values
     test_loss, test_acc = 0, 0
