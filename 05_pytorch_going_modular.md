@@ -246,7 +246,16 @@ data/
 
 Once we've got data, we can then turn it into PyTorch `Dataset`'s and `DataLoader`'s (one for training data and one for testing data).
 
-We convert the useful `Dataset` and `DataLoader` creation code into a function called `create_dataloaders()`.
+First, we need to create the `going_modular` directory where we'll save all our Python scripts:
+
+```python
+import os
+
+# Create the directory if it doesn't exist
+os.makedirs('going_modular', exist_ok=True)
+```
+
+Now we can convert the useful `Dataset` and `DataLoader` creation code into a function called `create_dataloaders()`.
 
 And we write it to file using the line `%%writefile going_modular/data_setup.py`. 
 
