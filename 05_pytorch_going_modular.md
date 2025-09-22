@@ -1,131 +1,133 @@
-[View Source Code](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/05_pytorch_going_modular.md) | [View Slides](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf) 
+[소스 코드 보기](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/05_pytorch_going_modular.md) | [슬라이드 보기](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/05_pytorch_going_modular.pdf) 
 
-# 05. PyTorch Going Modular
+> **원본:** 이 문서는 [Daniel Bourke](https://github.com/mrdbourke)의 [Learn PyTorch for Deep Learning](https://github.com/mrdbourke/pytorch-deep-learning) 자료를 한국어로 번역한 것입니다. 원본 저장소: https://github.com/mrdbourke/pytorch-deep-learning
 
-This section answers the question, "how do I turn my notebook code into Python scripts?"
+# 05. PyTorch 모듈화
 
-To do so, we're going to turn the most useful code cells in [notebook 04. PyTorch Custom Datasets](https://www.learnpytorch.io/04_pytorch_custom_datasets/) into a series of Python scripts saved to a directory called [`going_modular`](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular).
+이 섹션은 "노트북 코드를 Python 스크립트로 어떻게 변환할까요?"라는 질문에 답합니다.
 
-## What is going modular?
+이를 위해 [노트북 04. PyTorch 커스텀 데이터셋](https://www.learnpytorch.io/04_pytorch_custom_datasets/)의 가장 유용한 코드 셀들을 [`going_modular`](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular)라는 디렉토리에 저장된 일련의 Python 스크립트로 변환할 것입니다.
 
-Going modular involves turning notebook code (from a Jupyter Notebook or Google Colab notebook) into a series of different Python scripts that offer similar functionality.
+## 모듈화란 무엇인가요?
 
-For example, we could turn our notebook code from a series of cells into the following Python files:
+모듈화는 노트북 코드(Jupyter Notebook이나 Google Colab 노트북에서)를 유사한 기능을 제공하는 일련의 다른 Python 스크립트로 변환하는 것을 포함합니다.
 
-* `data_setup.py` - a file to prepare and download data if needed.
-* `engine.py` - a file containing various training functions.
-* `model_builder.py` or `model.py` - a file to create a PyTorch model.
-* `train.py` - a file to leverage all other files and train a target PyTorch model.
-* `utils.py` - a file dedicated to helpful utility functions.
+예를 들어, 우리는 노트북 코드를 일련의 셀에서 다음과 같은 Python 파일들로 변환할 수 있습니다:
 
-> **Note:** The naming and layout of the above files will depend on your use case and code requirements. Python scripts are as general as individual notebook cells, meaning, you could create one for almost any kind of functionality.
+* `data_setup.py` - 필요시 데이터를 준비하고 다운로드하는 파일.
+* `engine.py` - 다양한 훈련 함수를 포함하는 파일.
+* `model_builder.py` 또는 `model.py` - PyTorch 모델을 생성하는 파일.
+* `train.py` - 다른 모든 파일을 활용하여 대상 PyTorch 모델을 훈련하는 파일.
+* `utils.py` - 유용한 유틸리티 함수에 전념하는 파일.
 
-## Why would you want to go modular?
+> **참고:** 위 파일들의 명명과 레이아웃은 사용 사례와 코드 요구사항에 따라 달라집니다. Python 스크립트는 개별 노트북 셀만큼 일반적이므로, 거의 모든 종류의 기능에 대해 하나를 만들 수 있습니다.
 
-Notebooks are fantastic for iteratively exploring and running experiments quickly.
+## 왜 모듈화를 원할까요?
 
-However, for larger scale projects you may find Python scripts more reproducible and easier to run.
+노트북은 반복적으로 탐색하고 실험을 빠르게 실행하는 데 훌륭합니다.
 
-Though this is a debated topic, as companies like [Netflix have shown how they use notebooks for production code](https://netflixtechblog.com/notebook-innovation-591ee3221233).
+하지만 더 큰 규모의 프로젝트에서는 Python 스크립트가 더 재현 가능하고 실행하기 쉬울 수 있습니다.
 
-**Production code** is code that runs to offer a service to someone or something.
+하지만 이것은 논쟁의 여지가 있는 주제입니다. [Netflix가 프로덕션 코드에 노트북을 사용하는 방법을 보여준 것처럼](https://netflixtechblog.com/notebook-innovation-591ee3221233) 말입니다.
 
-For example, if you have an app running online that other people can access and use, the code running that app is considered **production code**.
+**프로덕션 코드**는 누군가나 무언가에게 서비스를 제공하기 위해 실행되는 코드입니다.
 
-And libraries like fast.ai's [`nb-dev`](https://github.com/fastai/nbdev) (short for notebook development) enable you to write whole Python libraries (including documentation) with Jupyter Notebooks.
+예를 들어, 다른 사람들이 접근하고 사용할 수 있는 온라인 앱이 있다면, 그 앱을 실행하는 코드는 **프로덕션 코드**로 간주됩니다.
 
-### Pros and cons of notebooks vs Python scripts
+그리고 fast.ai의 [`nb-dev`](https://github.com/fastai/nbdev) (노트북 개발의 줄임말)와 같은 라이브러리는 Jupyter Notebooks로 전체 Python 라이브러리(문서 포함)를 작성할 수 있게 해줍니다.
 
-There's arguments for both sides.
+### 노트북 vs Python 스크립트의 장단점
 
-But this list sums up a few of the main topics.
+양쪽 모두에 대한 논쟁이 있습니다.
 
-|               | **Pros**                                               | **Cons**                                     |
+하지만 이 목록은 주요 주제들을 요약합니다.
+
+|               | **장점**                                               | **단점**                                     |
 | ------------- | ------------------------------------------------------ | -------------------------------------------- |
-| **Notebooks** | Easy to experiment/get started                         | Versioning can be hard                       |
-|               | Easy to share (e.g. a link to a Google Colab notebook) | Hard to use only specific parts              |
-|               | Very visual                                            | Text and graphics can get in the way of code |
+| **노트북** | 실험하기/시작하기 쉬움                         | 버전 관리가 어려울 수 있음                       |
+|               | 공유하기 쉬움 (예: Google Colab 노트북 링크) | 특정 부분만 사용하기 어려움              |
+|               | 매우 시각적                                            | 텍스트와 그래픽이 코드를 방해할 수 있음 |
 
-|                    | **Pros**                                                                            | **Cons**                                                                                  |
+|                    | **장점**                                                                            | **단점**                                                                                  |
 | ------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| **Python scripts** | Can package code together (saves rewriting similar code across different notebooks) | Experimenting isn't as visual (usually have to run the whole script rather than one cell) |
-|                    | Can use git for versioning                                                          |                                                                                           |
-|                    | Many open source projects use scripts                                               |                                                                                           |
-|                    | Larger projects can be run on cloud vendors (not as much support for notebooks)     |                                                                                           |
+| **Python 스크립트** | 코드를 함께 패키징할 수 있음 (다른 노트북에서 유사한 코드를 다시 작성하는 것을 절약) | 실험이 시각적이지 않음 (보통 한 셀보다는 전체 스크립트를 실행해야 함) |
+|                    | git을 사용한 버전 관리 가능                                                          |                                                                                           |
+|                    | 많은 오픈소스 프로젝트가 스크립트 사용                                               |                                                                                           |
+|                    | 더 큰 프로젝트를 클라우드 벤더에서 실행 가능 (노트북에 대한 지원이 많지 않음)     |                                                                                           |
 
-### My workflow
+### 제 워크플로우
 
-I usually start machine learning projects in Jupyter/Google Colab notebooks for quick experimentation and visualization.
+저는 보통 빠른 실험과 시각화를 위해 Jupyter/Google Colab 노트북에서 머신러닝 프로젝트를 시작합니다.
 
-Then when I've got something working, I move the most useful pieces of code to Python scripts.
+그런 다음 뭔가 작동하는 것을 얻으면, 가장 유용한 코드 조각들을 Python 스크립트로 이동시킵니다.
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-my-workflow-for-experimenting.png" alt="one possible workflow for writing machine learning code, start with jupyter or google colab notebooks and then move to Python scripts when you've got something working." width=1000/>
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-my-workflow-for-experimenting.png" alt="머신러닝 코드 작성을 위한 하나의 가능한 워크플로우, jupyter 또는 google colab 노트북으로 시작한 다음 뭔가 작동하는 것을 얻으면 Python 스크립트로 이동" width=1000/>
 
-*There are many possible workflows for writing machine learning code. Some prefer to start with scripts, others (like me) prefer to start with notebooks and go to scripts later on.*
+*머신러닝 코드 작성을 위한 많은 가능한 워크플로우가 있습니다. 일부는 스크립트로 시작하는 것을 선호하고, 다른 사람들(저처럼)은 노트북으로 시작해서 나중에 스크립트로 가는 것을 선호합니다.*
 
-### PyTorch in the wild
+### 실제 환경에서의 PyTorch
 
-In your travels, you'll see many code repositories for PyTorch-based ML projects have instructions on how to run the PyTorch code in the form of Python scripts.
+여러분의 여행에서, PyTorch 기반 ML 프로젝트의 많은 코드 저장소들이 Python 스크립트 형태로 PyTorch 코드를 실행하는 방법에 대한 지침을 가지고 있다는 것을 보게 될 것입니다.
 
-For example, you might be instructed to run code like the following in a terminal/command line to train a model:
+예를 들어, 모델을 훈련하기 위해 터미널/명령줄에서 다음과 같은 코드를 실행하라는 지시를 받을 수 있습니다:
 
 ```
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
 ```
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-python-train-command-line-annotated.png" alt="command line call for training a PyTorch model with different hyperparameters" width=1000/> 
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-python-train-command-line-annotated.png" alt="다양한 하이퍼파라미터로 PyTorch 모델을 훈련하기 위한 명령줄 호출" width=1000/> 
 
-*Running a PyTorch `train.py` script on the command line with various hyperparameter settings.*
+*다양한 하이퍼파라미터 설정으로 명령줄에서 PyTorch `train.py` 스크립트 실행.*
 
-In this case, `train.py` is the target Python script, it'll likely contain functions to train a PyTorch model.
+이 경우, `train.py`는 대상 Python 스크립트이며, PyTorch 모델을 훈련하는 함수들을 포함할 것입니다.
 
-And `--model`, `--batch_size`, `--lr` and `--num_epochs` are known as argument flags.
+그리고 `--model`, `--batch_size`, `--lr`, `--num_epochs`는 인수 플래그로 알려져 있습니다.
 
-You can set these to whatever values you like and if they're compatible with `train.py`, they'll work, if not, they'll error.
+이것들을 원하는 값으로 설정할 수 있으며, `train.py`와 호환되면 작동하고, 그렇지 않으면 오류가 발생합니다.
 
-For example, let's say we wanted to train our TinyVGG model from notebook 04 for 10 epochs with a batch size of 32 and a learning rate of 0.001:
+예를 들어, 노트북 04의 TinyVGG 모델을 배치 크기 32, 학습률 0.001로 10 에포크 동안 훈련하고 싶다고 가정해봅시다:
 
 ```
 python train.py --model tinyvgg --batch_size 32 --lr 0.001 --num_epochs 10
 ```
 
-You could setup any number of these argument flags in your `train.py` script to suit your needs.
+필요에 맞게 `train.py` 스크립트에서 이러한 인수 플래그를 원하는 만큼 설정할 수 있습니다.
 
-The PyTorch blog post for training state-of-the-art computer vision models uses this style.
+최첨단 컴퓨터 비전 모델 훈련을 위한 PyTorch 블로그 포스트가 이 스타일을 사용합니다.
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-training-sota-recipe.png" alt="PyTorch training script recipe for training state of the art computer vision models" width=800/>
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-training-sota-recipe.png" alt="최첨단 컴퓨터 비전 모델 훈련을 위한 PyTorch 훈련 스크립트 레시피" width=800/>
 
-*PyTorch command line training script recipe for training state-of-the-art computer vision models with 8 GPUs. Source: [PyTorch blog](https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/#the-training-recipe).*
+*8개 GPU로 최첨단 컴퓨터 비전 모델을 훈련하기 위한 PyTorch 명령줄 훈련 스크립트 레시피. 출처: [PyTorch 블로그](https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/#the-training-recipe).*
 
-## What we're going to cover
+## 우리가 다룰 내용
 
-The main concept of this section is: **turn useful notebook code cells into reusable Python files.**
+이 섹션의 주요 개념은: **유용한 노트북 코드 셀을 재사용 가능한 Python 파일로 변환하는 것입니다.**
 
-Doing this will save us writing the same code over and over again.
+이렇게 하면 같은 코드를 계속 반복해서 작성하는 것을 절약할 수 있습니다.
 
-There are two notebooks for this section:
+이 섹션에는 두 개의 노트북이 있습니다:
 
-1. [**05. Going Modular: Part 1 (cell mode)**](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb) - this notebook is run as a traditional Jupyter Notebook/Google Colab notebook and is a condensed version of [notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/).
-2. [**05. Going Modular: Part 2 (script mode)**](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb) - this notebook is the same as number 1 but with added functionality to turn each of the major sections into Python scripts, such as, `data_setup.py` and `train.py`. 
+1. [**05. 모듈화: 파트 1 (셀 모드)**](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb) - 이 노트북은 전통적인 Jupyter Notebook/Google Colab 노트북으로 실행되며 [노트북 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/)의 압축된 버전입니다.
+2. [**05. 모듈화: 파트 2 (스크립트 모드)**](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb) - 이 노트북은 1번과 동일하지만 각 주요 섹션을 `data_setup.py`와 `train.py`와 같은 Python 스크립트로 변환하는 추가 기능이 있습니다.
 
-The text in this document focuses on the code cells 05. Going Modular: Part 2 (script mode), the ones with `%%writefile ...` at the top.
+이 문서의 텍스트는 05. 모듈화: 파트 2 (스크립트 모드)의 코드 셀들, 즉 상단에 `%%writefile ...`이 있는 것들에 중점을 둡니다.
 
-### Why two parts?
+### 왜 두 부분인가요?
 
-Because sometimes the best way to learn something is to see how it *differs* from something else.
+때로는 무언가를 배우는 가장 좋은 방법은 그것이 다른 것과 어떻게 *다른지* 보는 것이기 때문입니다.
 
-If you run each notebook side-by-side you'll see how they differ and that's where the key learnings are.
+각 노트북을 나란히 실행하면 어떻게 다른지 볼 수 있고, 그곳이 핵심 학습이 있는 곳입니다.
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-notebook-cell-mode-vs-script-mode.png" alt="running cell mode notebook vs a script mode notebook" width=1000/>
+<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-notebook-cell-mode-vs-script-mode.png" alt="셀 모드 노트북 vs 스크립트 모드 노트북 실행" width=1000/>
 
-*Running the two notebooks for section 05 side-by-side. You'll notice that the **script mode notebook has extra code cells** to turn code from the cell mode notebook into Python scripts.*
+*섹션 05의 두 노트북을 나란히 실행. **스크립트 모드 노트북에는 셀 모드 노트북의 코드를 Python 스크립트로 변환하는 추가 코드 셀들**이 있다는 것을 알 수 있습니다.*
 
-### What we're working towards
+### 우리가 목표로 하는 것
 
-By the end of this section we want to have two things:
+이 섹션의 끝에서 우리는 두 가지를 갖고 싶습니다:
 
-1. The ability to train the model we built in notebook 04 (Food Vision Mini) with one line of code on the command line: `python train.py`.
-2. A directory structure of reusable Python scripts, such as: 
+1. 명령줄에서 한 줄의 코드로 노트북 04에서 구축한 모델(Food Vision Mini)을 훈련할 수 있는 능력: `python train.py`.
+2. 재사용 가능한 Python 스크립트의 디렉토리 구조, 예를 들어: 
 
 ```
 going_modular/
@@ -152,13 +154,13 @@ going_modular/
             └── sushi/
 ```
 
-### Things to note
+### 주의할 점
 
-* **Docstrings** - Writing reproducible and understandable code is important. And with this in mind, each of the functions/classes we'll be putting into scripts has been created with Google's [Python docstring style in mind](https://google.github.io/styleguide/pyguide.html#383-functions-and-methods).
-* **Imports at the top of scripts** - Since all of the Python scripts we're going to create could be considered a small program on their own, all of the scripts require their input modules be imported at the start of the script for example:
+* **독스트링** - 재현 가능하고 이해하기 쉬운 코드를 작성하는 것이 중요합니다. 이를 염두에 두고, 스크립트에 넣을 함수/클래스들은 Google의 [Python 독스트링 스타일](https://google.github.io/styleguide/pyguide.html#383-functions-and-methods)을 염두에 두고 생성되었습니다.
+* **스크립트 상단의 임포트** - 우리가 만들 Python 스크립트들은 모두 자체적으로 작은 프로그램으로 간주될 수 있으므로, 모든 스크립트는 스크립트 시작 부분에서 입력 모듈을 임포트해야 합니다. 예를 들어:
 
 ```python
-# Import modules required for train.py
+# train.py에 필요한 모듈 임포트
 import os
 import torch
 import data_setup, engine, model_builder, utils
@@ -166,27 +168,27 @@ import data_setup, engine, model_builder, utils
 from torchvision import transforms
 ```
 
-## Where can you get help?
+## 어디서 도움을 받을 수 있나요?
 
-All of the materials for this course [are available on GitHub](https://github.com/mrdbourke/pytorch-deep-learning).
+이 코스의 모든 자료는 [GitHub에서 사용할 수 있습니다](https://github.com/mrdbourke/pytorch-deep-learning).
 
-If you run into trouble, you can ask a question on the course [GitHub Discussions page](https://github.com/mrdbourke/pytorch-deep-learning/discussions).
+문제가 발생하면 코스 [GitHub Discussions 페이지](https://github.com/mrdbourke/pytorch-deep-learning/discussions)에서 질문할 수 있습니다.
 
-And of course, there's the [PyTorch documentation](https://pytorch.org/docs/stable/index.html) and [PyTorch developer forums](https://discuss.pytorch.org/), a very helpful place for all things PyTorch. 
+물론 [PyTorch 문서](https://pytorch.org/docs/stable/index.html)와 [PyTorch 개발자 포럼](https://discuss.pytorch.org/)도 있습니다. 이는 PyTorch와 관련된 모든 것에 대해 매우 도움이 되는 곳입니다. 
 
-## 0. Cell mode vs. script mode
+## 0. 셀 모드 vs. 스크립트 모드
 
-A cell mode notebook such as [05. Going Modular Part 1 (cell mode)](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb) is a notebook run normally, each cell in the notebook is either code or markdown.
+[05. 모듈화 파트 1 (셀 모드)](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb)와 같은 셀 모드 노트북은 일반적으로 실행되는 노트북으로, 노트북의 각 셀은 코드이거나 마크다운입니다.
 
-A script mode notebook such as [05. Going Modular Part 2 (script mode)](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb) is very similar to a cell mode notebook, however, many of the code cells may be turned into Python scripts.
+[05. 모듈화 파트 2 (스크립트 모드)](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb)와 같은 스크립트 모드 노트북은 셀 모드 노트북과 매우 유사하지만, 많은 코드 셀들이 Python 스크립트로 변환될 수 있습니다.
 
-> **Note:** You don't *need* to create Python scripts via a notebook, you can create them directly through an IDE (integrated developer environment) such as [VS Code](https://code.visualstudio.com/). Having the script mode notebook as part of this section is just to demonstrate one way of going from notebooks to Python scripts.
+> **참고:** 노트북을 통해 Python 스크립트를 만들 *필요는 없습니다*. [VS Code](https://code.visualstudio.com/)와 같은 IDE(통합 개발 환경)를 통해 직접 만들 수 있습니다. 이 섹션의 일부로 스크립트 모드 노트북을 갖는 것은 노트북에서 Python 스크립트로 가는 한 가지 방법을 보여주기 위한 것입니다.
 
-## 1. Get data
+## 1. 데이터 가져오기
 
-Getting the data in each of the 05 notebooks happens the same as in [notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#1-get-data).
+05 노트북들 각각에서 데이터를 가져오는 것은 [노트북 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#1-get-data)와 동일하게 발생합니다.
 
-A call is made to GitHub via Python's `requests` module to download a `.zip` file and unzip it.
+Python의 `requests` 모듈을 통해 GitHub에 호출하여 `.zip` 파일을 다운로드하고 압축을 해제합니다.
 
 ```python 
 import os
@@ -220,7 +222,7 @@ with zipfile.ZipFile(data_path / "pizza_steak_sushi.zip", "r") as zip_ref:
 os.remove(data_path / "pizza_steak_sushi.zip")
 ```
 
-This results in having a file called `data` that contains another directory called `pizza_steak_sushi` with images of pizza, steak and sushi in standard image classification format.
+이것은 피자, 스테이크, 스시 이미지가 표준 이미지 분류 형식으로 포함된 `pizza_steak_sushi`라는 다른 디렉토리를 포함하는 `data`라는 파일을 갖게 됩니다.
 
 ```
 data/
@@ -242,13 +244,13 @@ data/
         └── sushi/
 ```
 
-## 2. Create Datasets and DataLoaders (`data_setup.py`)
+## 2. 데이터셋과 데이터로더 생성하기 (`data_setup.py`)
 
-Once we've got data, we can then turn it into PyTorch `Dataset`'s and `DataLoader`'s (one for training data and one for testing data).
+데이터를 얻으면, PyTorch `Dataset`과 `DataLoader`로 변환할 수 있습니다 (훈련 데이터용 하나, 테스트 데이터용 하나).
 
-We convert the useful `Dataset` and `DataLoader` creation code into a function called `create_dataloaders()`.
+유용한 `Dataset`과 `DataLoader` 생성 코드를 `create_dataloaders()`라는 함수로 변환합니다.
 
-And we write it to file using the line `%%writefile going_modular/data_setup.py`. 
+그리고 `%%writefile going_modular/data_setup.py` 라인을 사용하여 파일에 작성합니다. 
 
 ```py title="data_setup.py"
 %%writefile going_modular/data_setup.py
@@ -319,23 +321,23 @@ def create_dataloaders(
   return train_dataloader, test_dataloader, class_names
 ```
 
-If we'd like to make `DataLoader`'s we can now use the function within `data_setup.py` like so:
+`DataLoader`를 만들고 싶다면 이제 `data_setup.py` 내의 함수를 다음과 같이 사용할 수 있습니다:
 
 ```python
-# Import data_setup.py
+# data_setup.py 임포트
 from going_modular import data_setup
 
-# Create train/test dataloader and get class names as a list
+# 훈련/테스트 데이터로더 생성하고 클래스 이름을 리스트로 가져오기
 train_dataloader, test_dataloader, class_names = data_setup.create_dataloaders(...)
 ```
 
-## 3. Making a model (`model_builder.py`)
+## 3. 모델 만들기 (`model_builder.py`)
 
-Over the past few notebooks (notebook 03 and notebook 04), we've built the TinyVGG model a few times.
+지난 몇 개의 노트북들(노트북 03과 노트북 04)에서 TinyVGG 모델을 몇 번 구축했습니다.
 
-So it makes sense to put the model into its file so we can reuse it again and again.
+따라서 모델을 자체 파일에 넣어서 계속 재사용할 수 있도록 하는 것이 합리적입니다.
 
-Let's put our `TinyVGG()` model class into a script with the line `%%writefile going_modular/model_builder.py`:
+`TinyVGG()` 모델 클래스를 `%%writefile going_modular/model_builder.py` 라인으로 스크립트에 넣어봅시다:
 
 ```python title="model_builder.py"
 %%writefile going_modular/model_builder.py
@@ -397,30 +399,30 @@ class TinyVGG(nn.Module):
       # return self.classifier(self.conv_block_2(self.conv_block_1(x))) # <- leverage the benefits of operator fusion
 ```
 
-Now instead of coding the TinyVGG model from scratch every time, we can import it using:
+이제 매번 TinyVGG 모델을 처음부터 코딩하는 대신, 다음과 같이 임포트할 수 있습니다:
 
 ```python
 import torch
-# Import model_builder.py
+# model_builder.py 임포트
 from going_modular import model_builder
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Instantiate an instance of the model from the "model_builder.py" script
+# "model_builder.py" 스크립트에서 모델의 인스턴스 생성
 torch.manual_seed(42)
 model = model_builder.TinyVGG(input_shape=3,
                               hidden_units=10, 
                               output_shape=len(class_names)).to(device)
 ```
 
-## 4. Creating `train_step()` and `test_step()` functions and `train()` to combine them  
+## 4. `train_step()`과 `test_step()` 함수 생성하기 및 `train()`으로 결합하기
 
-We wrote several training functions in [notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#75-create-train-test-loop-functions):
+[노트북 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#75-create-train-test-loop-functions)에서 여러 훈련 함수를 작성했습니다:
 
-1. `train_step()` - takes in a model, a `DataLoader`, a loss function and an optimizer and trains the model on the `DataLoader`.
-2. `test_step()` - takes in a model, a `DataLoader` and a loss function and evaluates the model on the `DataLoader`.
-3. `train()` - performs 1. and 2. together for a given number of epochs and returns a results dictionary.
+1. `train_step()` - 모델, `DataLoader`, 손실 함수, 옵티마이저를 받아서 `DataLoader`에서 모델을 훈련합니다.
+2. `test_step()` - 모델, `DataLoader`, 손실 함수를 받아서 `DataLoader`에서 모델을 평가합니다.
+3. `train()` - 주어진 에포크 수에 대해 1번과 2번을 함께 수행하고 결과 딕셔너리를 반환합니다.
 
-Since these will be the *engine* of our model training, we can put them all into a Python script called `engine.py` with the line `%%writefile going_modular/engine.py`:
+이것들이 우리 모델 훈련의 *엔진*이 될 것이므로, `%%writefile going_modular/engine.py` 라인으로 `engine.py`라는 Python 스크립트에 모두 넣을 수 있습니다:
 
 ```python title="engine.py"
 %%writefile going_modular/engine.py
@@ -618,25 +620,25 @@ def train(model: torch.nn.Module,
   return results
 ```
 
-Now we've got the `engine.py` script, we can import functions from it via:
+이제 `engine.py` 스크립트를 갖게 되었으므로, 다음과 같이 함수를 임포트할 수 있습니다:
 
 ```python
-# Import engine.py
+# engine.py 임포트
 from going_modular import engine
 
-# Use train() by calling it from engine.py
+# engine.py에서 호출하여 train() 사용
 engine.train(...)
 ```
 
-## 5. Creating a function to save the model (`utils.py`)
+## 5. 모델을 저장하는 함수 생성하기 (`utils.py`)
 
-Often you'll want to save a model whilst it's training or after training.
+훈련 중이거나 훈련 후에 모델을 저장하고 싶을 때가 많습니다.
 
-Since we've written the code to save a model a few times now in previous notebooks, it makes sense to turn it into a function and save it to file.
+이전 노트북들에서 모델을 저장하는 코드를 몇 번 작성했으므로, 이를 함수로 변환하여 파일에 저장하는 것이 합리적입니다.
 
-It's common practice to store helper functions in a file called `utils.py` (short for utilities).
+유틸리티 함수를 `utils.py`(utilities의 줄임말)라는 파일에 저장하는 것이 일반적인 관행입니다.
 
-Let's save our `save_model()` function to a file called `utils.py` with the line `%%writefile going_modular/utils.py`: 
+`save_model()` 함수를 `%%writefile going_modular/utils.py` 라인으로 `utils.py`라는 파일에 저장해봅시다: 
 
 ```python title="utils.py"
 %%writefile going_modular/utils.py
@@ -677,47 +679,47 @@ def save_model(model: torch.nn.Module,
              f=model_save_path)
 ```
 
-Now if we wanted to use our `save_model()` function, instead of writing it all over again, we can import it and use it via:
+이제 `save_model()` 함수를 사용하고 싶다면, 다시 모두 작성하는 대신 다음과 같이 임포트하고 사용할 수 있습니다:
 
 ```python
-# Import utils.py
+# utils.py 임포트
 from going_modular import utils
 
-# Save a model to file
+# 모델을 파일에 저장
 save_model(model=...
            target_dir=...,
            model_name=...)
 ```
 
-## 6. Train, evaluate and save the model (`train.py`)
+## 6. 모델 훈련, 평가 및 저장하기 (`train.py`)
 
-As previously discussed, you'll often come across PyTorch repositories that combine all of their functionality together in a `train.py` file.
+앞서 논의한 바와 같이, PyTorch 저장소들이 모든 기능을 `train.py` 파일에 함께 결합하는 것을 자주 보게 될 것입니다.
 
-This file is essentially saying "train the model using whatever data is available".
+이 파일은 본질적으로 "사용 가능한 모든 데이터를 사용하여 모델을 훈련하라"고 말하고 있습니다.
 
-In our `train.py` file, we'll combine all of the functionality of the other Python scripts we've created and use it to train a model.
+우리의 `train.py` 파일에서, 우리가 만든 다른 Python 스크립트들의 모든 기능을 결합하여 모델을 훈련하는 데 사용할 것입니다.
 
-This way we can train a PyTorch model using a single line of code on the command line:
+이렇게 하면 명령줄에서 한 줄의 코드로 PyTorch 모델을 훈련할 수 있습니다:
 
 ```
 python train.py
 ```
 
-To create `train.py` we'll go through the following steps:
+`train.py`를 만들기 위해 다음 단계들을 거칠 것입니다:
 
-1. Import the various dependencies, namely `torch`, `os`, `torchvision.transforms` and all of the scripts from the `going_modular` directory, `data_setup`, `engine`, `model_builder`, `utils`.
-  * **Note:** Since `train.py` will be *inside* the `going_modular` directory, we can import the other modules via `import ...` rather than `from going_modular import ...`.
-2. Setup various hyperparameters such as batch size, number of epochs, learning rate and number of hidden units (these could be set in the future via [Python's `argparse`](https://docs.python.org/3/library/argparse.html)).
-3. Setup the training and test directories.
-4. Setup device-agnostic code.
-5. Create the necessary data transforms.
-6. Create the DataLoaders using `data_setup.py`.
-7. Create the model using `model_builder.py`.
-8. Setup the loss function and optimizer.
-9. Train the model using `engine.py`.
-10. Save the model using `utils.py`. 
+1. `torch`, `os`, `torchvision.transforms`와 `going_modular` 디렉토리의 모든 스크립트들인 `data_setup`, `engine`, `model_builder`, `utils`를 포함한 다양한 의존성을 임포트합니다.
+  * **참고:** `train.py`가 `going_modular` 디렉토리 *내부*에 있을 것이므로, `from going_modular import ...` 대신 `import ...`를 통해 다른 모듈들을 임포트할 수 있습니다.
+2. 배치 크기, 에포크 수, 학습률, 은닉 유닛 수와 같은 다양한 하이퍼파라미터를 설정합니다 (이것들은 나중에 [Python의 `argparse`](https://docs.python.org/3/library/argparse.html)를 통해 설정할 수 있습니다).
+3. 훈련 및 테스트 디렉토리를 설정합니다.
+4. 디바이스 독립적인 코드를 설정합니다.
+5. 필요한 데이터 변환을 생성합니다.
+6. `data_setup.py`를 사용하여 DataLoader를 생성합니다.
+7. `model_builder.py`를 사용하여 모델을 생성합니다.
+8. 손실 함수와 옵티마이저를 설정합니다.
+9. `engine.py`를 사용하여 모델을 훈련합니다.
+10. `utils.py`를 사용하여 모델을 저장합니다. 
 
-And we can create the file from a notebook cell using the line `%%writefile going_modular/train.py`:
+그리고 `%%writefile going_modular/train.py` 라인을 사용하여 노트북 셀에서 파일을 생성할 수 있습니다:
 
 ```python title="train.py"
 %%writefile going_modular/train.py
@@ -785,52 +787,52 @@ utils.save_model(model=model,
                  model_name="05_going_modular_script_mode_tinyvgg_model.pth")
 ```
 
-Woohoo!
+와!
 
-Now we can train a PyTorch model by running the following line on the command line:
+이제 명령줄에서 다음 라인을 실행하여 PyTorch 모델을 훈련할 수 있습니다:
 
 ```
 python train.py
 ```
 
-Doing this will leverage all of the other code scripts we've created.
+이렇게 하면 우리가 만든 다른 모든 코드 스크립트들을 활용할 것입니다.
 
-And if we wanted to, we could adjust our `train.py` file to use argument flag inputs with Python's `argparse` module, this would allow us to provide different hyperparameter settings like previously discussed:
+원한다면, Python의 `argparse` 모듈을 사용하여 인수 플래그 입력을 사용하도록 `train.py` 파일을 조정할 수 있습니다. 이렇게 하면 앞서 논의한 것처럼 다른 하이퍼파라미터 설정을 제공할 수 있습니다:
 
 ```
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
 ```
 
-## Exercises
+## 연습문제
 
-**Resources:**
+**자료:**
 
-* [Exercise template notebook for 05](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/exercises/05_pytorch_going_modular_exercise_template.ipynb)
-* [Example solutions notebook for 05](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/solutions/05_pytorch_going_modular_exercise_solutions.ipynb)
-    * Live coding run through of [solutions notebook for 05 on YouTube](https://youtu.be/ijgFhMK3pp4)
+* [05번 연습문제 템플릿 노트북](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/exercises/05_pytorch_going_modular_exercise_template.ipynb)
+* [05번 예제 해답 노트북](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/solutions/05_pytorch_going_modular_exercise_solutions.ipynb)
+    * [YouTube에서 05번 해답 노트북 라이브 코딩 실행](https://youtu.be/ijgFhMK3pp4)
 
-**Exercises:**
+**연습문제:**
 
-1. Turn the code to get the data (from section 1. Get Data above) into a Python script, such as `get_data.py`.
-    * When you run the script using `python get_data.py` it should check if the data already exists and skip downloading if it does.
-    * If the data download is successful, you should be able to access the `pizza_steak_sushi` images from the `data` directory.
-2. Use [Python's `argparse` module](https://docs.python.org/3/library/argparse.html) to be able to send the `train.py` custom hyperparameter values for training procedures.
-    * Add an argument for using a different:
-        * Training/testing directory
-        * Learning rate
-        * Batch size
-        * Number of epochs to train for
-        * Number of hidden units in the TinyVGG model
-    * Keep the default values for each of the above arguments as what they already are (as in notebook 05).
-    * For example, you should be able to run something similar to the following line to train a TinyVGG model with a learning rate of 0.003 and a batch size of 64 for 20 epochs: `python train.py --learning_rate 0.003 --batch_size 64 --num_epochs 20`.
-    * **Note:** Since `train.py` leverages the other scripts we created in section 05, such as, `model_builder.py`, `utils.py` and `engine.py`, you'll have to make sure they're available to use too. You can find these in the [`going_modular` folder on the course GitHub](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular/going_modular). 
-3. Create a script to predict (such as `predict.py`) on a target image given a file path with a saved model.
-    * For example, you should be able to run the command `python predict.py some_image.jpeg` and have a trained PyTorch model predict on the image and return its prediction.
-    * To see example prediction code, check out the [predicting on a custom image section in notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function). 
-    * You may also have to write code to load in a trained model.
+1. 데이터를 가져오는 코드(위의 섹션 1. 데이터 가져오기에서)를 `get_data.py`와 같은 Python 스크립트로 변환하세요.
+    * `python get_data.py`를 사용하여 스크립트를 실행할 때 데이터가 이미 존재하는지 확인하고, 존재한다면 다운로드를 건너뛰어야 합니다.
+    * 데이터 다운로드가 성공하면 `data` 디렉토리에서 `pizza_steak_sushi` 이미지에 접근할 수 있어야 합니다.
+2. [Python의 `argparse` 모듈](https://docs.python.org/3/library/argparse.html)을 사용하여 훈련 절차를 위해 `train.py`에 커스텀 하이퍼파라미터 값을 보낼 수 있도록 하세요.
+    * 다음에 대해 다른 것을 사용하는 인수를 추가하세요:
+        * 훈련/테스트 디렉토리
+        * 학습률
+        * 배치 크기
+        * 훈련할 에포크 수
+        * TinyVGG 모델의 은닉 유닛 수
+    * 위 인수들 각각의 기본값을 노트북 05에서와 동일하게 유지하세요.
+    * 예를 들어, 학습률 0.003, 배치 크기 64로 20 에포크 동안 TinyVGG 모델을 훈련하려면 다음과 같은 라인을 실행할 수 있어야 합니다: `python train.py --learning_rate 0.003 --batch_size 64 --num_epochs 20`.
+    * **참고:** `train.py`가 섹션 05에서 만든 다른 스크립트들(`model_builder.py`, `utils.py`, `engine.py` 등)을 활용하므로, 이것들도 사용할 수 있도록 해야 합니다. 이것들은 [코스 GitHub의 `going_modular` 폴더](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular/going_modular)에서 찾을 수 있습니다.
+3. 저장된 모델이 있는 파일 경로가 주어진 대상 이미지에 대해 예측하는 스크립트(예: `predict.py`)를 생성하세요.
+    * 예를 들어, `python predict.py some_image.jpeg` 명령을 실행할 수 있어야 하며, 훈련된 PyTorch 모델이 이미지에 대해 예측하고 예측 결과를 반환해야 합니다.
+    * 예제 예측 코드를 보려면 [노트북 04의 커스텀 이미지 예측 섹션](https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function)을 확인하세요.
+    * 훈련된 모델을 로드하는 코드도 작성해야 할 수 있습니다.
 
-## Extra-curriculum
+## 추가 학습
 
-* To learn more about structuring a Python project, check out Real Python's guide on [Python Application Layouts](https://realpython.com/python-application-layouts/). 
-* For ideas on styling your PyTorch code, check out the [PyTorch style guide by Igor Susmelj](https://github.com/IgorSusmelj/pytorch-styleguide#recommended-code-structure-for-training-your-model) (much of styling in this chapter is based off this guide + various similar PyTorch repositories).
-* For an example `train.py` script and various other PyTorch scripts written by the PyTorch team to train state-of-the-art image classification models, check out their [`classification` repository on GitHub](https://github.com/pytorch/vision/tree/main/references/classification). 
+* Python 프로젝트 구조화에 대해 더 배우려면 Real Python의 [Python Application Layouts](https://realpython.com/python-application-layouts/) 가이드를 확인하세요.
+* PyTorch 코드 스타일링에 대한 아이디어를 얻으려면 [Igor Susmelj의 PyTorch 스타일 가이드](https://github.com/IgorSusmelj/pytorch-styleguide#recommended-code-structure-for-training-your-model)를 확인하세요 (이 챕터의 많은 스타일링이 이 가이드 + 다양한 유사한 PyTorch 저장소들을 기반으로 합니다).
+* 최첨단 이미지 분류 모델을 훈련하기 위해 PyTorch 팀이 작성한 예제 `train.py` 스크립트와 다양한 다른 PyTorch 스크립트를 보려면 GitHub의 [`classification` 저장소](https://github.com/pytorch/vision/tree/main/references/classification)를 확인하세요. 
