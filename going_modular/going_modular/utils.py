@@ -172,7 +172,7 @@ def plot_loss_curves(results):
 
     epochs = range(len(results["train_loss"]))
 
-    plt.figure(figsize=(7, 4))
+    plt.figure(figsize=(5, 8))
 
     # Plot loss
     plt.subplot(1, 2, 1)
