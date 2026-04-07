@@ -198,7 +198,7 @@ def pred_and_plot_image(
     """
 
     # 1. Load in image and convert the tensor values to float32
-    target_image = torchvision.io.read_image(str(image_path)).type(torch.float32)
+    target_image = torchvision.io.decode_image(str(image_path)).type(torch.float32)
 
     # 2. Divide the image pixel values by 255 to get them between [0, 1]
     target_image = target_image / 255.0
