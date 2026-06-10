@@ -40,6 +40,12 @@ def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Ten
 
     Source - https://madewithml.com/courses/foundations/neural-networks/ (with modifications)
     """
+    # Save the device the model was originally in, to restore when done
+    original_device = next(model.parameters()).device
+
+    # Save the state model was originally in, to restore when done
+    was_training = model.training
+    
     # Put everything to CPU (works better with NumPy + Matplotlib)
     model.to("cpu")
     X, y = X.to("cpu"), y.to("cpu")
@@ -70,6 +76,10 @@ def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Ten
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
 
+    # Restore original model states (train/eval mode, device)
+    model.to(original_device)
+    if was_training:
+        model.train()
 
 # Plot linear data or training and test and predictions (optional)
 def plot_predictions(
