@@ -1,0 +1,39 @@
+# Python dependencies for the Learn PyTorch for Deep Learning course.
+#
+# Quick start (for local setups, e.g. macOS/Windows/Linux CPU):
+#     pip install -r requirements.txt
+#
+# Note on PyTorch:
+#   torch and torchvision are listed here for convenience. For a build matched
+#   to your operating system and (optional) CUDA/GPU, prefer the official
+#   selector at https://pytorch.org/get-started/locally/ and install torch +
+#   torchvision from there first, then run the command above for the rest.
+#
+# Google Colab users can skip this file: most of these packages come
+# pre-installed (see SETUP.md).
+
+# Core deep learning
+torch>=1.10.0
+torchvision>=0.11.0
+
+# Model summaries and metrics
+torchinfo
+torchmetrics
+
+# Data, plotting and scientific computing
+numpy
+pandas
+matplotlib
+scikit-learn
+mlxtend  # used for confusion-matrix plotting in the vision notebooks
+
+# Images, progress bars and downloads
+Pillow
+tqdm
+requests
+
+# Notebook environment
+jupyterlab
+
+# Model deployment demos (section 09)
+gradio
