@@ -7,7 +7,9 @@ import os
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
-NUM_WORKERS = os.cpu_count()
+# os.cpu_count() can return None on some platforms; fall back to 0 (main-process
+# loading) so DataLoader always receives a valid num_workers value.
+NUM_WORKERS = os.cpu_count() or 0
 
 def create_dataloaders(
     train_dir: str, 

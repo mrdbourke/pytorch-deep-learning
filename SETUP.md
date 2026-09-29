@@ -86,6 +86,16 @@ print(torch.cuda.is_available()) # will return True if PyTorch can use the GPU
 
 If PyTorch can see the GPU on Google Colab, the above will print `True`.
 
+## Quick install with pip (all operating systems)
+
+If you already have Python and just want the course packages in one go, a [`requirements.txt`](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/requirements.txt) is included at the root of the repository:
+
+```bash
+pip install -r requirements.txt
+```
+
+Because the right PyTorch build depends on your operating system and whether you have a GPU, it's best to install `torch` and `torchvision` first using the official [PyTorch setup selector](https://pytorch.org/get-started/locally/), then run the command above for the remaining packages. The conda-based setup below is the recommended path for a Linux machine with a NVIDIA GPU.
+
 ## TK - 2. Getting setup locally (Linux version)
 
 > **Note:** A reminder this is not a replacement for the [PyTorch documentation for getting setup locally](https://pytorch.org/get-started/locally/). This is only one way of getting setup (there are many) and designed specifically for this course.
