@@ -28,7 +28,7 @@ def walk_through_dir(dir_path):
 
     Returns:
     A print out of:
-      number of subdiretories in dir_path
+      number of subdirectories in dir_path
       number of images (files) in each subdirectory
       name of each subdirectory
     """
